@@ -52,15 +52,15 @@ Use this as a quick checklist and links hub for practice. Tailor depth to role l
 
 ## Practice links (from this blog)
 
-- Twitter: {{ site.baseurl }}{% post_url 2025-10-29-system-design-twitter %}
-- YouTube: {{ site.baseurl }}{% post_url 2025-10-29-system-design-youtube %}
-- GitHub: {{ site.baseurl }}{% post_url 2025-10-29-system-design-github %}
-- ChatGPT: {{ site.baseurl }}{% post_url 2025-10-29-system-design-chatgpt %}
-- Robinhood: {{ site.baseurl }}{% post_url 2025-10-29-system-design-robinhood-trading-platform %}
-- Cloud overview: {{ site.baseurl }}{% post_url 2025-10-29-system-design-overview-cloud %}
-- Embedded overview: {{ site.baseurl }}{% post_url 2025-10-29-system-design-overview-embedded %}
-- Client↔Gateway protocols: {{ site.baseurl }}{% post_url 2025-10-04-system-design-client-api-gateway-connection-options %}
-- Interview framework: {{ site.baseurl }}{% post_url 2025-10-04-system-design-interview-framework %}
+- Twitter: {{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-system-design-twitter %}
+- YouTube: {{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-system-design-youtube %}
+- GitHub: {{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-system-design-github %}
+- ChatGPT: {{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-system-design-chatgpt %}
+- Robinhood: {{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-system-design-robinhood-trading-platform %}
+- Cloud overview: {{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-system-design-overview-cloud %}
+- Embedded overview: {{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-system-design-overview-embedded %}
+- Client↔Gateway protocols: {{ site.url }}{{ site.baseurl }}{% post_url 2025-10-04-system-design-client-api-gateway-connection-options %}
+- Interview framework: {{ site.url }}{{ site.baseurl }}{% post_url 2025-10-04-system-design-interview-framework %}
 
 ## One last tip
 

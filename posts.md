@@ -29,7 +29,7 @@ nav_exclude: true
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <div class="post-meta">{{ post.date | date: date_format }}</div>
         <h2 class="post-title">
-          <a class="post-link" href="{{ post.url | relative_url }}">
+          <a class="post-link" href="{{ post.url | absolute_url }}">
             {{ post.title | escape }}
           </a>
         </h2>
