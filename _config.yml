@@ -40,9 +40,8 @@ plugins:
 # Navigation
 header_pages:
   - posts.md
-  - about.md
-  - contact.md
   - system-design-interview-summary.md
+  - embedded-system-design-showcase.md
 
 # Build options
 future: true
