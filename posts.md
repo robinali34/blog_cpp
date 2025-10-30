@@ -46,7 +46,9 @@ nav_exclude: true
           {%- assign unique_tags = post.tags | uniq -%}
           <div class="post-tags">
             {%- for tag in unique_tags -%}
-              <span class="tag">{{ tag }}</span>
+              {%- unless unique_categories contains tag -%}
+                <span class="tag">{{ tag }}</span>
+              {%- endunless -%}
             {%- endfor -%}
           </div>
         {%- endif -%}
