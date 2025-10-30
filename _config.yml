@@ -44,6 +44,9 @@ header_pages:
   - contact.md
   - system-design-interview-summary.md
 
+# Build options
+future: true
+
 # Exclude
 exclude:
   - Gemfile

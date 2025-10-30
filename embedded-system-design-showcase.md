@@ -23,12 +23,12 @@ This page highlights end‑to‑end embedded system designs, C++ patterns, and c
 
 ## Case studies (deep dives)
 
-- Lidar + Android controller (single‑device embedded design): {% link _posts/2025-10-30-embedded-single-device-design-android-lidar.md %}
-- Port I/O read/write (8/16/32‑bit, barriers, endianness): {% link _posts/2025-10-30-embedded-port-io-read-write.md %}
-- USB reader/writer (CDC‑ACM + libusb bulk): {% link _posts/2025-10-30-usb-reader-writer-embedded-cpp.md %}
-- Android USB Host (CDC/Bulk) in Kotlin: {% link _posts/2025-10-30-android-usb-reader-writer.md %}
-- PCI config/MMIO access from C++ (libpci + mmap): {% link _posts/2025-10-30-pci-read-write-with-cpp.md %}
-- Matter/CHIP device/controller examples: {% link _posts/2025-10-30-matter-with-cpp-intro-and-examples.md %}
+- Lidar + Android controller (single‑device embedded design): {% post_url 2025-10-30-embedded-single-device-design-android-lidar %}
+- Port I/O read/write (8/16/32‑bit, barriers, endianness): {% post_url 2025-10-30-embedded-port-io-read-write %}
+- USB reader/writer (CDC‑ACM + libusb bulk): {% post_url 2025-10-30-usb-reader-writer-embedded-cpp %}
+- Android USB Host (CDC/Bulk) in Kotlin: {% post_url 2025-10-30-android-usb-reader-writer %}
+- PCI config/MMIO access from C++ (libpci + mmap): {% post_url 2025-10-30-pci-read-write-with-cpp %}
+- Matter/CHIP device/controller examples: {% post_url 2025-10-30-matter-with-cpp-intro-and-examples %}
 
 ## C++ patterns that scale on MCUs/SoCs
 
