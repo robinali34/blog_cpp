@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++ Raw Data Read/Write Between Firmware and SDK"
+title: "Raw Data Read/Write Between Firmware and SDK"
 date: 2025-10-29 00:00:00 -0700
 categories: cpp systems ipc binary-protocol
 permalink: /2025/10/29/cpp-firmware-sdk-raw-data-io/

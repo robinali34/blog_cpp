@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++ String Processing - Performance Optimization Techniques"
+title: "String Processing - Performance Optimization Techniques"
 date: 2025-10-16 15:32:59 -0700
 categories: cpp programming tutorial string-processing performance optimization algorithm
 ---

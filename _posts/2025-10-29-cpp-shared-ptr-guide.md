@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++ std::shared_ptr: A Practical Guide"
+title: "std::shared_ptr: A Practical Guide"
 date: 2025-10-29 00:00:00 -0700
 categories: cpp smart-pointers memory-management
 permalink: /2025/10/29/cpp-shared-ptr-guide/

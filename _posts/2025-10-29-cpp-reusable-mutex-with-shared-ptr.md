@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++ Reusable Mutex with shared_ptr"
+title: "Reusable Mutex with shared_ptr"
 date: 2025-10-29 00:00:00 -0700
 categories: cpp concurrency mutex shared_ptr smart-pointers
 permalink: /2025/10/29/cpp-reusable-mutex-with-shared-ptr/

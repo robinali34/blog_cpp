@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++ Containers: reserve vs resize (Capacity, Growth, Invalidation)"
+title: "Containers: reserve vs resize (Capacity, Growth, Invalidation)"
 date: 2025-10-29 00:00:00 -0700
 categories: cpp containers performance
 permalink: /2025/10/29/cpp-container-reserve-resize-guide/

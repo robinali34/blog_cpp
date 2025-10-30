@@ -39,7 +39,7 @@ plugins:
 
 # Navigation
 header_pages:
-  - all-posts.md
+  - posts.md
   - about.md
   - contact.md
 

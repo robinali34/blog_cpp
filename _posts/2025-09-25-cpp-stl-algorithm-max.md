@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++ STL: algorithm - max"
+title: "STL: algorithm - max"
 categories: programming cpp tutorial reference algorithm stl max comparator utility competitive-programming
 ---
 

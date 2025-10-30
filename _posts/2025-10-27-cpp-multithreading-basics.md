@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++ Multithreading Basics: thread, future, mutex, condition_variable, atomic"
+title: "Multithreading Basics: thread, future, mutex, condition_variable, atomic"
 date: 2025-10-27 21:12:00 -0700
 categories: cpp concurrency multithreading
 permalink: /2025/10/27/cpp-multithreading-basics/

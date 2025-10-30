@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++ STL Cheat Sheet for Embedded/System Design"
+title: "STL Cheat Sheet for Embedded/System Design"
 date: 2025-10-29 00:00:00 -0700
 categories: cpp embedded systems cheat-sheet
 permalink: /2025/10/29/cpp-stl-embedded-cheat-sheet/

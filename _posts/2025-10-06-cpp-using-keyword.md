@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++: The using Keyword - Aliases, Imports, and More"
+title: "The using Keyword - Aliases, Imports, and More"
 date: 2025-10-06 00:00:00 -0000
 categories: programming cpp tutorial reference language using keyword alias typedef templates inheritance enum c++20
 ---

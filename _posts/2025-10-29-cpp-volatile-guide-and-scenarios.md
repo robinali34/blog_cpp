@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++ volatile: What It Is, What It Isn't, and Real-World Scenarios"
+title: "volatile: What It Is, What It Isn't, and Real-World Scenarios"
 date: 2025-10-29 00:00:00 -0700
 categories: cpp low-level memory-model embedded
 permalink: /2025/10/29/cpp-volatile-guide-and-scenarios/

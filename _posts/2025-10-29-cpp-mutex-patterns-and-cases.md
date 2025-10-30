@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "C++ Mutex Patterns: All Common Cases and Best Practices"
+title: "Mutex Patterns: All Common Cases and Best Practices"
 date: 2025-10-29 00:00:00 -0700
 categories: cpp concurrency mutex synchronization
 permalink: /2025/10/29/cpp-mutex-patterns-and-cases/
