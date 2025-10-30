@@ -139,6 +139,25 @@ Non‑functional:
 - MVP: Camera HAL3 + NDK encoder + UI preview; BLE control; voice hotword + basic commands; minimal display (status/recording indicator); local save + phone sync
 - V2: WebRTC remote stream; richer voice grammar; notifications mirroring; third‑party SDK; advanced redaction; multi‑cam stitching
 
+## 14) Capacity, SLOs, and Failure Drills
+
+Capacity & sizing
+- Video 1080p30 H.264 baseline ~2–4 Mbps; preview to phone target 1–2 Mbps with adaptive bitrate.
+- Storage: 1 hour @ 2 Mbps ≈ ~0.9 GB; local buffer target 10–20 GB; daily sync on charge+Wi‑Fi.
+- BLE control messages < 10 KB/s; Wi‑Fi throughput target > 20 Mbps for burst transfers.
+
+SLOs
+- TTFF (preview) < 2 s p95; shutter latency < 150 ms p95; voice command to action < 300 ms p95.
+- Upload success rate > 99% within 24 h; background crash rate < 0.1% DAU.
+
+Failure drills
+- Camera HAL error → restart pipeline (AImageReader/MediaCodec) with exponential backoff.
+- Thermal limit → degrade fps/resolution/ML first; pause streaming; surface UX banner.
+- Connectivity drop → buffer locally; resume with checksums; prevent duplicates via manifests.
+
+Consistency & privacy
+- Local‑first capture; explicit user action to share; redact PII on‑device before cloud; immutable audit of uploads.
+
 ---
 
 This Android‑based architecture maps firmware drivers through HALs into NDK services for low‑latency media and display handling, with clean AIDL/JNI bridges into a Kotlin/Jetpack UI. It supports dual control (voice + phone) and an in‑glass display while balancing power, privacy, and developer ergonomics.

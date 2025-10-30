@@ -272,6 +272,22 @@ API gateways can handle multiple protocols:
 - **Load balancing**: Distribute traffic across protocol-specific services
 - **Authentication**: Unified auth across all protocols
 
+## Capacity, SLOs, and Failure Modes
+
+Capacity
+- WebSocket: plan concurrent connection capacity (e.g., 1M conns/region) and fan‑in/out; shard by consistent hashing; memory footprint ~tens of KB/conn.
+- gRPC: compute peak QPS with streaming vs. unary; size thread pools and connection pools accordingly.
+
+SLOs
+- REST/GraphQL p95 latency targets (e.g., < 200 ms); WebSocket broadcast fanout p95 < 150 ms; gRPC streaming p95 inter‑message < 100 ms.
+
+Failure modes
+- Gateway overload → shed optional traffic; downgrade to polling/SSE; enforce per‑tenant rate limits.
+- Long‑lived WS drops → jittered reconnect backoff; resume cursors; idempotent commands.
+
+Consistency & evolution
+- Prefer idempotent APIs with request IDs; version protocols and preserve backward compatibility; support dual‑stack migrations (e.g., WS→SSE fallback).
+
 ## Performance Considerations
 
 ### Throughput Comparison

@@ -394,6 +394,25 @@ Scale 3: Microservices, distributed databases, CDN
 - **Metrics:** Time-series databases
 - **Alerting:** Automated incident response
 
+### SLOs and Error Budgets (Interview Depth)
+
+- Define explicit SLOs per API (e.g., P95 latency, availability) and compute monthly error budgets.
+- Show how you’ll protect SLOs: circuit breakers, rate limits, brownouts (reduced features), and load‑shedding.
+- Link SLOs to auto‑scaling signals (queue depth, p95 latency) and rollback triggers.
+
+### Capacity Planning (Back‑of‑the‑envelope)
+
+- Convert product assumptions into QPS, storage/day, egress; size caches, DB IOPS, and message throughput.
+- Call out cost awareness: hot vs. cold storage, multi‑region replication overhead.
+
+### Consistency Choices
+
+- Identify strong vs. eventual domains; design idempotency and dedupe for at‑least‑once pipelines.
+
+### Failure Drills
+
+- Region loss, dependency brownouts, thundering herd—describe mitigations and runbooks.
+
 ---
 
 ## Step 5: Review and Wrap Up
