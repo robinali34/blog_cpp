@@ -4,7 +4,7 @@ title: System Design Interview Summary
 permalink: /system-design-interview/
 ---
 
-# System Design Interview Summary (Google, Meta, Salesforce, Robinhood, ...)
+# System Design Interview Summary
 
 Use this as a quick checklist and links hub for practice. Tailor depth to role level and domain.
 
@@ -52,15 +52,15 @@ Use this as a quick checklist and links hub for practice. Tailor depth to role l
 
 ## Practice links (from this blog)
 
-- Twitter: {% link _posts/2025-10-30-system-design-twitter.md %}
-- YouTube: {% link _posts/2025-10-30-system-design-youtube.md %}
-- GitHub: {% link _posts/2025-10-30-system-design-github.md %}
-- ChatGPT: {% link _posts/2025-10-30-system-design-chatgpt.md %}
-- Robinhood: {% link _posts/2025-10-30-system-design-robinhood-trading-platform.md %}
-- Cloud overview: {% link _posts/2025-10-30-system-design-overview-cloud.md %}
-- Embedded overview: {% link _posts/2025-10-30-system-design-overview-embedded.md %}
-- Client↔Gateway protocols: {% link _posts/2025-10-04-system-design-client-api-gateway-connection-options.md %}
-- Interview framework: {% link _posts/2025-10-04-system-design-interview-framework.md %}
+- Twitter: {% post_url 2025-10-30-system-design-twitter %}
+- YouTube: {% post_url 2025-10-30-system-design-youtube %}
+- GitHub: {% post_url 2025-10-30-system-design-github %}
+- ChatGPT: {% post_url 2025-10-30-system-design-chatgpt %}
+- Robinhood: {% post_url 2025-10-30-system-design-robinhood-trading-platform %}
+- Cloud overview: {% post_url 2025-10-30-system-design-overview-cloud %}
+- Embedded overview: {% post_url 2025-10-30-system-design-overview-embedded %}
+- Client↔Gateway protocols: {% post_url 2025-10-04-system-design-client-api-gateway-connection-options %}
+- Interview framework: {% post_url 2025-10-04-system-design-interview-framework %}
 
 ## One last tip
 
