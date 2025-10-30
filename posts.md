@@ -37,15 +37,17 @@ nav_exclude: true
           <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</div>
         {%- endif -%}
         {%- if post.categories -%}
+          {%- assign unique_categories = post.categories | uniq -%}
           <div class="post-categories">
-            {%- for category in post.categories -%}
+            {%- for category in unique_categories -%}
               <span class="category-tag">{{ category }}</span>
             {%- endfor -%}
           </div>
         {%- endif -%}
         {%- if post.tags -%}
+          {%- assign unique_tags = post.tags | uniq -%}
           <div class="post-tags">
-            {%- for tag in post.tags -%}
+            {%- for tag in unique_tags -%}
               <span class="tag">{{ tag }}</span>
             {%- endfor -%}
           </div>

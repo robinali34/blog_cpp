@@ -52,15 +52,15 @@ Use this as a quick checklist and links hub for practice. Tailor depth to role l
 
 ## Practice links (from this blog)
 
-- Twitter: {{ '/2025/10/29/system-design-twitter/' | relative_url }}
-- YouTube: {{ '/2025/10/29/system-design-youtube/' | relative_url }}
-- GitHub: {{ '/2025/10/29/system-design-github/' | relative_url }}
-- ChatGPT: {{ '/2025/10/29/system-design-chatgpt/' | relative_url }}
-- Robinhood: {{ '/2025/10/29/system-design-robinhood/' | relative_url }}
-- Cloud overview: {{ '/2025/10/29/system-design-overview-cloud/' | relative_url }}
-- Embedded overview: {{ '/2025/10/29/system-design-overview-embedded/' | relative_url }}
-- Client↔Gateway protocols: {{ '/2025/10/04/system-design-client-api-gateway-connection-options/' | relative_url }}
-- Interview framework: {{ '/2025/10/04/system-design-interview-framework/' | relative_url }}
+- Twitter: {{ site.baseurl }}{% post_url 2025-10-29-system-design-twitter %}
+- YouTube: {{ site.baseurl }}{% post_url 2025-10-29-system-design-youtube %}
+- GitHub: {{ site.baseurl }}{% post_url 2025-10-29-system-design-github %}
+- ChatGPT: {{ site.baseurl }}{% post_url 2025-10-29-system-design-chatgpt %}
+- Robinhood: {{ site.baseurl }}{% post_url 2025-10-29-system-design-robinhood-trading-platform %}
+- Cloud overview: {{ site.baseurl }}{% post_url 2025-10-29-system-design-overview-cloud %}
+- Embedded overview: {{ site.baseurl }}{% post_url 2025-10-29-system-design-overview-embedded %}
+- Client↔Gateway protocols: {{ site.baseurl }}{% post_url 2025-10-04-system-design-client-api-gateway-connection-options %}
+- Interview framework: {{ site.baseurl }}{% post_url 2025-10-04-system-design-interview-framework %}
 
 ## One last tip
 
