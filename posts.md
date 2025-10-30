@@ -15,21 +15,7 @@ nav_exclude: true
   <div class="search-section">
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="Search posts by title, content, or category..." class="search-input">
-      <div class="search-filters">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="cpp">C++</button>
-        <button class="filter-btn" data-filter="system-design">System Design</button>
-        <button class="filter-btn" data-filter="multithreading">Multithreading</button>
-        <button class="filter-btn" data-filter="concurrency">Concurrency</button>
-        <button class="filter-btn" data-filter="mqtt">MQTT</button>
-        <button class="filter-btn" data-filter="ble">BLE</button>
-        <button class="filter-btn" data-filter="postgresql">PostgreSQL</button>
-        <button class="filter-btn" data-filter="sql">SQL</button>
-        <button class="filter-btn" data-filter="stl">STL</button>
-        <button class="filter-btn" data-filter="shared_ptr">shared_ptr</button>
-        <button class="filter-btn" data-filter="mutex">mutex</button>
-        <button class="filter-btn" data-filter="atomic">atomic</button>
-      </div>
+      <div class="search-filters" id="dynamicFilters"></div>
     </div>
     <div class="search-results-info">
       <span id="resultsCount">{{ site.posts.size }} posts found</span>
@@ -116,11 +102,43 @@ nav_exclude: true
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('searchInput');
-  const filterButtons = document.querySelectorAll('.filter-btn');
+  const filtersHost = document.getElementById('dynamicFilters');
   const postItems = document.querySelectorAll('.post-item');
   const resultsCount = document.getElementById('resultsCount');
   
   let currentFilter = 'all';
+  let filterButtons = [];
+
+  function buildFilters() {
+    const freq = new Map();
+    postItems.forEach(p => {
+      const cats = (p.dataset.categories || '').split(/\s+/).filter(Boolean);
+      const tags = (p.dataset.tags || '').split(/\s+/).filter(Boolean);
+      const all = [...cats, ...tags].map(s => s.toLowerCase());
+      const uniq = Array.from(new Set(all));
+      uniq.forEach(k => freq.set(k, (freq.get(k) || 0) + 1));
+    });
+    const entries = Array.from(freq.entries()).sort((a,b) => b[1]-a[1]).slice(0, 24);
+    const frag = document.createDocumentFragment();
+    const mk = (label, filter, active=false) => {
+      const btn = document.createElement('button');
+      btn.className = 'filter-btn' + (active ? ' active' : '');
+      btn.dataset.filter = filter;
+      btn.textContent = label;
+      btn.addEventListener('click', function(){
+        filterButtons.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        currentFilter = this.dataset.filter;
+        performSearch();
+      });
+      return btn;
+    };
+    frag.appendChild(mk('All', 'all', true));
+    entries.forEach(([k, count]) => frag.appendChild(mk(`${k} (${count})`, k)));
+    filtersHost.innerHTML = '';
+    filtersHost.appendChild(frag);
+    filterButtons = Array.from(filtersHost.querySelectorAll('.filter-btn'));
+  }
   
   function performSearch() {
     const searchTerm = (searchInput.value || '').toLowerCase();
@@ -153,14 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
     resultsCount.textContent = `${visibleCount} posts found`;
   }
   
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', function() {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      currentFilter = this.dataset.filter;
-      performSearch();
-    });
-  });
+  buildFilters();
   
   if (searchInput) {
     searchInput.addEventListener('input', performSearch);

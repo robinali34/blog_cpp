@@ -158,6 +158,22 @@ Failure drills
 Consistency & privacy
 - Local‑first capture; explicit user action to share; redact PII on‑device before cloud; immutable audit of uploads.
 
+## 15) Detailed APIs (sketch)
+
+```http
+POST /v1/capture/start { mode, fps, res } -> { session_id }
+POST /v1/capture/stop { session_id } -> 204
+GET  /v1/device/status -> { battery, thermals, storage }
+POST /v1/ota/apply { version, url, sig } -> { job_id }
+```
+
+## 16) Test plan
+
+- Media pipeline: soak tests 2h @1080p30; encoder latency p50/p95; dropped frame rate.
+- Voice: hotword FAR/FRR benchmarks; command p50/p95 latencies; noise environments.
+- Thermal: chamber profiles; degrade thresholds validated.
+- Connectivity: BLE/Wi‑Fi swap under load; offline store‑and‑forward; resume with dedupe.
+
 ---
 
 This Android‑based architecture maps firmware drivers through HALs into NDK services for low‑latency media and display handling, with clean AIDL/JNI bridges into a Kotlin/Jetpack UI. It supports dual control (voice + phone) and an in‑glass display while balancing power, privacy, and developer ergonomics.

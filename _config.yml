@@ -1,13 +1,14 @@
 title: "C++ & Systems Blog"
 description: "C++/Systems posts migrated from blog_leetcode"
 baseurl: "/blog_cpp"
-url: "https://robinali34.github.io/blog_cpp/"
+url: "https://robinali34.github.io"
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 theme: minima
 show_excerpts: true
+timezone: America/Los_Angeles
 
 # Collections
 collections:

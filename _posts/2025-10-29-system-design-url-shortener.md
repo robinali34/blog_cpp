@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "System Design: URL Shortener (bit.ly)"
-date: 2025-10-30 23:05:00 -0700
+date: 2025-10-29 23:05:00 -0700
 categories: system-design architecture
-permalink: /2025/10/30/system-design-url-shortener/
+permalink: /2025/10/29/system-design-url-shortener/
 tags: [system-design, cache, database, consistency, idempotency]
 ---
 
@@ -43,4 +43,22 @@ Clients → API → Cache (Redis) → DB (MySQL/Cassandra) → Analytics (Kafka)
 ## Evolution
 - Shard by code prefix; add geo DNS; move analytics to stream processing.
 
+## DDL sketch
 
+```sql
+CREATE TABLE urls (
+  code varchar(10) PRIMARY KEY,
+  long_url text NOT NULL,
+  created_at timestamptz NOT NULL,
+  expires_at timestamptz,
+  owner bigint
+);
+```
+
+## Cache strategy
+
+- Cache‑aside with negative caching for 404s; TTL skew to avoid stampedes; single‑flight locks per code.
+
+## Failure drills
+
+- DB hot partition → rehash codes; add read replicas; protect with rate limit per IP.

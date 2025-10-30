@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "PCI Read/Write with C++ on Linux: Config Space and MMIO"
-date: 2025-10-30 16:00:00 -0700
+date: 2025-10-29 16:00:00 -0700
 categories: cpp systems low-level
-permalink: /2025/10/30/pci-read-write-with-cpp/
+permalink: /2025/10/29/pci-read-write-with-cpp/
 tags: [cpp, pci, mmio, drivers, linux, userspace, libpci]
 ---
 
@@ -160,5 +160,3 @@ Explanation
 - Read/interpret config space; enable MMIO/bus mastering via `PCI_COMMAND` when appropriate.
 - Map BARs and access registers using `volatile` and correct endianness.
 - Ensure privilege, isolation from kernel drivers, and proper error handling.
-
-

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "System Design: ChatGPT-Style LLM Service (Serving, Caching, Safety)"
-date: 2025-10-30 21:30:00 -0700
+date: 2025-10-29 21:30:00 -0700
 categories: system-design architecture ai
-permalink: /2025/10/30/system-design-chatgpt/
+permalink: /2025/10/29/system-design-chatgpt/
 tags: [system-design, llm, inference, caching, safety, retrieval]
 ---
 
@@ -79,4 +79,23 @@ POST /v1/embeddings { model, input }
 - GPU node loss: retry to alternate pool; preserve cache keys when possible; degrade to smaller model if capacity constrained.
 - RAG backends slow: fall back to last known context or skip retrieval with warning tag.
 
+## Detailed APIs
 
+```http
+POST /v1/chat/completions { model, messages[], tools?, tool_choice?, stream? }
+event: chunk  data: { role, delta, usage? }
+```
+
+## Orchestrator design
+
+- Router selects model/pool; KV cache coordinator attaches cache id; streaming gateway multiplexes SSE chunks.
+- Tooling: JSON schema validation and safe tool sandbox with timeouts; retries with circuit breaker per tool.
+
+## Capacity BoE
+
+- 100k concurrent streams @ 50 tok/s → 5M tok/s; plan GPU count for model throughput; batch size 8–16.
+- KV cache: 128k tokens/GPU tier; promote hot sessions; evict with LRU per tenant.
+
+## Testing & eval
+
+- Load gen with mixed prompts/tools; TTFT SLO monitors; shadow deploys for new model versions with guardrails.

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "DMA and Zero-Copy Architecture: High-Throughput Embedded C++"
-date: 2025-10-30 22:55:00 -0700
+date: 2025-10-29 22:55:00 -0700
 categories: embedded performance dma
-permalink: /2025/10/30/dma-zero-copy-architecture/
+permalink: /2025/10/29/dma-zero-copy-architecture/
 tags: [dma, zero-copy, throughput, cache, ahardwarebuffer]
 ---
 
@@ -37,5 +37,3 @@ AHardwareBuffer_allocate(&d, &ahb);
 ## Cache coherency
 
 - Beware D‑cache on DMA; use clean/invalidate or non‑cacheable regions; align to cache lines.
-
-

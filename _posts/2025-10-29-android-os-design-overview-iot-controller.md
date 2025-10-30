@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Android OS Design Overview: IoT Device Controller"
-date: 2025-10-30 22:00:00 -0700
+date: 2025-10-29 22:00:00 -0700
 categories: android system-design embedded
-permalink: /2025/10/30/android-os-design-overview-iot-controller/
+permalink: /2025/10/29/android-os-design-overview-iot-controller/
 tags: [android, architecture, services, hal, aidl, bluetooth, permissions, power]
 ---
 
@@ -118,4 +118,3 @@ Java_com_example_iot_Native_parseFrame(JNIEnv* env, jclass, jbyteArray input) {
 ## Interview checklist
 
 - Layers (UI, Service, Repo, Transport), background limits, permission model, power, recovery, OTA, and security posture.
-

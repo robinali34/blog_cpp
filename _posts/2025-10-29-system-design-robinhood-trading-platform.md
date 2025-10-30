@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "System Design: Robinhood-Style Retail Trading Platform"
-date: 2025-10-30 20:00:00 -0700
+date: 2025-10-29 20:00:00 -0700
 categories: system-design architecture fintech
-permalink: /2025/10/30/system-design-robinhood/
+permalink: /2025/10/29/system-design-robinhood/
 tags: [system-design, trading, market-data, orders, risk, compliance, reliability]
 ---
 
@@ -179,4 +179,36 @@ WebSocket events
 
 - Start with equities cash accounts; add margin, options, and crypto with separate risk engines; move to multi‑region read replicas, with OMS in primary only.
 
+## Detailed APIs
 
+```http
+POST /v1/orders { account_id, symbol, side, type, qty, limit_price?, tif } -> { id }
+GET  /v1/orders/{id}
+GET  /v1/quotes?symbols=AAPL,TSLA
+```
+
+## Data models (DDL sketch)
+
+```sql
+CREATE TABLE orders (
+  id bigint PRIMARY KEY,
+  account_id bigint,
+  symbol text,
+  side smallint,
+  type smallint,
+  qty numeric(18,4),
+  limit_price numeric(18,4),
+  tif smallint,
+  state smallint,
+  created_at timestamptz
+);
+```
+
+## Failure drills
+
+- OMS db failover → promote replica; halt routing; reconcile from Kafka; resume.
+- Exchange reject storm → auto‑throttle; switch venues; client messaging.
+
+## Test plan
+
+- Simulated market opens; PDT rule edge cases; ledger reconciliation fuzzing; venue connector chaos tests.

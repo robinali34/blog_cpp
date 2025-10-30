@@ -1,15 +1,15 @@
 ---
 layout: post
 title: "Embedded System Design for a Single Device: Lidar Sensor + Android (Interview Guide)"
-date: 2025-10-30 12:00:00 -0700
+date: 2025-10-29 12:00:00 -0700
 categories: system-design embedded android iot
-permalink: /2025/10/30/embedded-single-device-design-android-lidar/
+permalink: /2025/10/29/embedded-single-device-design-android-lidar/
 tags: [embedded, android, system-design, bluetooth, ble, wifi, usb, sensors, lidar, power, security, jni]
 ---
 
 # Embedded System Design for a Single Device: Lidar Sensor + Android
 
-This interview-oriented guide walks through designing a single embedded device solution: a Lidar sensor streaming measurements to an Android client. It covers requirements, interfaces (BLE/Wi‑Fi/USB), data formats, power, security, diagnostics, testing, and production considerations.
+This interview-oriented guide walks through designing a single embedded device solution: a Lidar sensor streaming measurements to an Android app for visualization, logging, and OTA settings. It covers requirements, interfaces (BLE/Wi‑Fi/USB), data formats, power, security, diagnostics, testing, and production considerations.
 
 ## 1) Problem framing
 
@@ -202,5 +202,3 @@ struct Packetizer {
 - Provide testing plan and factory flow.
 
 This template generalizes beyond Lidar to any single‑device sensor (IMU, ToF array, environmental). Adjust payload and throughput accordingly.
-
-

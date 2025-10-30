@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "System Design: Twitter (Timeline, Fanout, Search, Trends)"
-date: 2025-10-30 21:00:00 -0700
+date: 2025-10-29 21:00:00 -0700
 categories: system-design architecture social
-permalink: /2025/10/30/system-design-twitter/
+permalink: /2025/10/29/system-design-twitter/
 tags: [system-design, timeline, feed, fanout, search, trends, caching]
 ---
 
@@ -106,4 +106,50 @@ POST /v1/tweets/{id}/like
 
 - Phase 1: push‑only for small scale; Phase 2: hybrid fanout with on‑read merge; Phase 3: multi‑region with CRDT counters and geo‑proximal reads.
 
+## Detailed APIs (sample)
 
+```http
+POST /v1/tweets { text, media_ids[], reply_to?, audience? } -> { id }
+GET  /v1/timeline/home?cursor=... -> { items:[{tweet_id, user, text, media, counters}], next_cursor }
+POST /v1/tweets/{id}/like -> 204
+```
+
+## Data model (DDL sketch)
+
+```sql
+CREATE TABLE tweets (
+  tweet_id bigint PRIMARY KEY,
+  user_id bigint NOT NULL,
+  ts timestamp NOT NULL,
+  text text,
+  media jsonb,
+  visibility smallint,
+  attrs jsonb
+);
+CREATE TABLE timeline_items (
+  user_id bigint,
+  tweet_id bigint,
+  ts timestamp,
+  PRIMARY KEY (user_id, tweet_id)
+);
+```
+
+## Capacity math (BoE)
+
+- Home timeline read 2M QPS p95 200 ms → Redis cluster of N shards each ~150k QPS; cache size ~120 GB for heads.
+- Storage: 50M tweets/day @1 KB → 50 GB/day; 2‑year hot tier ~36 TB (before compression).
+
+## Consistency matrix
+
+- Tweet create: strong (single writer, idempotency key)
+- Timeline insert: eventual; reconcile on read with per‑followee cursors
+- Counters: eventual with periodic flush to base store
+
+## Failure drill runbook
+
+- Fanout backlog > threshold → switch heavy authors to pull, throttle enrichment, shed "who to follow".
+- Redis shard hot → enable request coalescing, migrate keys, temporarily reduce page size.
+
+## Testing plan
+
+- Load tests with mixed read/write and super‑user spikes; chaos on fanout queue; cache stampede simulations.

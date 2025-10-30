@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "USB Reader/Writer with C++ (Embedded): CDC-ACM and libusb Bulk"
-date: 2025-10-30 17:00:00 -0700
+date: 2025-10-29 17:00:00 -0700
 categories: cpp systems embedded
-permalink: /2025/10/30/usb-reader-writer-embedded-cpp/
+permalink: /2025/10/29/usb-reader-writer-embedded-cpp/
 tags: [cpp, usb, embedded, cdc-acm, libusb, serial, bulk-transfer]
 ---
 
@@ -137,5 +137,3 @@ Throughput tips
 
 Safety
 - If a kernel driver (e.g., `cdc_acm`) owns the interface, either use CDC-ACM path or auto-detach (`libusb_set_auto_detach_kernel_driver`). Don’t race the same interface with two drivers.
-
-

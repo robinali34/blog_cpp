@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "System Design: Notification/Push Service"
-date: 2025-10-30 23:15:00 -0700
+date: 2025-10-29 23:15:00 -0700
 categories: system-design architecture
-permalink: /2025/10/30/system-design-notification-service/
+permalink: /2025/10/29/system-design-notification-service/
 tags: [system-design, push, apns, fcm, email, retry]
 ---
 
@@ -24,5 +24,3 @@ Producers → Topic (Kafka) → Router → Channel Workers (APNs/FCM/SMTP/SMS) �
 
 ## Failure modes
 - Provider outage → circuit break and requeue with exponential backoff; channel fallback.
-
-

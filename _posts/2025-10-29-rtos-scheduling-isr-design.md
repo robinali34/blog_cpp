@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "RTOS Scheduling and ISR Design: Queues, Priorities, and Backpressure"
-date: 2025-10-30 22:30:00 -0700
+date: 2025-10-29 22:30:00 -0700
 categories: embedded rtos concurrency
-permalink: /2025/10/30/rtos-scheduling-isr-design/
+permalink: /2025/10/29/rtos-scheduling-isr-design/
 tags: [rtos, isr, dma, concurrency, queues, backpressure]
 ---
 
@@ -55,5 +55,3 @@ inline size_t pop_task(Ring& r, std::span<uint8_t> out) {
 - Drop newest non‑critical packets; keep metadata.
 - Signal rate reducer upstream (lower sample rate or MTU).
 - Telemetry summarization when congested.
-
-

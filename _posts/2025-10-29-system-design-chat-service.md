@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "System Design: Chat/Messaging Service"
-date: 2025-10-30 23:12:00 -0700
+date: 2025-10-29 23:12:00 -0700
 categories: system-design architecture realtime
-permalink: /2025/10/30/system-design-chat-service/
+permalink: /2025/10/29/system-design-chat-service/
 tags: [system-design, websocket, pubsub, storage, ordering, presence]
 ---
 
@@ -32,4 +32,18 @@ Clients → Gateway (auth) → WebSocket Fanout + Pub/Sub (Kafka) → Message St
 ## Failure modes
 - Hot group → split shards, partial fanout; degraded typing indicators under load.
 
+## Detailed APIs
 
+```http
+POST /v1/messages { conv_id, body, attachments? } -> { msg_id }
+GET  /v1/conversations/{id}/history?cursor=...
+POST /v1/receipts { conv_id, msg_id, type=delivered|read }
+```
+
+## Retention & search
+
+- Retention policies per workspace; legal hold; search indexes updated async with privacy filters.
+
+## Test plan
+
+- WS longevity under mobile networks; presence convergence; ordered delivery under partition.

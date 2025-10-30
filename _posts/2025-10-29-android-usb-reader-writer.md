@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Android USB Reader/Writer: USB Host with Kotlin (CDC-ACM & Bulk)"
-date: 2025-10-30 18:00:00 -0700
+date: 2025-10-29 18:00:00 -0700
 categories: android embedded systems
-permalink: /2025/10/30/android-usb-reader-writer/
+permalink: /2025/10/29/android-usb-reader-writer/
 tags: [android, usb, usb-host, cdc-acm, bulk, kotlin]
 ---
 
@@ -156,5 +156,3 @@ Troubleshooting
 - If `bulkTransfer` returns -1 quickly, check endpoint direction/type and timeouts.
 - If permission dialog doesn’t appear, verify action string matches in broadcast/manifest.
 - Some devices need an OTG adapter or external power; check logs with `adb logcat`. 
-
-

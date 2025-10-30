@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "PostgreSQL with C++: Practical Guide with Examples"
-date: 2025-10-30 10:00:00 -0700
+date: 2025-10-29 10:00:00 -0700
 categories: cpp database postgresql
-permalink: /2025/10/30/postgresql-with-cpp-guide/
+permalink: /2025/10/29/postgresql-with-cpp-guide/
 tags: [cpp, postgresql, database, libpq, libpqxx, transactions, prepared-statements, pooling]
 ---
 
@@ -327,5 +327,3 @@ private:
 
 - libpqxx docs: https://libpqxx.readthedocs.io/
 - libpq docs: https://www.postgresql.org/docs/current/libpq.html
-
-

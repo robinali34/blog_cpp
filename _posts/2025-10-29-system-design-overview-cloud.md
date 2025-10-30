@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "System Design Overview: Cloud-Native Architectures"
-date: 2025-10-30 21:45:00 -0700
+date: 2025-10-29 21:45:00 -0700
 categories: system-design architecture cloud
-permalink: /2025/10/30/system-design-overview-cloud/
+permalink: /2025/10/29/system-design-overview-cloud/
 tags: [system-design, cloud, microservices, kubernetes, api-gateway, caching, streaming, observability]
 ---
 
@@ -58,4 +58,13 @@ Infra: Kubernetes, Service Mesh, IaC (Terraform), Secrets (KMS)
 
 - Entry → gateway → services → data; sync vs async; cache strategy; failure modes; rollout plan; SLOs.
 
+## SLO & capacity templates
 
+```text
+SLOs: API p95 < 200 ms, availability 99.9%, error rate < 0.1%
+Capacity (BoE): QPS=____, payload=____ KB → egress/day=____ GB; cache hit target=____; DB IOPS needed=____.
+```
+
+## Failure drill menu
+
+- Regional outage, cache cluster loss, message backlog, DB primary failover, provider throttle—define runbooks and automate game days.

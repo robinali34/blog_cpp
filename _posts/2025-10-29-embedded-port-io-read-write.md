@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Embedded Port I/O Read/Write: uint8_t/uint16_t/uint32_t and More"
-date: 2025-10-30 19:00:00 -0700
+date: 2025-10-29 19:00:00 -0700
 categories: embedded systems low-level
-permalink: /2025/10/30/embedded-port-io-read-write/
+permalink: /2025/10/29/embedded-port-io-read-write/
 tags: [embedded, mmio, registers, volatile, endianness, memory-barriers, alignment]
 ---
 
@@ -201,5 +201,3 @@ void gpio_write32(unsigned pin, bool high) {
 - Handle endianness and alignment explicitly.
 - Prefer register block structs for clarity; keep addresses/types central.
 - Isolate ISR vs. main access; use atomics/critical sections if shared.
-
-

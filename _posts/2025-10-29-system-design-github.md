@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "System Design: GitHub (Repos, Git Storage, PRs, CI)"
-date: 2025-10-30 21:20:00 -0700
+date: 2025-10-29 21:20:00 -0700
 categories: system-design architecture devtools
-permalink: /2025/10/30/system-design-github/
+permalink: /2025/10/29/system-design-github/
 tags: [system-design, git, storage, code-review, ci, actions]
 ---
 
@@ -66,4 +66,20 @@ POST /repos/{owner}/{repo}/actions/workflows/{id}/dispatches
 - Runner abuse/crypto‑mining → quotas, network egress limits, anomaly detection.
 - Large monorepos → partial clones, sparse checkout, server‑side filtering.
 
+## Detailed APIs
 
+```http
+POST /repos/{o}/{r}/pulls { base, head, title, body } -> { number }
+GET  /repos/{o}/{r}/git/trees/{sha}?recursive=1
+POST /repos/{o}/{r}/actions/workflows/{id}/dispatches { ref, inputs }
+```
+
+## Data model details
+
+- Refs db: transactional table for branches/tags with CAS semantics; audit trail for force‑push.
+- PR store: base/head SHAs, review comments, checks status, mergeability cache.
+
+## Failure drills
+
+- Packfile corruption → quarantine repo, rebuild from replicas; notify owners.
+- Actions runner shortage → queue backoff, burst to cloud pool, reduce concurrency groups.

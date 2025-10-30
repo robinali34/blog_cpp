@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "System Design Overview: Embedded Architectures"
-date: 2025-10-30 21:50:00 -0700
+date: 2025-10-29 21:50:00 -0700
 categories: system-design embedded architecture
-permalink: /2025/10/30/system-design-overview-embedded/
+permalink: /2025/10/29/system-design-overview-embedded/
 tags: [embedded, mcu, rtos, drivers, boot, power, security, connectivity]
 ---
 
@@ -54,4 +54,10 @@ Peripherals: timers, watchdog, PMIC; Storage: NOR/NAND/EEPROM; Debug: SWD/JTAG/E
 
 - Boot→app flow, task breakdown, ISR boundaries, memory map, power modes, updates, and failure handling.
 
+## Power & test templates
 
+```text
+Power budget: Active ____ mA (duty ____%), Idle ____ mA, Sleep ____ µA → avg ____ mA → battery life ____ h on ____ mAh.
+Thermal: throttle thresholds ____ °C; degradation plan (fps/res/ML).
+Test: HIL record/replay; RF link loss scenarios; OTA abort/resume.
+```

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Matter (CHIP) with C++: Intro and Practical Examples"
-date: 2025-10-30 14:00:00 -0700
+date: 2025-10-29 14:00:00 -0700
 categories: iot matter embedded
-permalink: /2025/10/30/matter-with-cpp-intro-and-examples/
+permalink: /2025/10/29/matter-with-cpp-intro-and-examples/
 tags: [iot, matter, chip, embedded, bluetooth, wifi, thread, commissioning, clusters]
 ---
 
@@ -178,5 +178,3 @@ Security tips
 - Matter SDK repo: https://github.com/project-chip/connectedhomeip
 - CSA Matter spec: https://csa-iot.org/all-solutions/matter/
 - chip-tool usage: search "connectedhomeip chip-tool" in the SDK docs/examples
-
-

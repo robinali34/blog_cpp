@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Secure Bootloader and OTA: A/B Slots, Signatures, and Rollback"
-date: 2025-10-30 22:35:00 -0700
+date: 2025-10-29 22:35:00 -0700
 categories: embedded security ota
-permalink: /2025/10/30/bootloader-ota-secure/
+permalink: /2025/10/29/bootloader-ota-secure/
 tags: [bootloader, ota, signatures, rollback, a-b, flash]
 ---
 
@@ -44,5 +44,3 @@ Rules
 - Never execute unverified images.
 - Mark new slot "pending"; only commit after app sets healthy flag N times.
 - Keep watchdog during update; power‑loss safe writes (copy‑on‑write pages).
-
-

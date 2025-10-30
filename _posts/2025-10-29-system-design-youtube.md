@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "System Design: YouTube (Upload, Transcode, CDN, Recommendations)"
-date: 2025-10-30 21:10:00 -0700
+date: 2025-10-29 21:10:00 -0700
 categories: system-design architecture media
-permalink: /2025/10/30/system-design-youtube/
+permalink: /2025/10/29/system-design-youtube/
 tags: [system-design, video, cdn, transcoding, recommendation, search]
 ---
 
@@ -79,4 +79,29 @@ GET  /v1/search?q=...
 
 - Metadata strongly consistent; edge caches eventual; search index eventually consistent with tombstone handling.
 
+## Detailed APIs
 
+```http
+POST /v1/videos { title, file_id, privacy } -> { id }
+GET  /v1/videos/{id}
+GET  /v1/watch/{id}/manifest.m3u8
+POST /v1/live/start { stream_key }
+```
+
+## Storage layout
+
+- Masters: `s3://videos/master/{id}`; Segments: `s3://videos/segments/{id}/{bitrate}/{seq}.m4s`;
+- Manifests cached at CDN; signed cookies for private content.
+
+## Capacity table (BoE)
+
+| Component | Rate | Notes |
+|---|---:|---|
+| Upload ingest | 2 Gbps/region | spikes on events |
+| Transcode jobs | 1M/day | GPU pool autoscaled |
+| CDN egress | 5 Tbps peak | multi‑CDN |
+
+## Failure drills
+
+- Region transcoder loss → drain queues to others; degrade ladder; user messaging for quality.
+- CDN cache miss surge → pre‑warm top manifests; tighten CDN TTL for manifests only.

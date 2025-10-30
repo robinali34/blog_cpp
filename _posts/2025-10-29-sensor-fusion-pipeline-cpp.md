@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Sensor Fusion Pipeline in C++: IMU + Lidar with Bounded Latency"
-date: 2025-10-30 22:45:00 -0700
+date: 2025-10-29 22:45:00 -0700
 categories: embedded sensors cpp
-permalink: /2025/10/30/sensor-fusion-pipeline-cpp/
+permalink: /2025/10/29/sensor-fusion-pipeline-cpp/
 tags: [imu, lidar, sensor-fusion, filters, latency, time-sync]
 ---
 
@@ -33,5 +33,4 @@ void update(State& s, const Sample& lidar);
 ## Latency budget
 
 - End‑to‑end < 30 ms: IMU ISR→queue (<1 ms), predictor (<1 ms), lidar update (<2 ms), render/logging async.
-
 

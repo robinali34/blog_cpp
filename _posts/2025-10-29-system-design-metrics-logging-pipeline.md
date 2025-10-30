@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "System Design: Metrics & Logging Pipeline"
-date: 2025-10-30 23:18:00 -0700
+date: 2025-10-29 23:18:00 -0700
 categories: system-design architecture observability
-permalink: /2025/10/30/system-design-metrics-logging-pipeline/
+permalink: /2025/10/29/system-design-metrics-logging-pipeline/
 tags: [system-design, metrics, logging, kafka, prom, elastic]
 ---
 
@@ -25,5 +25,3 @@ Agents → Kafka (multi-tenant topics) → Stream processors (PII redaction, sam
 
 ## Failure modes
 - Backpressure to agents (buffer + sampling); hot shards → rebalancing; index throttling.
-
-
