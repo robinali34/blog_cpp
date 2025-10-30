@@ -27,6 +27,7 @@
   function render(posts, { pageSize, page, query, category }) {
     const list = document.getElementById('posts-list');
     const pagination = document.getElementById('pagination');
+    const resultsMeta = document.getElementById('results-meta');
     const q = (query || '').trim().toLowerCase();
     const cat = (category || '').trim().toLowerCase();
 
@@ -41,12 +42,27 @@
     const start = (current - 1) * pageSize;
     const slice = filtered.slice(start, start + pageSize);
 
-    list.innerHTML = slice.map(p => (
-      '<div class="post-item">'
-      + '<div class="post-title"><a href="' + p.url + '">' + p.title + '</a></div>'
-      + '<div class="post-meta">' + formatDate(p.date) + (p.categories && p.categories.length ? ' · ' + p.categories.join(', ') : '') + '</div>'
-      + '</div>'
-    )).join('');
+    if (resultsMeta) {
+      const total = filtered.length;
+      const rangeFrom = total ? (start + 1) : 0;
+      const rangeTo = start + slice.length;
+      resultsMeta.textContent = total + ' posts found' + (total ? (' · showing ' + rangeFrom + '–' + rangeTo) : '');
+    }
+
+    list.innerHTML = slice.map(p => {
+      const cats = (p.categories || []).map(c => '<span class="chip" title="Category">' + c + '</span>').join('');
+      const tags = (p.tags || []).map(t => '<span class="chip" title="Tag">#' + t + '</span>').join('');
+      const chips = (cats || tags) ? ('<div class="chips">' + cats + tags + '</div>') : '';
+      const excerpt = p.excerpt ? ('<div class="post-excerpt">' + p.excerpt + '</div>') : '';
+      return (
+        '<div class="post-item">'
+        + '<div class="post-title"><a href="' + p.url + '">' + p.title + '</a></div>'
+        + '<div class="post-meta">' + formatDate(p.date) + '</div>'
+        + excerpt
+        + chips
+        + '</div>'
+      );
+    }).join('');
 
     // Pagination controls
     const makeBtn = (label, targetPage, disabled, active) => {
@@ -111,8 +127,8 @@
   }
 
   let POSTS = [];
-  let UI = { search: null, category: null };
-  let STATE = { query: '', category: '', page: 1 };
+  let UI = { search: null, category: null, pageSize: null, clear: null };
+  let STATE = { query: '', category: '', page: 1, pageSize: 10 };
 
   function updateState(partial) {
     STATE = Object.assign({}, STATE, partial);
@@ -120,21 +136,24 @@
       STATE.page = 1; // reset page on filter change
     }
     writeStateToUrl(STATE);
-    render(POSTS, { pageSize: 10, page: STATE.page, query: STATE.query, category: STATE.category });
+    render(POSTS, { pageSize: STATE.pageSize, page: STATE.page, query: STATE.query, category: STATE.category });
   }
 
   function init() {
     POSTS = parsePosts();
     UI.search = document.getElementById('search-input');
     UI.category = document.getElementById('category-select');
+    UI.pageSize = document.getElementById('page-size');
+    UI.clear = document.getElementById('clear-filters');
 
     // Initialize state from URL
     const initial = readState();
-    STATE = { query: initial.query, category: initial.category, page: initial.page || 1 };
+    STATE = { query: initial.query, category: initial.category, page: initial.page || 1, pageSize: Number(initial.pageSize || 10) };
 
     // Set UI from state
     if (UI.search) UI.search.value = STATE.query;
     if (UI.category) UI.category.value = STATE.category;
+    if (UI.pageSize) UI.pageSize.value = String(STATE.pageSize);
 
     // Wire events
     if (UI.search) {
@@ -147,9 +166,19 @@
     if (UI.category) {
       UI.category.addEventListener('change', () => updateState({ category: UI.category.value }));
     }
+    if (UI.pageSize) {
+      UI.pageSize.addEventListener('change', () => updateState({ pageSize: Number(UI.pageSize.value), page: 1 }));
+    }
+    if (UI.clear) {
+      UI.clear.addEventListener('click', () => {
+        if (UI.search) UI.search.value = '';
+        if (UI.category) UI.category.value = '';
+        updateState({ query: '', category: '', page: 1 });
+      });
+    }
 
     // First render
-    render(POSTS, { pageSize: 10, page: STATE.page, query: STATE.query, category: STATE.category });
+    render(POSTS, { pageSize: STATE.pageSize, page: STATE.page, query: STATE.query, category: STATE.category });
   }
 
   if (document.readyState === 'loading') {

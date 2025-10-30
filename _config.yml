@@ -40,6 +40,8 @@ plugins:
 # Navigation
 header_pages:
   - all-posts.md
+  - about.md
+  - contact.md
 
 # Exclude
 exclude:
