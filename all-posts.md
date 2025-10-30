@@ -32,7 +32,7 @@ permalink: /all/
 {% for post in posts_sorted %}
   {
     "title": {{ post.title | jsonify }},
-    "url": {{ post.url | jsonify }},
+    "url": {{ post.url | relative_url | jsonify }},
     "date": {{ post.date | date_to_xmlschema | jsonify }},
     "categories": {{ post.categories | default: [] | jsonify }}
   }{% unless forloop.last %},{% endunless %}

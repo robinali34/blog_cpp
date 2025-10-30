@@ -35,7 +35,7 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: |
-          bundle exec jekyll build --baseurl "$BASE_PATH"
+          bundle exec jekyll build
         shell: bash
 
       - name: Upload artifact
