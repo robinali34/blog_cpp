@@ -2,5 +2,48 @@ title: "C++ & Systems Blog"
 description: "C++/Systems posts migrated from blog_leetcode"
 baseurl: ""
 url: ""
+
+# Build settings
 markdown: kramdown
+highlighter: rouge
 theme: minima
+show_excerpts: true
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Pagination
+paginate: 10
+paginate_path: "/posts/page:num/"
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
