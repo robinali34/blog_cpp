@@ -28,11 +28,9 @@ nav_exclude: true
       <article class="post-item" data-title="{{ post.title | downcase }}" data-excerpt="{{ post.excerpt | strip_html | downcase }}" data-categories="{{ post.categories | join: ' ' | downcase }}" data-tags="{{ post.tags | join: ' ' | downcase }}">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <div class="post-meta">{{ post.date | date: date_format }}</div>
-        <h2 class="post-title">
-          <a class="post-link" href="{{ post.url | absolute_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h2>
+        <div class="post-link-md">
+          [<a href="{{ post.url | absolute_url }}">{{ post.title | escape }}</a>]({{ post.url | absolute_url }})
+        </div>
         {%- if post.excerpt -%}
           <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</div>
         {%- endif -%}
@@ -93,6 +91,9 @@ nav_exclude: true
 .post-excerpt { color: #444; margin-top: 0.35rem; line-height: 1.45; }
 .post-categories, .post-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
 .category-tag, .tag { display: inline-block; padding: 0.12rem 0.45rem; border: 1px solid #e0e0e0; border-radius: 999px; font-size: 0.8rem; color: #555; background: #f8f8f8; }
+.post-link-md { margin-top: 0.2rem; font-size: 0.95rem; }
+.post-link-md a { color: #0366d6; word-break: break-all; text-decoration: none; }
+.post-link-md a:hover { text-decoration: underline; }
 
 .back-to-home { text-align: center; margin: 1.5rem 0 0; }
 .btn { display: inline-block; padding: 0.5rem 0.9rem; border: 1px solid #ddd; border-radius: 8px; background: #fff; color: #0366d6; text-decoration: none; }

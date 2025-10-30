@@ -21,11 +21,7 @@ layout: default
         <article class="post-card">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <div class="post-meta">{{ post.date | date: date_format }}</div>
-          <h3 class="post-title">
-            <a class="post-link" href="{{ post.url | absolute_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h3>
+          <div class="post-link-md">[<a href="{{ post.url | absolute_url }}">{{ post.title | escape }}</a>]({{ post.url | absolute_url }})</div>
           {%- if post.excerpt -%}
             <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</div>
           {%- endif -%}
@@ -55,11 +51,7 @@ layout: default
         <article class="post-item">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <div class="post-meta">{{ post.date | date: date_format }}</div>
-          <h3 class="post-title">
-            <a class="post-link" href="{{ post.url | absolute_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h3>
+          <div class="post-link-md">[<a href="{{ post.url | absolute_url }}">{{ post.title | escape }}</a>]({{ post.url | absolute_url }})</div>
           {%- if post.excerpt -%}
             <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</div>
           {%- endif -%}
@@ -122,6 +114,9 @@ layout: default
 .post-excerpt { color: #444; margin-top: 0.35rem; line-height: 1.45; }
 .post-categories { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
 .category-tag { display: inline-block; padding: 0.12rem 0.45rem; border: 1px solid #e0e0e0; border-radius: 999px; font-size: 0.8rem; color: #555; background: #f8f8f8; }
+.post-link-md { margin-top: 0.3rem; font-size: 0.95rem; }
+.post-link-md a { color: #0366d6; word-break: break-all; text-decoration: none; }
+.post-link-md a:hover { text-decoration: underline; }
 
 .view-all-posts { text-align: center; margin-top: 0.9rem; }
 .btn { display: inline-block; padding: 0.5rem 0.9rem; border: 1px solid #ddd; border-radius: 8px; background: #fff; color: #0366d6; text-decoration: none; }
