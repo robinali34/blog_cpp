@@ -78,6 +78,41 @@ nav_exclude: true
   </div>
 </div>
 
+<style>
+.posts-page { max-width: 1000px; margin: 0 auto; padding: 0 1rem 2rem; }
+.page-header { margin: 1rem 0 1.25rem; }
+.page-title { margin: 0; font-size: 2rem; }
+.page-description { color: #555; margin-top: 0.25rem; }
+
+.search-section { position: sticky; top: 0; background: #fff; padding: 0.75rem 0; z-index: 5; border-bottom: 1px solid #eee; }
+.search-container { display: flex; flex-direction: column; gap: 0.5rem; }
+.search-input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 0.95rem; }
+.search-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.filter-btn { padding: 0.25rem 0.6rem; border: 1px solid #ddd; border-radius: 999px; background: #fafafa; color: #444; cursor: pointer; font-size: 0.85rem; }
+.filter-btn:hover { background: #f0f0f0; }
+.filter-btn.active { background: #0366d6; color: #fff; border-color: #0366d6; }
+.search-results-info { margin-top: 0.25rem; color: #666; font-size: 0.9rem; }
+
+.posts-list { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 0.9rem; margin-top: 1rem; }
+@media (min-width: 700px) { .posts-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.post-item { border: 1px solid #eaecef; border-radius: 10px; padding: 0.9rem; background: #fff; transition: box-shadow 0.2s ease, transform 0.05s ease; }
+.post-item:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.06); transform: translateY(-1px); }
+.post-meta { color: #666; font-size: 0.85rem; }
+.post-title { margin: 0.2rem 0 0; font-size: 1.05rem; }
+.post-link { text-decoration: none; color: #24292e; }
+.post-link:hover { text-decoration: underline; }
+.post-excerpt { color: #444; margin-top: 0.35rem; line-height: 1.45; }
+.post-categories, .post-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
+.category-tag, .tag { display: inline-block; padding: 0.12rem 0.45rem; border: 1px solid #e0e0e0; border-radius: 999px; font-size: 0.8rem; color: #555; background: #f8f8f8; }
+
+.back-to-home { text-align: center; margin: 1.5rem 0 0; }
+.btn { display: inline-block; padding: 0.5rem 0.9rem; border: 1px solid #ddd; border-radius: 8px; background: #fff; color: #0366d6; text-decoration: none; }
+.btn:hover { background: #f6f8fa; }
+
+.no-posts { text-align: center; color: #666; padding: 2rem 0; }
+</style>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('searchInput');

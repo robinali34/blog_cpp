@@ -97,3 +97,44 @@ layout: default
   </section>
 
 </div>
+
+<style>
+.home { max-width: 1000px; margin: 0 auto; padding: 0 1rem 2rem; }
+.site-header { text-align: center; margin: 1rem 0 1.25rem; }
+.site-title { margin: 0; font-size: 2.1rem; }
+.site-subtitle { color: #666; margin: 0.25rem 0 0; }
+
+.welcome-section { text-align: center; margin: 1rem 0 1.25rem; }
+.welcome-section h2 { margin: 0 0 0.25rem; }
+.welcome-section p { color: #555; margin: 0; }
+
+.latest-posts { margin-top: 1.25rem; }
+.latest-posts h2 { margin-bottom: 0.6rem; }
+.post-grid { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 0.9rem; }
+@media (min-width: 700px) { .post-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.post-card { border: 1px solid #eaecef; border-radius: 10px; padding: 0.9rem; background: #fff; transition: box-shadow 0.2s ease, transform 0.05s ease; }
+.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.06); transform: translateY(-1px); }
+.post-meta { color: #666; font-size: 0.85rem; }
+.post-title { margin: 0.2rem 0 0; font-size: 1.05rem; }
+.post-link { text-decoration: none; color: #24292e; }
+.post-link:hover { text-decoration: underline; }
+.post-excerpt { color: #444; margin-top: 0.35rem; line-height: 1.45; }
+.post-categories { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
+.category-tag { display: inline-block; padding: 0.12rem 0.45rem; border: 1px solid #e0e0e0; border-radius: 999px; font-size: 0.8rem; color: #555; background: #f8f8f8; }
+
+.view-all-posts { text-align: center; margin-top: 0.9rem; }
+.btn { display: inline-block; padding: 0.5rem 0.9rem; border: 1px solid #ddd; border-radius: 8px; background: #fff; color: #0366d6; text-decoration: none; }
+.btn:hover { background: #f6f8fa; }
+
+.all-posts { margin-top: 1.5rem; }
+.posts-list { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 0.9rem; }
+.post-item { border: 1px solid #eaecef; border-radius: 10px; padding: 0.9rem; background: #fff; }
+
+.pagination { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-top: 1rem; color: #555; }
+.pagination a { color: #0366d6; }
+.pagination .disabled { opacity: 0.5; }
+
+.rss-section { text-align: center; margin-top: 1.25rem; color: #555; }
+.rss-section a { color: #0366d6; }
+</style>
