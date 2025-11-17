@@ -45,39 +45,39 @@ layout: default
         </div>
       </article>
     </main>
+  </div>
 
-    <!-- Right Sidebar -->
-    <aside class="post-sidebar">
-      <div class="sidebar-section">
-        <h3 class="sidebar-title">Related Pages</h3>
-        <ul class="related-posts-list">
-          {%- for header_page in site.header_pages -%}
-            {%- assign header_page_obj = site.pages | where: "path", header_page | first -%}
-            {%- if header_page_obj and header_page_obj.url != page.url -%}
-              <li class="related-post-item">
-                <a href="{{ header_page_obj.url | relative_url }}" class="related-post-link">
-                  <span class="related-post-title">{{ header_page_obj.title | escape }}</span>
-                </a>
-              </li>
-            {%- endif -%}
-          {%- endfor -%}
-        </ul>
-      </div>
-
-      <div class="sidebar-section">
-        <h3 class="sidebar-title">Recent Posts</h3>
-        <ul class="recent-posts-list">
-          {%- for post in site.posts limit: 5 -%}
-            <li class="recent-post-item">
-              <a href="{{ post.url | relative_url }}" class="recent-post-link">
-                <span class="recent-post-title">{{ post.title | escape }}</span>
-                <span class="recent-post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <!-- Bottom Sections -->
+  <div class="post-bottom-sections">
+    <div class="bottom-section">
+      <h3 class="bottom-section-title">Related Pages</h3>
+      <ul class="related-posts-list">
+        {%- for header_page in site.header_pages -%}
+          {%- assign header_page_obj = site.pages | where: "path", header_page | first -%}
+          {%- if header_page_obj and header_page_obj.url != page.url -%}
+            <li class="related-post-item">
+              <a href="{{ header_page_obj.url | relative_url }}" class="related-post-link">
+                <span class="related-post-title">{{ header_page_obj.title | escape }}</span>
               </a>
             </li>
-          {%- endfor -%}
-        </ul>
-      </div>
-    </aside>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    <div class="bottom-section">
+      <h3 class="bottom-section-title">Recent Posts</h3>
+      <ul class="recent-posts-list">
+        {%- for post in site.posts limit: 5 -%}
+          <li class="recent-post-item">
+            <a href="{{ post.url | relative_url }}" class="recent-post-link">
+              <span class="recent-post-title">{{ post.title | escape }}</span>
+              <span class="recent-post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
   </div>
 </div>
 

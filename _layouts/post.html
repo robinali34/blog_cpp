@@ -81,25 +81,56 @@ layout: default
         </footer>
       </article>
     </main>
+  </div>
 
-    <!-- Right Sidebar -->
-    <aside class="post-sidebar">
-      <div class="sidebar-section">
-        <h3 class="sidebar-title">Related Posts</h3>
-        <ul class="related-posts-list">
-          {%- assign related_count = 0 -%}
-          {%- assign max_related = 5 -%}
-          {%- if page.categories.size > 0 -%}
-            {%- for post in site.posts -%}
-              {%- if post.url != page.url and related_count < max_related -%}
-                {%- assign has_common_category = false -%}
-                {%- for category in page.categories -%}
-                  {%- if post.categories contains category -%}
-                    {%- assign has_common_category = true -%}
+  <!-- Bottom Sections -->
+  <div class="post-bottom-sections">
+    <div class="bottom-section">
+      <h3 class="bottom-section-title">Related Posts</h3>
+      <ul class="related-posts-list">
+        {%- assign related_count = 0 -%}
+        {%- assign max_related = 5 -%}
+        {%- if page.categories.size > 0 -%}
+          {%- for post in site.posts -%}
+            {%- if post.url != page.url and related_count < max_related -%}
+              {%- assign has_common_category = false -%}
+              {%- for category in page.categories -%}
+                {%- if post.categories contains category -%}
+                  {%- assign has_common_category = true -%}
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- if has_common_category -%}
+                <li class="related-post-item">
+                  <a href="{{ post.url | relative_url }}" class="related-post-link">
+                    <span class="related-post-title">{{ post.title | escape }}</span>
+                    <span class="related-post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                  </a>
+                </li>
+                {%- assign related_count = related_count | plus: 1 -%}
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+        {%- if related_count < max_related and page.tags.size > 0 -%}
+          {%- for post in site.posts -%}
+            {%- if post.url != page.url and related_count < max_related -%}
+              {%- assign has_common_tag = false -%}
+              {%- for tag in page.tags -%}
+                {%- if post.tags contains tag -%}
+                  {%- assign has_common_tag = true -%}
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- if has_common_tag -%}
+                {%- assign already_listed = false -%}
+                {%- for related_post in site.posts limit: related_count -%}
+                  {%- if related_post.url == post.url -%}
+                    {%- assign already_listed = true -%}
                     {%- break -%}
                   {%- endif -%}
                 {%- endfor -%}
-                {%- if has_common_category -%}
+                {%- unless already_listed -%}
                   <li class="related-post-item">
                     <a href="{{ post.url | relative_url }}" class="related-post-link">
                       <span class="related-post-title">{{ post.title | escape }}</span>
@@ -107,65 +138,34 @@ layout: default
                     </a>
                   </li>
                   {%- assign related_count = related_count | plus: 1 -%}
-                {%- endif -%}
+                {%- endunless -%}
               {%- endif -%}
-            {%- endfor -%}
-          {%- endif -%}
-          {%- if related_count < max_related and page.tags.size > 0 -%}
-            {%- for post in site.posts -%}
-              {%- if post.url != page.url and related_count < max_related -%}
-                {%- assign has_common_tag = false -%}
-                {%- for tag in page.tags -%}
-                  {%- if post.tags contains tag -%}
-                    {%- assign has_common_tag = true -%}
-                    {%- break -%}
-                  {%- endif -%}
-                {%- endfor -%}
-                {%- if has_common_tag -%}
-                  {%- assign already_listed = false -%}
-                  {%- for related_post in site.posts limit: related_count -%}
-                    {%- if related_post.url == post.url -%}
-                      {%- assign already_listed = true -%}
-                      {%- break -%}
-                    {%- endif -%}
-                  {%- endfor -%}
-                  {%- unless already_listed -%}
-                    <li class="related-post-item">
-                      <a href="{{ post.url | relative_url }}" class="related-post-link">
-                        <span class="related-post-title">{{ post.title | escape }}</span>
-                        <span class="related-post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                      </a>
-                    </li>
-                    {%- assign related_count = related_count | plus: 1 -%}
-                  {%- endunless -%}
-                {%- endif -%}
-              {%- endif -%}
-            {%- endfor -%}
-          {%- endif -%}
-          {%- if related_count == 0 -%}
-            <li class="related-post-item">
-              <span class="no-related-posts">No related posts found</span>
-            </li>
-          {%- endif -%}
-        </ul>
-      </div>
-
-      <div class="sidebar-section">
-        <h3 class="sidebar-title">Recent Posts</h3>
-        <ul class="recent-posts-list">
-          {%- for post in site.posts limit: 5 -%}
-            {%- if post.url != page.url -%}
-              <li class="recent-post-item">
-                <a href="{{ post.url | relative_url }}" class="recent-post-link">
-                  <span class="recent-post-title">{{ post.title | escape }}</span>
-                  <span class="recent-post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                </a>
-              </li>
             {%- endif -%}
           {%- endfor -%}
-        </ul>
-      </div>
-    </aside>
+        {%- endif -%}
+        {%- if related_count == 0 -%}
+          <li class="related-post-item">
+            <span class="no-related-posts">No related posts found</span>
+          </li>
+        {%- endif -%}
+      </ul>
+    </div>
+
+    <div class="bottom-section">
+      <h3 class="bottom-section-title">Recent Posts</h3>
+      <ul class="recent-posts-list">
+        {%- for post in site.posts limit: 5 -%}
+          {%- if post.url != page.url -%}
+            <li class="recent-post-item">
+              <a href="{{ post.url | relative_url }}" class="recent-post-link">
+                <span class="recent-post-title">{{ post.title | escape }}</span>
+                <span class="recent-post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+              </a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
   </div>
 </div>
 
