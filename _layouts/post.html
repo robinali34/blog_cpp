@@ -205,7 +205,8 @@ layout: default
     if (!tocList) return;
 
     let tocHTML = '';
-    let stack = []; // Track open list levels
+    let lastLevel = 0; // Track the level of the last item we processed
+    let openLists = 0; // Track how many nested lists are currently open
 
     headings.forEach((heading, index) => {
       const level = parseInt(heading.tagName.charAt(1));
@@ -219,20 +220,22 @@ layout: default
         heading.id = id;
       }
 
-      // Close items/lists until we reach the appropriate level
-      while (stack.length > 0 && stack[stack.length - 1] >= level) {
-        if (stack.length > 0) {
-          tocHTML += '</li>';
-        }
-        if (stack.length > 1 && stack[stack.length - 1] > level) {
-          tocHTML += '</ul>';
-        }
-        stack.pop();
+      // Close previous list item (except for the first one)
+      if (index > 0) {
+        tocHTML += '</li>';
       }
 
-      // Open new nested list if going deeper
-      if (stack.length > 0 && level > stack[stack.length - 1]) {
+      // Close nested lists if we're going up in level (not same level)
+      while (openLists > 0 && level < lastLevel) {
+        tocHTML += '</ul>';
+        openLists--;
+      }
+
+      // If going deeper (and we have a previous item), open a new nested list
+      // Don't open a list for the first item - it goes in the root list
+      if (index > 0 && level > lastLevel) {
         tocHTML += '<ul class="toc-sublist">';
+        openLists++;
       }
 
       // Start new list item
@@ -240,16 +243,16 @@ layout: default
       tocHTML += `<li class="toc-item toc-level-${level}">`;
       tocHTML += `<a href="#${id}" class="toc-link">${text}</a>`;
 
-      stack.push(level);
+      lastLevel = level;
     });
 
     // Close all remaining open items and lists
-    while (stack.length > 0) {
+    if (headings.length > 0) {
       tocHTML += '</li>';
-      if (stack.length > 1) {
-        tocHTML += '</ul>';
-      }
-      stack.pop();
+    }
+    while (openLists > 0) {
+      tocHTML += '</ul>';
+      openLists--;
     }
 
     tocList.innerHTML = tocHTML;
