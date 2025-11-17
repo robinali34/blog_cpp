@@ -151,20 +151,6 @@ layout: default
       </div>
 
       <div class="sidebar-section">
-        <h3 class="sidebar-title">Categories</h3>
-        <ul class="categories-list">
-          {%- assign all_categories = site.posts | map: "categories" | flatten | uniq | sort -%}
-          {%- for category in all_categories -%}
-            <li class="category-item">
-              <a href="{{ '/posts/' | relative_url }}?category={{ category | url_encode }}" class="category-link">
-                {{ category }}
-              </a>
-            </li>
-          {%- endfor -%}
-        </ul>
-      </div>
-
-      <div class="sidebar-section">
         <h3 class="sidebar-title">Recent Posts</h3>
         <ul class="recent-posts-list">
           {%- for post in site.posts limit: 5 -%}
