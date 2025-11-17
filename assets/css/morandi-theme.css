@@ -769,3 +769,294 @@ hr {
   }
 }
 
+/* Smaller mobile devices */
+@media (max-width: 480px) {
+  .post-container {
+    padding: 0 8px;
+  }
+  
+  .post-header {
+    padding: 0.75rem 0;
+    margin-bottom: 1rem;
+  }
+  
+  .header-content {
+    padding: 0 8px;
+  }
+  
+  .post-header .site-title {
+    font-size: 1.25rem;
+  }
+  
+  .post-header .site-nav {
+    gap: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .post-header .site-nav a {
+    padding: 0.4rem 0.75rem;
+  }
+  
+  .post-wrapper {
+    gap: 1rem;
+  }
+  
+  .post-main {
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  
+  .post-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+  
+  .post-header-content {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  
+  .post-meta-info {
+    gap: 0.75rem;
+    font-size: 0.85rem;
+  }
+  
+  .post-date {
+    font-size: 0.85rem;
+  }
+  
+  .post-categories,
+  .post-tags {
+    gap: 0.4rem;
+  }
+  
+  .category-tag,
+  .tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .post-content {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  .post-content h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .post-content h3 {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .post-content h4 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .post-content p {
+    margin-bottom: 1rem;
+  }
+  
+  .post-content ul,
+  .post-content ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+  
+  .post-content li {
+    margin-bottom: 0.4rem;
+  }
+  
+  .post-content pre {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+    overflow-x: auto;
+  }
+  
+  .post-content code {
+    font-size: 0.85rem;
+    padding: 0.15rem 0.3rem;
+  }
+  
+  .post-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+  
+  .post-nav-link {
+    padding: 0.75rem;
+    min-height: 44px; /* Ensure tappable area */
+  }
+  
+  .post-nav-label {
+    font-size: 0.8rem;
+  }
+  
+  .post-nav-title {
+    font-size: 0.9rem;
+  }
+  
+  .post-sidebar-left {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .sidebar-section {
+    padding: 1rem;
+    border-radius: 6px;
+  }
+  
+  .sidebar-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .toc-section {
+    max-width: 100%;
+    max-height: 400px;
+  }
+  
+  .toc-nav {
+    max-height: 350px;
+    font-size: 0.85rem;
+  }
+  
+  .toc-link {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.85rem;
+    min-height: 36px; /* Ensure tappable area */
+    display: flex;
+    align-items: center;
+  }
+  
+  .toc-level-2 .toc-link {
+    font-size: 0.9rem;
+  }
+  
+  .toc-level-3 .toc-link {
+    font-size: 0.8rem;
+    padding-left: 0.75rem;
+  }
+  
+  .toc-level-4 .toc-link {
+    font-size: 0.75rem;
+    padding-left: 1rem;
+  }
+  
+  .related-post-link,
+  .recent-post-link {
+    padding: 0.4rem;
+    min-height: 44px; /* Ensure tappable area */
+  }
+  
+  .related-post-title,
+  .recent-post-title {
+    font-size: 0.9rem;
+  }
+  
+  .related-post-date,
+  .recent-post-date {
+    font-size: 0.75rem;
+  }
+  
+  .category-link {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.85rem;
+    min-height: 36px; /* Ensure tappable area */
+    display: flex;
+    align-items: center;
+  }
+  
+  .related-post-item,
+  .recent-post-item {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .category-item {
+    margin-bottom: 0.4rem;
+  }
+  
+  /* Ensure images are responsive */
+  .post-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+  }
+  
+  /* Tables should scroll horizontally */
+  .post-content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+  
+  .post-content th,
+  .post-content td {
+    padding: 0.4rem;
+    font-size: 0.85rem;
+  }
+  
+  /* Blockquotes */
+  .post-content blockquote {
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+  
+  /* Horizontal rules */
+  .post-content hr {
+    margin: 1.5rem 0;
+  }
+}
+
+/* Extra small devices (very small phones, < 360px) */
+@media (max-width: 360px) {
+  .post-container {
+    padding: 0 6px;
+  }
+  
+  .header-content {
+    padding: 0 6px;
+  }
+  
+  .post-main {
+    padding: 0.75rem;
+  }
+  
+  .post-title {
+    font-size: 1.5rem;
+  }
+  
+  .post-content {
+    font-size: 0.95rem;
+  }
+  
+  .post-content h2 {
+    font-size: 1.35rem;
+  }
+  
+  .post-content h3 {
+    font-size: 1.15rem;
+  }
+  
+  .sidebar-section {
+    padding: 0.75rem;
+  }
+  
+  .toc-link,
+  .category-link {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
