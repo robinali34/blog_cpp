@@ -8,6 +8,17 @@ permalink: /embedded-system-design/
 
 This page highlights end‑to‑end embedded system designs, C++ patterns, and case studies. Whether you're building production embedded systems, preparing for technical interviews, or expanding your systems programming knowledge, these resources provide practical examples and design patterns.
 
+## Table of Contents
+
+- [Design principles (embedded + C++)](#design-principles-embedded--c)
+- [Reference stacks](#reference-stacks)
+- [Case studies (deep dives)](#case-studies-deep-dives)
+- [C++ patterns that scale on MCUs/SoCs](#c-patterns-that-scale-on-mcusocs)
+- [Performance & reliability playbook](#performance--reliability-playbook)
+- [Security & OTA](#security--ota)
+- [Measurement & test](#measurement--test)
+- [Design checklist (key considerations)](#design-checklist-key-considerations)
+
 ## Design principles (embedded + C++)
 
 - Determinism first: bounded latencies, ISR minimization, DMA offload, RTOS priorities.

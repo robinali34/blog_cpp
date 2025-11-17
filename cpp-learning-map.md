@@ -8,6 +8,53 @@ permalink: /cpp-learning-map/
 
 A structured learning path for mastering C++ from fundamentals to advanced topics. Follow this roadmap to build a solid foundation and progress systematically.
 
+## Table of Contents
+
+- [Learning Path Overview](#learning-path-overview)
+- [Phase 1: Fundamentals (Beginner)](#phase-1-fundamentals-beginner)
+  - [Basic Syntax and Concepts](#1-basic-syntax-and-concepts)
+  - [Functions](#2-functions)
+  - [Arrays and Strings](#3-arrays-and-strings)
+  - [Pointers and References](#4-pointers-and-references)
+- [Phase 2: Object-Oriented Programming (Intermediate)](#phase-2-object-oriented-programming-intermediate)
+  - [Classes and Objects](#5-classes-and-objects)
+  - [Inheritance](#6-inheritance)
+  - [Polymorphism](#7-polymorphism)
+  - [Encapsulation and Abstraction](#8-encapsulation-and-abstraction)
+- [Phase 3: Modern C++ Features (Intermediate-Advanced)](#phase-3-modern-c-features-intermediate-advanced)
+  - [C++11 Features](#9-c11-features)
+  - [C++14 Features](#10-c14-features)
+  - [C++17 Features](#11-c17-features)
+  - [C++20 Features](#12-c20-features)
+- [Phase 4: Standard Library (Intermediate)](#phase-4-standard-library-intermediate)
+  - [STL Containers](#13-stl-containers)
+  - [STL Algorithms](#14-stl-algorithms)
+  - [Iterators](#15-iterators)
+  - [Smart Pointers](#16-smart-pointers)
+- [Phase 5: Advanced Topics (Advanced)](#phase-5-advanced-topics-advanced)
+  - [Templates](#17-templates)
+  - [Memory Management](#18-memory-management)
+  - [Exception Handling](#19-exception-handling)
+  - [Advanced Language Features](#20-advanced-language-features)
+- [Phase 6: Systems Programming (Advanced)](#phase-6-systems-programming-advanced)
+  - [Multithreading and Concurrency](#21-multithreading-and-concurrency)
+  - [Networking](#22-networking)
+  - [File I/O](#23-file-io)
+  - [System Calls and Low-Level Programming](#24-system-calls-and-low-level-programming)
+- [Phase 7: Embedded and Performance (Expert)](#phase-7-embedded-and-performance-expert)
+  - [Embedded Systems](#25-embedded-systems)
+  - [Performance Optimization](#26-performance-optimization)
+  - [Advanced C++ Patterns](#27-advanced-c-patterns)
+- [Phase 8: Specialized Topics (Expert)](#phase-8-specialized-topics-expert)
+  - [Database Integration](#28-database-integration)
+  - [Protocol Implementation](#29-protocol-implementation)
+  - [Interview Preparation](#30-interview-preparation)
+- [Learning Resources by Topic](#learning-resources-by-topic)
+- [Learning Tips](#learning-tips)
+- [Recommended Study Order](#recommended-study-order)
+- [Assessment Checklist](#assessment-checklist)
+- [Next Steps](#next-steps)
+
 ## Learning Path Overview
 
 ```
