@@ -1,7 +1,11 @@
 ---
-layout: page
-title: System Design Interview Summary
+layout: post
+title: "System Design Interview Summary"
+date: 2025-11-16 00:00:00 -0700
+categories: interview-preparation system-design software-engineering
+tags: system-design interview-preparation architecture scalability reliability
 permalink: /system-design-interview/
+excerpt: "A comprehensive guide to system design interviews covering what interviewers look for, company-specific focus areas, pacing strategies, checklists, and evaluation rubrics."
 ---
 
 # System Design Interview Summary
@@ -83,7 +87,7 @@ Red flags
 - Ignores SLOs/availability; no plan for retries/backpressure/idempotency.
 - Hand-wavy storage/indexing; ignores pagination, hot keys, or partitioning.
 - Over-indexes on tech names over problem fit; solutionism.
-- Inflexible communication; doesn’t incorporate hints.
+- Inflexible communication; doesn't incorporate hints.
 
 Leveling expectations (rough guide)
 - L3/Junior: Solid fundamentals, clear communication, correct baseline architecture; may need prompting for capacity/SLOs.

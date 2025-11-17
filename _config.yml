@@ -41,7 +41,7 @@ plugins:
 # Navigation
 header_pages:
   - posts.md
-  - system-design-interview-summary.md
+  - cpp-learning-map.md
   - embedded-system-design-showcase.md
 
 # Build options
