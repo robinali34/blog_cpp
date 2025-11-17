@@ -514,6 +514,7 @@ hr {
   border-bottom: 2px solid var(--morandi-border-light);
   flex-shrink: 0;
   flex-grow: 0;
+  flex-basis: auto;
 }
 
 .related-posts-list,
@@ -606,23 +607,33 @@ hr {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+
+.post-sidebar-left .toc-section {
   max-height: calc(100vh - 40px);
+  height: calc(100vh - 40px);
+  min-height: 300px;
+}
+
+.post-sidebar-left .toc-section .sidebar-title {
+  flex: 0 0 auto;
+  margin-bottom: 1rem;
 }
 
 .toc-nav {
-  flex: 1 1 0;
+  flex: 1 1 0%;
   overflow-y: auto !important;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   padding-right: 0.75rem;
   padding-bottom: 0.5rem;
   width: 100%;
   max-width: 240px;
   box-sizing: border-box;
   min-height: 0;
-  max-height: 100%;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--morandi-border-dark) var(--morandi-bg-primary);
+  position: relative;
 }
 
 .toc-nav::-webkit-scrollbar {
