@@ -603,43 +603,48 @@ hr {
   width: 100%;
   max-width: 240px;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   max-height: calc(100vh - 100px);
-  height: calc(100vh - 100px);
+  min-height: 200px;
 }
 
 .toc-nav {
   flex: 1;
   overflow-y: auto;
-  overflow-x: auto;
-  padding-right: 0.5rem;
+  overflow-x: hidden;
+  padding-right: 0.75rem;
   padding-bottom: 0.5rem;
   width: 100%;
   max-width: 240px;
   box-sizing: border-box;
   min-height: 0;
+  max-height: 100%;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--morandi-border-dark) var(--morandi-bg-primary);
 }
 
 .toc-nav::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 .toc-nav::-webkit-scrollbar-track {
   background: var(--morandi-bg-primary);
-  border-radius: 3px;
+  border-radius: 4px;
+  margin: 4px 0;
 }
 
 .toc-nav::-webkit-scrollbar-thumb {
-  background: var(--morandi-border-medium);
-  border-radius: 3px;
+  background: var(--morandi-border-dark);
+  border-radius: 4px;
+  border: 1px solid var(--morandi-bg-primary);
 }
 
 .toc-nav::-webkit-scrollbar-thumb:hover {
-  background: var(--morandi-border-dark);
+  background: var(--morandi-gray-medium);
 }
 
 .toc-nav::-webkit-scrollbar-corner {
