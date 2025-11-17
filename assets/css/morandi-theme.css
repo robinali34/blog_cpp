@@ -493,6 +493,7 @@ hr {
   overflow: visible;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 }
 
 .sidebar-section {
@@ -512,6 +513,7 @@ hr {
   padding-bottom: 0.75rem;
   border-bottom: 2px solid var(--morandi-border-light);
   flex-shrink: 0;
+  min-height: fit-content;
 }
 
 .related-posts-list,
@@ -604,11 +606,12 @@ hr {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  max-height: 600px;
+  max-height: calc(100vh - 100px);
+  height: calc(100vh - 100px);
 }
 
 .toc-nav {
-  max-height: 550px;
+  flex: 1;
   overflow-y: auto;
   overflow-x: auto;
   padding-right: 0.5rem;
@@ -616,8 +619,8 @@ hr {
   width: 100%;
   max-width: 240px;
   box-sizing: border-box;
-  flex: 1;
   min-height: 0;
+  -webkit-overflow-scrolling: touch;
 }
 
 .toc-nav::-webkit-scrollbar {
@@ -761,11 +764,12 @@ hr {
   }
   
   .toc-section {
-    max-height: 500px;
+    max-height: calc(100vh - 120px);
+    height: auto;
   }
   
   .toc-nav {
-    max-height: 450px;
+    max-height: calc(100vh - 180px);
   }
 }
 
@@ -921,11 +925,12 @@ hr {
   
   .toc-section {
     max-width: 100%;
-    max-height: 400px;
+    max-height: calc(100vh - 140px);
+    height: auto;
   }
   
   .toc-nav {
-    max-height: 350px;
+    max-height: calc(100vh - 200px);
     font-size: 0.85rem;
   }
   
