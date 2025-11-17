@@ -190,7 +190,7 @@ layout: default
     const postContent = document.querySelector('.post-content');
     if (!postContent) return;
 
-    const headings = postContent.querySelectorAll('h2, h3, h4, h5, h6');
+    const headings = postContent.querySelectorAll('h2, h3, h4');
     const tocSection = document.querySelector('.toc-section');
     
     if (headings.length === 0) {
@@ -209,6 +209,9 @@ layout: default
 
     headings.forEach((heading, index) => {
       const level = parseInt(heading.tagName.charAt(1));
+      // Skip levels beyond 4 (h5, h6) - only process h2, h3, h4
+      if (level > 4) return;
+      
       const id = heading.id || `heading-${index}`;
       
       // Set ID if not already set
