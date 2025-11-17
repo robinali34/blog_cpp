@@ -384,6 +384,7 @@ auto chunks = vec | std::views::chunk_by([](int a, int b) {
 
 ### 16. `std::ranges::join_with` Improvements
 
+{% raw %}
 ```cpp
 // Expected C++26: Enhanced join
 #include <ranges>
@@ -393,6 +394,7 @@ std::vector<std::vector<int>> vecs = {{1, 2}, {3, 4}, {5, 6}};
 // Join with custom separator
 auto joined = vecs | std::views::join_with(std::vector{-1});
 ```
+{% endraw %}
 
 ### 17. `std::ranges::repeat_n`
 

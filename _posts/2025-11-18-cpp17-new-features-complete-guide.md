@@ -47,10 +47,12 @@ std::pair<int, std::string> p(10, "test");
 auto [key, value] = p;
 
 // Map iteration
+{% raw %}
 std::map<std::string, int> m = {{"one", 1}, {"two", 2}};
 for (const auto& [key, val] : m) {
     std::cout << key << ": " << val << std::endl;
 }
+{% endraw %}
 
 // Struct decomposition
 struct Point {

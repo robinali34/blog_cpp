@@ -396,6 +396,7 @@ for (auto chunk : vec | std::views::chunk_by([](int a, int b) {
 
 Join ranges with separator.
 
+{% raw %}
 ```cpp
 #include <ranges>
 
@@ -406,6 +407,7 @@ for (auto val : vecs | std::views::join_with(0)) {
     std::cout << val << " ";  // 1 2 0 3 4 0 5 6
 }
 ```
+{% endraw %}
 
 ### 19. `std::ranges::repeat`
 

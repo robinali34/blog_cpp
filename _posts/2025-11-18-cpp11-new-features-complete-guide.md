@@ -212,6 +212,7 @@ func(NULL);    // Ambiguous
 
 Braced initialization syntax.
 
+{% raw %}
 ```cpp
 // Works everywhere
 int x{42};
@@ -232,6 +233,7 @@ private:
 
 MyClass obj{10, 3.14};  // Direct initialization
 ```
+{% endraw %}
 
 ### 10. Initializer Lists
 
