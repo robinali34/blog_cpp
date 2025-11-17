@@ -27,6 +27,16 @@ nav_exclude: true
       {%- for post in site.posts -%}
       <article class="post-item" data-title="{{ post.title | downcase }}" data-excerpt="{{ post.excerpt | strip_html | downcase }}" data-categories="{{ post.categories | join: ' ' | downcase }}" data-tags="{{ post.tags | join: ' ' | downcase }}">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {%- if post.categories -%}
+          {%- assign unique_categories = post.categories | uniq -%}
+        {%- else -%}
+          {%- assign unique_categories = '' | split: '' -%}
+        {%- endif -%}
+        {%- if post.tags -%}
+          {%- assign unique_tags = post.tags | uniq -%}
+        {%- else -%}
+          {%- assign unique_tags = '' | split: '' -%}
+        {%- endif -%}
         <div class="post-meta">{{ post.date | date: date_format }}</div>
         <div class="post-link-md">
           [<a href="{{ post.url | absolute_url }}">{{ post.title | escape }}</a>]({{ post.url | absolute_url }})
@@ -34,16 +44,14 @@ nav_exclude: true
         {%- if post.excerpt -%}
           <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</div>
         {%- endif -%}
-        {%- if post.categories -%}
-          {%- assign unique_categories = post.categories | uniq -%}
+        {%- if unique_categories.size > 0 -%}
           <div class="post-categories">
             {%- for category in unique_categories -%}
               <span class="category-tag">{{ category }}</span>
             {%- endfor -%}
           </div>
         {%- endif -%}
-        {%- if post.tags -%}
-          {%- assign unique_tags = post.tags | uniq -%}
+        {%- if unique_tags.size > 0 -%}
           <div class="post-tags">
             {%- for tag in unique_tags -%}
               {%- unless unique_categories contains tag -%}

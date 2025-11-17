@@ -6,7 +6,7 @@ permalink: /embedded-system-design/
 
 # Senior Embedded C++ System Design Showcase
 
-This page highlights end‑to‑end embedded system designs, C++ patterns, and case studies suitable for a senior embedded C++ engineer portfolio and interviews.
+This page highlights end‑to‑end embedded system designs, C++ patterns, and case studies. Whether you're building production embedded systems, preparing for technical interviews, or expanding your systems programming knowledge, these resources provide practical examples and design patterns.
 
 ## Design principles (embedded + C++)
 
@@ -55,11 +55,13 @@ This page highlights end‑to‑end embedded system designs, C++ patterns, and c
 - Hardware‑in‑the‑loop record/replay; determinism gates; RF and thermal scenarios.
 - Fuzz binary parsers; property tests for TLV/CBOR; CRC/seq corruption tests.
 
-## Interview checklist (senior)
+## Design checklist (key considerations)
 
 - State workloads, latencies, and power targets early; quantify.
 - Show ISR→task design, buffer sizes, and backpressure math.
 - Prove C++ API choices (RAII, atomics, no hidden allocations) and testing strategy.
 - Cover failure drills: sensor faults, thermal, link drops, OTA aborts.
+
+*Useful for both production design reviews and technical interviews.*
 
 

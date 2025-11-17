@@ -6,7 +6,7 @@ permalink: /system-design-interview/
 
 # System Design Interview Summary
 
-Use this as a quick checklist and links hub for practice. Tailor depth to role level and domain.
+This guide serves as both a reference for system design interviews and a practical resource for designing real-world systems. Use it as a checklist for interview practice, or as a framework when architecting production systems. Tailor depth to role level and domain.
 
 ## What interviewers look for
 
@@ -52,15 +52,7 @@ Use this as a quick checklist and links hub for practice. Tailor depth to role l
 
 ## Practice links (from this blog)
 
-- [Twitter]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-system-design-twitter %})
-- [YouTube]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-system-design-youtube %})
-- [GitHub]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-system-design-github %})
-- [ChatGPT]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-system-design-chatgpt %})
-- [Robinhood]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-system-design-robinhood-trading-platform %})
-- [Cloud overview]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-system-design-overview-cloud %})
-- [Embedded overview]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-system-design-overview-embedded %})
-- [Client↔Gateway protocols]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-04-system-design-client-api-gateway-connection-options %})
-- [Interview framework]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-04-system-design-interview-framework %})
+- [Embedded System Design Showcase]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-embedded-system-design-showcase %})
 
 ## One last tip
 

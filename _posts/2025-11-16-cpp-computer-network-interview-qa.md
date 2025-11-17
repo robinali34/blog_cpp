@@ -2,7 +2,7 @@
 layout: post
 title: "C++ Computer Network Interview Q&A - Complete Guide"
 date: 2025-11-16
-categories: [Interview Preparation, C++, Networking, System Programming, Socket Programming, TCP/IP, UDP, Interview Questions]
+categories: interview-preparation cpp networking system-programming socket-programming tcp-ip udp interview-questions
 excerpt: "A comprehensive guide to C++ computer network interview questions and answers, covering socket programming, TCP/UDP, network protocols, asynchronous I/O, multithreading, and common interview scenarios with code examples."
 ---
 
