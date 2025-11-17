@@ -1,0 +1,248 @@
+/* Morandi Color Palette - Soft, Muted, Elegant */
+:root {
+  /* Primary Morandi Colors */
+  --morandi-cream: #F5F0E8;
+  --morandi-beige: #E8E3D8;
+  --morandi-sand: #D9D4C7;
+  --morandi-gray-light: #E8E5E0;
+  --morandi-gray: #D4D1CC;
+  --morandi-gray-medium: #B8B5B0;
+  --morandi-gray-dark: #9A9792;
+  
+  /* Accent Colors */
+  --morandi-dusty-pink: #E8D5D0;
+  --morandi-pink-medium: #D4C4BF;
+  --morandi-pale-blue: #D4D8E0;
+  --morandi-blue-medium: #C4C8D0;
+  --morandi-washed-green: #D4D8D0;
+  --morandi-green-medium: #C4C8C0;
+  
+  /* Text Colors */
+  --morandi-text-dark: #5A5752;
+  --morandi-text-medium: #7A7772;
+  --morandi-text-light: #9A9792;
+  
+  /* Background Colors */
+  --morandi-bg-primary: #F5F0E8;
+  --morandi-bg-secondary: #E8E3D8;
+  --morandi-bg-card: #FFFFFF;
+  --morandi-bg-hover: #F0EBE3;
+  
+  /* Border Colors */
+  --morandi-border-light: #E8E3D8;
+  --morandi-border-medium: #D4D1CC;
+  --morandi-border-dark: #B8B5B0;
+  
+  /* Link Colors */
+  --morandi-link: #8B8680;
+  --morandi-link-hover: #6B6660;
+  --morandi-link-active: #9A9792;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--morandi-bg-primary);
+  color: var(--morandi-text-dark);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--morandi-text-dark);
+  font-weight: 500;
+}
+
+/* Links */
+a {
+  color: var(--morandi-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--morandi-link-hover);
+  text-decoration: underline;
+}
+
+/* Code Blocks */
+pre, code {
+  background-color: var(--morandi-beige);
+  border: 1px solid var(--morandi-border-light);
+  color: var(--morandi-text-dark);
+}
+
+code {
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--morandi-bg-card);
+  border: 1px solid var(--morandi-border-medium);
+  color: var(--morandi-link);
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--morandi-bg-hover);
+  border-color: var(--morandi-border-dark);
+  color: var(--morandi-link-hover);
+}
+
+/* Cards and Post Items */
+.post-card, .post-item {
+  background-color: var(--morandi-bg-card);
+  border: 1px solid var(--morandi-border-light);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.post-card:hover, .post-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: var(--morandi-border-medium);
+}
+
+/* Category and Tag Badges */
+.category-tag, .tag {
+  background-color: var(--morandi-beige);
+  border: 1px solid var(--morandi-border-light);
+  color: var(--morandi-text-medium);
+}
+
+.category-tag:hover, .tag:hover {
+  background-color: var(--morandi-sand);
+  border-color: var(--morandi-border-medium);
+}
+
+/* Search and Filters */
+.search-input {
+  background-color: var(--morandi-bg-card);
+  border: 1px solid var(--morandi-border-light);
+  color: var(--morandi-text-dark);
+}
+
+.search-input:focus {
+  border-color: var(--morandi-border-medium);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(232, 227, 216, 0.3);
+}
+
+.filter-btn {
+  background-color: var(--morandi-beige);
+  border: 1px solid var(--morandi-border-light);
+  color: var(--morandi-text-medium);
+}
+
+.filter-btn:hover {
+  background-color: var(--morandi-sand);
+  border-color: var(--morandi-border-medium);
+}
+
+.filter-btn.active {
+  background-color: var(--morandi-gray-medium);
+  border-color: var(--morandi-gray-medium);
+  color: var(--morandi-bg-card);
+}
+
+/* Pagination */
+.pagination a {
+  color: var(--morandi-link);
+}
+
+.pagination a:hover {
+  color: var(--morandi-link-hover);
+}
+
+/* Site Header */
+.site-header {
+  border-bottom: 1px solid var(--morandi-border-light);
+  background-color: var(--morandi-bg-card);
+}
+
+.site-title {
+  color: var(--morandi-text-dark);
+}
+
+.site-subtitle {
+  color: var(--morandi-text-medium);
+}
+
+/* Navigation */
+.site-nav {
+  background-color: var(--morandi-bg-card);
+  border-bottom: 1px solid var(--morandi-border-light);
+}
+
+.site-nav a {
+  color: var(--morandi-text-medium);
+}
+
+.site-nav a:hover {
+  color: var(--morandi-text-dark);
+  background-color: var(--morandi-bg-hover);
+}
+
+/* Post Meta */
+.post-meta {
+  color: var(--morandi-text-light);
+}
+
+.post-excerpt {
+  color: var(--morandi-text-medium);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--morandi-border-medium);
+  background-color: var(--morandi-beige);
+  color: var(--morandi-text-medium);
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+th, td {
+  border: 1px solid var(--morandi-border-light);
+  padding: 0.5em;
+}
+
+th {
+  background-color: var(--morandi-beige);
+  color: var(--morandi-text-dark);
+}
+
+tr:nth-child(even) {
+  background-color: var(--morandi-bg-primary);
+}
+
+/* Horizontal Rules */
+hr {
+  border: none;
+  border-top: 1px solid var(--morandi-border-light);
+  margin: 2em 0;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--morandi-dusty-pink);
+  color: var(--morandi-text-dark);
+}
+
+::-moz-selection {
+  background-color: var(--morandi-dusty-pink);
+  color: var(--morandi-text-dark);
+}
+

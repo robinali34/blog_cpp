@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/morandi-theme.css' | relative_url }}">
+
 <div class="home">
   <header class="site-header">
     <h1 class="site-title">{{ site.title | default: "C++ & Systems Blog" }}</h1>
@@ -91,45 +93,49 @@ layout: default
 </div>
 
 <style>
-.home { max-width: 1000px; margin: 0 auto; padding: 0 1rem 2rem; }
-.site-header { text-align: center; margin: 1rem 0 1.25rem; }
-.site-title { margin: 0; font-size: 2.1rem; }
-.site-subtitle { color: #666; margin: 0.25rem 0 0; }
+.home { max-width: 1000px; margin: 0 auto; padding: 0 1rem 2rem; background-color: var(--morandi-bg-primary, #F5F0E8); }
+.site-header { text-align: center; margin: 1rem 0 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--morandi-border-light, #E8E3D8); }
+.site-title { margin: 0; font-size: 2.1rem; color: var(--morandi-text-dark, #5A5752); }
+.site-subtitle { color: var(--morandi-text-medium, #7A7772); margin: 0.25rem 0 0; }
 
 .welcome-section { text-align: center; margin: 1rem 0 1.25rem; }
-.welcome-section h2 { margin: 0 0 0.25rem; }
-.welcome-section p { color: #555; margin: 0; }
+.welcome-section h2 { margin: 0 0 0.25rem; color: var(--morandi-text-dark, #5A5752); }
+.welcome-section p { color: var(--morandi-text-medium, #7A7772); margin: 0; }
 
 .latest-posts { margin-top: 1.25rem; }
-.latest-posts h2 { margin-bottom: 0.6rem; }
+.latest-posts h2 { margin-bottom: 0.6rem; color: var(--morandi-text-dark, #5A5752); }
 .post-grid { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 0.9rem; }
 @media (min-width: 700px) { .post-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
-.post-card { border: 1px solid #eaecef; border-radius: 10px; padding: 0.9rem; background: #fff; transition: box-shadow 0.2s ease, transform 0.05s ease; }
-.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.06); transform: translateY(-1px); }
-.post-meta { color: #666; font-size: 0.85rem; }
+.post-card { border: 1px solid var(--morandi-border-light, #E8E3D8); border-radius: 10px; padding: 0.9rem; background: var(--morandi-bg-card, #FFFFFF); transition: box-shadow 0.2s ease, transform 0.05s ease, border-color 0.2s ease; }
+.post-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); transform: translateY(-1px); border-color: var(--morandi-border-medium, #D4D1CC); }
+.post-meta { color: var(--morandi-text-light, #9A9792); font-size: 0.85rem; }
 .post-title { margin: 0.2rem 0 0; font-size: 1.05rem; }
-.post-link { text-decoration: none; color: #24292e; }
+.post-link { text-decoration: none; color: var(--morandi-text-dark, #5A5752); }
 .post-link:hover { text-decoration: underline; }
-.post-excerpt { color: #444; margin-top: 0.35rem; line-height: 1.45; }
+.post-excerpt { color: var(--morandi-text-medium, #7A7772); margin-top: 0.35rem; line-height: 1.45; }
 .post-categories { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
-.category-tag { display: inline-block; padding: 0.12rem 0.45rem; border: 1px solid #e0e0e0; border-radius: 999px; font-size: 0.8rem; color: #555; background: #f8f8f8; }
+.category-tag { display: inline-block; padding: 0.12rem 0.45rem; border: 1px solid var(--morandi-border-light, #E8E3D8); border-radius: 999px; font-size: 0.8rem; color: var(--morandi-text-medium, #7A7772); background: var(--morandi-beige, #E8E3D8); transition: all 0.2s ease; }
+.category-tag:hover { background: var(--morandi-sand, #D9D4C7); border-color: var(--morandi-border-medium, #D4D1CC); }
 .post-link-md { margin-top: 0.3rem; font-size: 0.95rem; }
-.post-link-md a { color: #0366d6; word-break: break-all; text-decoration: none; }
-.post-link-md a:hover { text-decoration: underline; }
+.post-link-md a { color: var(--morandi-link, #8B8680); word-break: break-all; text-decoration: none; }
+.post-link-md a:hover { color: var(--morandi-link-hover, #6B6660); text-decoration: underline; }
 
 .view-all-posts { text-align: center; margin-top: 0.9rem; }
-.btn { display: inline-block; padding: 0.5rem 0.9rem; border: 1px solid #ddd; border-radius: 8px; background: #fff; color: #0366d6; text-decoration: none; }
-.btn:hover { background: #f6f8fa; }
+.btn { display: inline-block; padding: 0.5rem 0.9rem; border: 1px solid var(--morandi-border-medium, #D4D1CC); border-radius: 8px; background: var(--morandi-bg-card, #FFFFFF); color: var(--morandi-link, #8B8680); text-decoration: none; transition: all 0.2s ease; }
+.btn:hover { background: var(--morandi-bg-hover, #F0EBE3); border-color: var(--morandi-border-dark, #B8B5B0); color: var(--morandi-link-hover, #6B6660); }
 
 .all-posts { margin-top: 1.5rem; }
 .posts-list { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 0.9rem; }
-.post-item { border: 1px solid #eaecef; border-radius: 10px; padding: 0.9rem; background: #fff; }
+.post-item { border: 1px solid var(--morandi-border-light, #E8E3D8); border-radius: 10px; padding: 0.9rem; background: var(--morandi-bg-card, #FFFFFF); transition: box-shadow 0.2s ease, border-color 0.2s ease; }
+.post-item:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); border-color: var(--morandi-border-medium, #D4D1CC); }
 
-.pagination { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-top: 1rem; color: #555; }
-.pagination a { color: #0366d6; }
+.pagination { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-top: 1rem; color: var(--morandi-text-medium, #7A7772); }
+.pagination a { color: var(--morandi-link, #8B8680); }
+.pagination a:hover { color: var(--morandi-link-hover, #6B6660); }
 .pagination .disabled { opacity: 0.5; }
 
-.rss-section { text-align: center; margin-top: 1.25rem; color: #555; }
-.rss-section a { color: #0366d6; }
+.rss-section { text-align: center; margin-top: 1.25rem; color: var(--morandi-text-medium, #7A7772); }
+.rss-section a { color: var(--morandi-link, #8B8680); }
+.rss-section a:hover { color: var(--morandi-link-hover, #6B6660); }
 </style>

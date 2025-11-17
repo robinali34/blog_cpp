@@ -5,6 +5,8 @@ permalink: /posts/
 nav_exclude: true
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/morandi-theme.css' | relative_url }}">
+
 <div class="posts-page">
   <header class="page-header">
     <h1 class="page-title">All Posts</h1>
@@ -75,41 +77,43 @@ nav_exclude: true
 </div>
 
 <style>
-.posts-page { max-width: 1000px; margin: 0 auto; padding: 0 1rem 2rem; }
-.page-header { margin: 1rem 0 1.25rem; }
-.page-title { margin: 0; font-size: 2rem; }
-.page-description { color: #555; margin-top: 0.25rem; }
+.posts-page { max-width: 1000px; margin: 0 auto; padding: 0 1rem 2rem; background-color: var(--morandi-bg-primary, #F5F0E8); }
+.page-header { margin: 1rem 0 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--morandi-border-light, #E8E3D8); }
+.page-title { margin: 0; font-size: 2rem; color: var(--morandi-text-dark, #5A5752); }
+.page-description { color: var(--morandi-text-medium, #7A7772); margin-top: 0.25rem; }
 
-.search-section { position: sticky; top: 0; background: #fff; padding: 0.75rem 0; z-index: 5; border-bottom: 1px solid #eee; }
+.search-section { position: sticky; top: 0; background: var(--morandi-bg-card, #FFFFFF); padding: 0.75rem 0; z-index: 5; border-bottom: 1px solid var(--morandi-border-light, #E8E3D8); }
 .search-container { display: flex; flex-direction: column; gap: 0.5rem; }
-.search-input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid #ddd; border-radius: 8px; font-size: 0.95rem; }
+.search-input { width: 100%; padding: 0.6rem 0.75rem; border: 1px solid var(--morandi-border-light, #E8E3D8); border-radius: 8px; font-size: 0.95rem; background-color: var(--morandi-bg-card, #FFFFFF); color: var(--morandi-text-dark, #5A5752); }
+.search-input:focus { border-color: var(--morandi-border-medium, #D4D1CC); outline: none; box-shadow: 0 0 0 3px rgba(232, 227, 216, 0.3); }
 .search-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.filter-btn { padding: 0.25rem 0.6rem; border: 1px solid #ddd; border-radius: 999px; background: #fafafa; color: #444; cursor: pointer; font-size: 0.85rem; }
-.filter-btn:hover { background: #f0f0f0; }
-.filter-btn.active { background: #0366d6; color: #fff; border-color: #0366d6; }
-.search-results-info { margin-top: 0.25rem; color: #666; font-size: 0.9rem; }
+.filter-btn { padding: 0.25rem 0.6rem; border: 1px solid var(--morandi-border-light, #E8E3D8); border-radius: 999px; background: var(--morandi-beige, #E8E3D8); color: var(--morandi-text-medium, #7A7772); cursor: pointer; font-size: 0.85rem; transition: all 0.2s ease; }
+.filter-btn:hover { background: var(--morandi-sand, #D9D4C7); border-color: var(--morandi-border-medium, #D4D1CC); }
+.filter-btn.active { background: var(--morandi-gray-medium, #B8B5B0); color: var(--morandi-bg-card, #FFFFFF); border-color: var(--morandi-gray-medium, #B8B5B0); }
+.search-results-info { margin-top: 0.25rem; color: var(--morandi-text-light, #9A9792); font-size: 0.9rem; }
 
 .posts-list { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 0.9rem; margin-top: 1rem; }
 @media (min-width: 700px) { .posts-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
-.post-item { border: 1px solid #eaecef; border-radius: 10px; padding: 0.9rem; background: #fff; transition: box-shadow 0.2s ease, transform 0.05s ease; }
-.post-item:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.06); transform: translateY(-1px); }
-.post-meta { color: #666; font-size: 0.85rem; }
-.post-title { margin: 0.2rem 0 0; font-size: 1.05rem; }
-.post-link { text-decoration: none; color: #24292e; }
+.post-item { border: 1px solid var(--morandi-border-light, #E8E3D8); border-radius: 10px; padding: 0.9rem; background: var(--morandi-bg-card, #FFFFFF); transition: box-shadow 0.2s ease, transform 0.05s ease, border-color 0.2s ease; }
+.post-item:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.08); transform: translateY(-1px); border-color: var(--morandi-border-medium, #D4D1CC); }
+.post-meta { color: var(--morandi-text-light, #9A9792); font-size: 0.85rem; }
+.post-title { margin: 0.2rem 0 0; font-size: 1.05rem; color: var(--morandi-text-dark, #5A5752); }
+.post-link { text-decoration: none; color: var(--morandi-text-dark, #5A5752); }
 .post-link:hover { text-decoration: underline; }
-.post-excerpt { color: #444; margin-top: 0.35rem; line-height: 1.45; }
+.post-excerpt { color: var(--morandi-text-medium, #7A7772); margin-top: 0.35rem; line-height: 1.45; }
 .post-categories, .post-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
-.category-tag, .tag { display: inline-block; padding: 0.12rem 0.45rem; border: 1px solid #e0e0e0; border-radius: 999px; font-size: 0.8rem; color: #555; background: #f8f8f8; }
+.category-tag, .tag { display: inline-block; padding: 0.12rem 0.45rem; border: 1px solid var(--morandi-border-light, #E8E3D8); border-radius: 999px; font-size: 0.8rem; color: var(--morandi-text-medium, #7A7772); background: var(--morandi-beige, #E8E3D8); transition: all 0.2s ease; }
+.category-tag:hover, .tag:hover { background: var(--morandi-sand, #D9D4C7); border-color: var(--morandi-border-medium, #D4D1CC); }
 .post-link-md { margin-top: 0.2rem; font-size: 0.95rem; }
-.post-link-md a { color: #0366d6; word-break: break-all; text-decoration: none; }
-.post-link-md a:hover { text-decoration: underline; }
+.post-link-md a { color: var(--morandi-link, #8B8680); word-break: break-all; text-decoration: none; }
+.post-link-md a:hover { color: var(--morandi-link-hover, #6B6660); text-decoration: underline; }
 
 .back-to-home { text-align: center; margin: 1.5rem 0 0; }
-.btn { display: inline-block; padding: 0.5rem 0.9rem; border: 1px solid #ddd; border-radius: 8px; background: #fff; color: #0366d6; text-decoration: none; }
-.btn:hover { background: #f6f8fa; }
+.btn { display: inline-block; padding: 0.5rem 0.9rem; border: 1px solid var(--morandi-border-medium, #D4D1CC); border-radius: 8px; background: var(--morandi-bg-card, #FFFFFF); color: var(--morandi-link, #8B8680); text-decoration: none; transition: all 0.2s ease; }
+.btn:hover { background: var(--morandi-bg-hover, #F0EBE3); border-color: var(--morandi-border-dark, #B8B5B0); color: var(--morandi-link-hover, #6B6660); }
 
-.no-posts { text-align: center; color: #666; padding: 2rem 0; }
+.no-posts { text-align: center; color: var(--morandi-text-medium, #7A7772); padding: 2rem 0; }
 </style>
 
 <script>
