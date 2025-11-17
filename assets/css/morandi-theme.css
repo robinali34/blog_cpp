@@ -331,19 +331,17 @@ hr {
     grid-template-columns: 1fr;
   }
   
-  .post-sidebar-left {
-    order: -2;
-  }
-  
-.post-sidebar {
-  order: -1;
+  .post-main {
+    order: 1;
   }
   
   .post-sidebar-left {
+    order: 2;
     width: 100%;
   }
   
   .post-sidebar {
+    order: 3;
     width: 100%;
   }
 }
