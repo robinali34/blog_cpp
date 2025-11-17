@@ -11,16 +11,6 @@ excerpt: "A comprehensive guide to all C++20 new features including concepts, ra
 
 C++20 was a major update introducing revolutionary features like concepts, ranges, coroutines, and modules. This guide covers all C++20 features.
 
----
-
-## Table of Contents
-
-1. [Core Language Features](#core-language-features)
-2. [Standard Library](#standard-library)
-3. [Other Features](#other-features)
-
----
-
 ## Core Language Features
 
 ### 1. Concepts

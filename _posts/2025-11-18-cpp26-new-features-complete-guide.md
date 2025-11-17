@@ -11,16 +11,6 @@ excerpt: "A guide to expected C++26 features based on current proposals and work
 
 C++26 is the upcoming C++ standard (expected 2026). This guide covers expected features based on current proposals and working drafts. **Note**: Features may change before finalization.
 
----
-
-## Table of Contents
-
-1. [Core Language Features](#core-language-features)
-2. [Standard Library](#standard-library)
-3. [Other Expected Features](#other-expected-features)
-
----
-
 ## Core Language Features
 
 ### 1. Static Reflection

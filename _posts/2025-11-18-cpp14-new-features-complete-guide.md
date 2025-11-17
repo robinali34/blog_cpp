@@ -11,16 +11,6 @@ excerpt: "A comprehensive guide to all C++14 new features including auto return 
 
 C++14 (C++1y) was a minor update to C++11, focusing on bug fixes and small improvements. This guide covers all C++14 features with examples.
 
----
-
-## Table of Contents
-
-1. [Core Language Features](#core-language-features)
-2. [Standard Library](#standard-library)
-3. [Other Improvements](#other-improvements)
-
----
-
 ## Core Language Features
 
 ### 1. Function Return Type Deduction (`auto` Return Types)

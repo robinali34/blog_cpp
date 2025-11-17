@@ -11,17 +11,6 @@ excerpt: "A comprehensive guide to C++ lambda expressions covering syntax, captu
 
 Lambda expressions in C++ provide a concise way to define anonymous function objects. This guide covers lambda syntax, capture modes, and common real-world scenarios.
 
----
-
-## Table of Contents
-
-1. [Lambda Basics](#lambda-basics)
-2. [Capture Modes](#capture-modes)
-3. [Common Scenarios](#common-scenarios)
-4. [Advanced Topics](#advanced-topics)
-
----
-
 ## Lambda Basics
 
 ### Basic Syntax

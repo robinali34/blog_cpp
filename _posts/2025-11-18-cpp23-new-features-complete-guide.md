@@ -11,16 +11,6 @@ excerpt: "A comprehensive guide to all C++23 new features including std::expecte
 
 C++23 is the latest C++ standard, building on C++20 with many improvements and new features. This guide covers all C++23 features.
 
----
-
-## Table of Contents
-
-1. [Core Language Features](#core-language-features)
-2. [Standard Library](#standard-library)
-3. [Other Features](#other-features)
-
----
-
 ## Core Language Features
 
 ### 1. `if consteval`

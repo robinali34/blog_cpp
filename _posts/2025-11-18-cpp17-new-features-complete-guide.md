@@ -11,16 +11,6 @@ excerpt: "A comprehensive guide to all C++17 new features including structured b
 
 C++17 was a major update introducing many new features. This guide covers all C++17 features with examples.
 
----
-
-## Table of Contents
-
-1. [Core Language Features](#core-language-features)
-2. [Standard Library](#standard-library)
-3. [Other Features](#other-features)
-
----
-
 ## Core Language Features
 
 ### 1. Structured Bindings

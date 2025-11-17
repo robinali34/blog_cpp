@@ -11,18 +11,6 @@ excerpt: "A comprehensive guide to all C++11 new features including auto, lambda
 
 C++11 (formerly C++0x) was a major update that introduced many modern C++ features. This guide provides a comprehensive reference to all C++11 features with examples.
 
----
-
-## Table of Contents
-
-1. [Core Language Features](#core-language-features)
-2. [Memory and Alignment](#memory-and-alignment)
-3. [Standard Library](#standard-library)
-4. [Concurrency](#concurrency)
-5. [Other Features](#other-features)
-
----
-
 ## Core Language Features
 
 ### 1. `auto` Keyword

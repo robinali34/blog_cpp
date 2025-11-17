@@ -331,13 +331,13 @@ hr {
     grid-template-columns: 1fr;
   }
   
-  .post-main {
+  .post-sidebar-left {
     order: 1;
+    width: 100%;
   }
   
-  .post-sidebar-left {
+  .post-main {
     order: 2;
-    width: 100%;
   }
 }
 

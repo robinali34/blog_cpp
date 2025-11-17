@@ -11,19 +11,6 @@ excerpt: "A comprehensive guide to C++ pointers, references, and dereferencing c
 
 Understanding pointers, references, and dereferencing is fundamental to C++ programming. This guide covers all aspects with practical scenarios.
 
----
-
-## Table of Contents
-
-1. [Pointers Basics](#pointers-basics)
-2. [References Basics](#references-basics)
-3. [Dereferencing](#dereferencing)
-4. [Common Scenarios](#common-scenarios)
-5. [Smart Pointers](#smart-pointers)
-6. [Best Practices](#best-practices)
-
----
-
 ## Pointers Basics
 
 ### What is a Pointer?

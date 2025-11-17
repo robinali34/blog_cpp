@@ -12,17 +12,6 @@ C++ computer network interviews test your understanding of low-level networking 
 
 This guide covers essential C++ networking concepts, common interview questions, and detailed answers with code examples. Topics include socket programming, TCP/UDP, asynchronous I/O, multithreading, network protocols, and performance optimization.
 
-## Table of Contents
-
-1. [Socket Programming Fundamentals](#socket-programming-fundamentals)
-2. [TCP vs UDP](#tcp-vs-udp)
-3. [Socket API in C++](#socket-api-in-c)
-4. [Common Interview Questions](#common-interview-questions)
-5. [Advanced Topics](#advanced-topics)
-6. [Code Examples](#code-examples)
-7. [Best Practices](#best-practices)
-8. [Summary](#summary)
-
 ## Socket Programming Fundamentals
 
 ### What is a Socket?
