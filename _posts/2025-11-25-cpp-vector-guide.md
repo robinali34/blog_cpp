@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "C++ std::vector Guide: Common Methods and Usage Patterns"
-date: 2025-11-24 00:00:00 -0700
+date: 2025-11-25 00:00:00 -0700
 categories: cpp stl containers vector
-permalink: /2025/11/24/cpp-vector-guide/
+permalink: /2025/11/25/cpp-vector-guide/
 tags: [cpp, vector, stl, containers, array, dynamic-array, performance]
 ---
 
@@ -20,7 +20,8 @@ A comprehensive guide to `std::vector`, the most commonly used C++ container, co
 5. [Iterator Methods](#iterator-methods)
 6. [Common Use Cases](#common-use-cases)
 7. [Performance Considerations](#performance-considerations)
-8. [Best Practices](#best-practices)
+8. [Runtime Complexity Analysis](#runtime-complexity-analysis)
+9. [Best Practices](#best-practices)
 
 ---
 
@@ -770,6 +771,80 @@ int main() {
     ptr[2] = 30;
 }
 ```
+
+---
+
+## Runtime Complexity Analysis
+
+Understanding the time and space complexity of `std::vector` operations is crucial for writing efficient code.
+
+### Time Complexity
+
+| Operation | Time Complexity | Notes |
+|-----------|----------------|------|
+| **Element Access** |
+| `operator[]`, `at()` | O(1) | Random access |
+| `front()`, `back()` | O(1) | Direct access to first/last element |
+| `data()` | O(1) | Returns pointer to underlying array |
+| **Iterators** |
+| `begin()`, `end()`, `rbegin()`, `rend()` | O(1) | Iterator creation |
+| **Modifiers** |
+| `push_back()`, `emplace_back()` | O(1) amortized | O(n) worst case if reallocation needed |
+| `pop_back()` | O(1) | No reallocation |
+| `insert()` | O(n) | Linear in distance from insertion point to end |
+| `insert()` (single element) | O(n) | May require shifting elements |
+| `insert()` (range) | O(n + m) | n = size, m = range size |
+| `erase()` | O(n) | Linear in distance from erasure point to end |
+| `erase()` (range) | O(n) | Linear in number of elements erased |
+| `clear()` | O(n) | Destroys all elements |
+| `assign()` | O(n) | n = new size |
+| `swap()` | O(1) | Constant time, swaps internal pointers |
+| **Capacity** |
+| `reserve()` | O(n) | n = new capacity (if reallocation needed) |
+| `resize()` | O(n) | n = new size |
+| `shrink_to_fit()` | O(n) | May reallocate to fit current size |
+| **Operations** |
+| `size()`, `empty()`, `capacity()` | O(1) | Constant time |
+| `==`, `!=`, `<`, `>`, `<=`, `>=` | O(n) | Element-wise comparison |
+
+### Space Complexity
+
+- **Storage**: O(n) where n is the number of elements
+- **Overhead**: Typically 3 pointers (begin, end, capacity) = 24 bytes on 64-bit systems
+- **Capacity**: May be larger than `size()` due to exponential growth strategy
+
+### Amortized Analysis
+
+`push_back()` has **amortized O(1)** complexity:
+
+- Most operations are O(1) (no reallocation)
+- Occasional O(n) reallocation when capacity is exceeded
+- With exponential growth (typically 2x), the amortized cost is O(1)
+- Example: Inserting 1,000,000 elements requires ~20 reallocations (log₂(1,000,000) ≈ 20)
+
+### Reallocation Impact
+
+```cpp
+std::vector<int> vec;
+// Without reserve: ~20 reallocations for 1M elements
+for (int i = 0; i < 1000000; ++i) {
+    vec.push_back(i);  // O(1) amortized, O(n) worst case
+}
+
+// With reserve: 0 reallocations
+vec.reserve(1000000);  // O(n) one-time cost
+for (int i = 0; i < 1000000; ++i) {
+    vec.push_back(i);  // O(1) guaranteed
+}
+```
+
+### Performance Tips Based on Complexity
+
+1. **Use `reserve()`** when you know the approximate size → Avoids O(n) reallocations
+2. **Prefer `emplace_back()`** over `push_back()` → Avoids unnecessary copies/moves
+3. **Avoid `insert()` in the middle** → O(n) operation, consider `std::deque` or `std::list` if frequent
+4. **Use `swap()` for container exchange** → O(1) instead of O(n) copy
+5. **Prefer range-based operations** → More efficient than loops with individual operations
 
 ---
 

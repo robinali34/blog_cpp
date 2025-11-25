@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "C++ std::set Guide: Ordered Container Essentials"
-date: 2025-11-24 00:00:00 -0700
+date: 2025-11-25 00:00:00 -0700
 categories: cpp stl containers set
-permalink: /2025/11/24/cpp-set-guide/
+permalink: /2025/11/25/cpp-set-guide/
 tags: [cpp, set, stl, containers, balanced-tree, stdset]
 ---
 
@@ -194,7 +194,106 @@ std::set<std::string, CaseInsensitive> keywords = {"Allow", "Deny"};
 
 ---
 
-## 8. Best Practices
+## 8. Runtime Complexity Analysis
+
+Understanding the time and space complexity of `std::set` operations is essential for choosing the right container and optimizing performance.
+
+### Time Complexity
+
+| Operation | Time Complexity | Notes |
+|-----------|----------------|------|
+| **Element Access** |
+| `begin()`, `end()`, `rbegin()`, `rend()` | O(1) | Iterator creation |
+| `*begin()`, `*rbegin()` | O(1) | Access to min/max element |
+| **Lookup** |
+| `find()`, `count()`, `contains()` (C++20) | O(log n) | Binary search in balanced tree |
+| `lower_bound()`, `upper_bound()`, `equal_range()` | O(log n) | Binary search operations |
+| **Modifiers** |
+| `insert()` (single element) | O(log n) | Tree insertion |
+| `insert()` (hint) | O(1) amortized | If hint is correct, O(log n) otherwise |
+| `insert()` (range) | O(m × log(n + m)) | m = range size, n = current size |
+| `emplace()`, `emplace_hint()` | O(log n) | Similar to insert, avoids copies |
+| `erase()` (by key) | O(log n) | Tree deletion |
+| `erase()` (by iterator) | O(1) amortized | If iterator is valid |
+| `erase()` (range) | O(m + log n) | m = number of elements erased |
+| `clear()` | O(n) | Destroys all elements |
+| **Operations** |
+| `size()`, `empty()`, `max_size()` | O(1) | Constant time |
+| `swap()` | O(1) | Constant time, swaps root pointers |
+| `merge()` (C++17) | O(n × log(m + n)) | n = source size, m = destination size |
+| **Comparison** |
+| `==`, `!=` | O(n) | Element-wise comparison |
+| `<`, `>`, `<=`, `>=` | O(n) | Lexicographic comparison |
+
+### Space Complexity
+
+- **Storage**: O(n) where n is the number of elements
+- **Node overhead**: Each node stores key, parent pointer, left child, right child, color (for red-black tree)
+- **Total**: Typically ~40-48 bytes per element on 64-bit systems (including tree structure)
+
+### Tree Structure Impact
+
+`std::set` is implemented as a **balanced binary search tree** (typically red-black tree):
+
+- **Height**: O(log n) guaranteed (red-black tree property)
+- **Balance**: Automatically maintained, no manual rebalancing needed
+- **Iterator stability**: Iterators remain valid unless the element is erased
+
+### Comparison with Other Containers
+
+| Operation | `std::set` | `std::vector` | `std::unordered_set` |
+|-----------|------------|---------------|----------------------|
+| Insert | O(log n) | O(1) amortized (end) | O(1) average |
+| Find | O(log n) | O(n) | O(1) average |
+| Erase | O(log n) | O(n) | O(1) average |
+| Ordered iteration | ✅ Yes | ✅ Yes | ❌ No |
+| Memory overhead | Higher | Lower | Higher |
+
+### Performance Tips Based on Complexity
+
+1. **Use `emplace()` for complex types** → Avoids unnecessary copies (still O(log n))
+2. **Provide hint for `insert()` when possible** → Can achieve O(1) amortized if hint is correct
+3. **Prefer `find()` over `count() == 1`** → Both O(log n), but `find()` is more semantic
+4. **Use `lower_bound()`/`upper_bound()` for range queries** → O(log n) instead of O(n) iteration
+5. **Consider `std::unordered_set`** → If ordering is not needed, O(1) average vs O(log n)
+6. **Avoid frequent insertions/deletions in tight loops** → Each operation is O(log n)
+
+### Example: Efficient Range Queries
+
+```cpp
+std::set<int> s = {1, 3, 5, 7, 9, 11, 13, 15};
+
+// ❌ Inefficient: O(n) iteration
+for (auto it = s.begin(); it != s.end(); ++it) {
+    if (*it >= 5 && *it <= 10) {
+        // Process element
+    }
+}
+
+// ✅ Efficient: O(log n) to find range, O(k) to iterate
+auto lower = s.lower_bound(5);  // O(log n)
+auto upper = s.upper_bound(10);   // O(log n)
+for (auto it = lower; it != upper; ++it) {
+    // Process element - O(k) where k is range size
+}
+```
+
+### When to Use `std::set`
+
+✅ **Use `std::set` when:**
+- You need ordered, unique elements
+- Frequent lookups (O(log n))
+- Range queries are common
+- Iterator stability is important
+
+❌ **Avoid `std::set` when:**
+- Ordering is not needed → Use `std::unordered_set` (O(1) average)
+- Frequent random access → Use `std::vector` (O(1))
+- Very large datasets with simple types → Consider `std::unordered_set`
+
+---
+
+## 9. Best Practices
 
 - **Check emptiness** before dereferencing `begin()`/`rbegin()`.
 - **Prefer `emplace`** for complex types to avoid extra copies.

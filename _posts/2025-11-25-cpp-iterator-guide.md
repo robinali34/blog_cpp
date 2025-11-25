@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "C++ Iterator Guide: Common Cases and Key-Value Storage Patterns"
-date: 2025-11-24 00:00:00 -0700
+date: 2025-11-25 00:00:00 -0700
 categories: cpp stl iterators containers algorithms
-permalink: /2025/11/24/cpp-iterator-guide/
+permalink: /2025/11/25/cpp-iterator-guide/
 tags: [cpp, iterator, stl, containers, map, unordered_map, performance, algorithms]
 ---
 

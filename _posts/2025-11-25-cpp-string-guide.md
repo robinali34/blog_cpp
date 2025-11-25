@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "C++ std::string Guide: Common Methods and Usage Patterns"
-date: 2025-11-24 00:00:00 -0700
+date: 2025-11-25 00:00:00 -0700
 categories: cpp stl string containers
-permalink: /2025/11/24/cpp-string-guide/
+permalink: /2025/11/25/cpp-string-guide/
 tags: [cpp, string, stl, containers, text-processing, algorithms]
 ---
 
@@ -20,7 +20,8 @@ A comprehensive guide to `std::string`, covering all essential methods, characte
 5. [Search and Find](#search-and-find)
 6. [Character Classification](#character-classification)
 7. [Common Use Cases](#common-use-cases)
-8. [Best Practices](#best-practices)
+8. [Runtime Complexity Analysis](#runtime-complexity-analysis)
+9. [Best Practices](#best-practices)
 
 ---
 
@@ -891,6 +892,98 @@ bool tryParseInt(const std::string& str, int& value) {
     } catch (const std::exception&) {
         return false;
     }
+}
+```
+
+---
+
+## Runtime Complexity Analysis
+
+Understanding the time and space complexity of `std::string` operations helps optimize string processing code.
+
+### Time Complexity
+
+| Operation | Time Complexity | Notes |
+|-----------|----------------|------|
+| **Element Access** |
+| `operator[]`, `at()` | O(1) | Random access |
+| `front()`, `back()` | O(1) | Direct access to first/last character |
+| `c_str()`, `data()` | O(1) | Returns pointer to underlying array |
+| **Modifiers** |
+| `push_back()`, `append()` | O(1) amortized | O(n) worst case if reallocation needed |
+| `operator+=` | O(n) | n = length of appended string |
+| `insert()` | O(n) | Linear in distance from insertion point to end |
+| `erase()` | O(n) | Linear in distance from erasure point to end |
+| `replace()` | O(n + m) | n = length, m = replacement length |
+| `clear()` | O(1) | Constant time (may not free memory) |
+| `resize()` | O(n) | n = new size |
+| `reserve()` | O(n) | n = new capacity (if reallocation needed) |
+| `swap()` | O(1) | Constant time, swaps internal pointers |
+| **String Operations** |
+| `substr()` | O(n) | n = length of substring |
+| `copy()` | O(n) | n = number of characters to copy |
+| `assign()` | O(n) | n = length of assigned string |
+| `operator+` (concatenation) | O(n + m) | n = length of first, m = length of second |
+| **Search and Find** |
+| `find()`, `rfind()` | O(n × m) | n = string length, m = pattern length (naive) |
+| `find_first_of()`, `find_last_of()` | O(n × m) | n = string length, m = character set size |
+| `find_first_not_of()`, `find_last_not_of()` | O(n × m) | n = string length, m = character set size |
+| **Comparison** |
+| `compare()` | O(min(n, m)) | n = this length, m = other length |
+| `operator==`, `!=`, `<`, `>`, etc. | O(min(n, m)) | Element-wise comparison |
+| `starts_with()`, `ends_with()` (C++20) | O(m) | m = prefix/suffix length |
+| `contains()` (C++23) | O(n × m) | n = string length, m = pattern length |
+| **Operations** |
+| `size()`, `length()`, `empty()`, `capacity()` | O(1) | Constant time |
+| `max_size()` | O(1) | Constant time |
+
+### Space Complexity
+
+- **Storage**: O(n) where n is the number of characters
+- **Overhead**: Typically 3 pointers + size/capacity = ~24-32 bytes on 64-bit systems
+- **Capacity**: May be larger than `size()` due to exponential growth strategy
+- **Small String Optimization (SSO)**: Many implementations store small strings (typically ≤15-23 chars) directly in the string object, avoiding heap allocation
+
+### Amortized Analysis
+
+`push_back()` and `append()` have **amortized O(1)** complexity per character:
+
+- Most operations are O(1) (no reallocation)
+- Occasional O(n) reallocation when capacity is exceeded
+- With exponential growth (typically 2x), the amortized cost is O(1) per character
+
+### String Search Complexity
+
+The `find()` family of functions typically use optimized algorithms:
+
+- **Naive algorithm**: O(n × m) worst case
+- **Boyer-Moore**: O(n/m) best case, O(n × m) worst case
+- **KMP (Knuth-Morris-Pratt)**: O(n + m) guaranteed
+- Most implementations use optimized versions for better average performance
+
+### Performance Tips Based on Complexity
+
+1. **Use `reserve()`** when building strings incrementally → Avoids O(n) reallocations
+2. **Prefer `operator+=` over `operator+`** → Avoids creating temporary strings (O(n + m) vs O(n + m) but with extra allocation)
+3. **Avoid repeated `find()` in loops** → O(n × m) per call, consider preprocessing
+4. **Use `substr()` judiciously** → O(n) operation, creates new string
+5. **Consider `string_view` (C++17)** → O(1) substring operations without copying
+6. **Use SSO for small strings** → No heap allocation for strings ≤15-23 characters
+
+### Example: Building Strings Efficiently
+
+```cpp
+// ❌ Inefficient: O(n²) due to repeated reallocation
+std::string result;
+for (int i = 0; i < 1000; ++i) {
+    result += "text";  // May cause reallocation each time
+}
+
+// ✅ Efficient: O(n) with reserve
+std::string result;
+result.reserve(4000);  // Reserve space for 1000 × 4 chars
+for (int i = 0; i < 1000; ++i) {
+    result += "text";  // No reallocation
 }
 ```
 
