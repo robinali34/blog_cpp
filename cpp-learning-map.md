@@ -149,8 +149,8 @@ Beginner → Intermediate → Advanced → Expert
 - nullptr
 
 **Recommended Posts:**
-- [C++11 New Features: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp11-new-features-complete-guide %})
-- [C++ Lambda Expressions: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp-lambda-complete-guide-scenarios %})
+- [C++11 New Features: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp11-new-features-complete-guide %})
+- [C++ Lambda Expressions: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp-lambda-complete-guide-scenarios %})
 
 ### 10. C++14 Features
 - Generic lambdas
@@ -159,7 +159,7 @@ Beginner → Intermediate → Advanced → Expert
 - Variable templates
 
 **Recommended Posts:**
-- [C++14 New Features: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp14-new-features-complete-guide %})
+- [C++14 New Features: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp14-new-features-complete-guide %})
 
 ### 11. C++17 Features
 - Structured bindings
@@ -169,7 +169,7 @@ Beginner → Intermediate → Advanced → Expert
 - std::filesystem
 
 **Recommended Posts:**
-- [C++17 New Features: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp17-new-features-complete-guide %})
+- [C++17 New Features: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp17-new-features-complete-guide %})
 
 ### 12. C++20 Features
 - Concepts
@@ -179,7 +179,7 @@ Beginner → Intermediate → Advanced → Expert
 - Three-way comparison
 
 **Recommended Posts:**
-- [C++20 New Features: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp20-new-features-complete-guide %})
+- [C++20 New Features: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp20-new-features-complete-guide %})
 
 ---
 
@@ -366,19 +366,19 @@ Beginner → Intermediate → Advanced → Expert
 ## Learning Resources by Topic
 
 ### Core Language
-- [C++11 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp11-new-features-complete-guide %})
-- [C++14 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp14-new-features-complete-guide %})
-- [C++17 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp17-new-features-complete-guide %})
-- [C++20 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp20-new-features-complete-guide %})
-- [C++23 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp23-new-features-complete-guide %})
-- [C++26 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp26-new-features-complete-guide %})
+- [C++11 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp11-new-features-complete-guide %})
+- [C++14 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp14-new-features-complete-guide %})
+- [C++17 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp17-new-features-complete-guide %})
+- [C++20 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp20-new-features-complete-guide %})
+- [C++23 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp23-new-features-complete-guide %})
+- [C++26 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp26-new-features-complete-guide %})
 
 ### Memory and Pointers
 - [Pointers, References, and Dereferencing]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp-pointers-references-dereference-guide %})
 - [Shared Pointer Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-cpp-shared-ptr-guide %})
 
 ### Functional Programming
-- [Lambda Expressions Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp-lambda-complete-guide-scenarios %})
+- [Lambda Expressions Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp-lambda-complete-guide-scenarios %})
 - [STL Lambda Capture Basics]({{ site.url }}{{ site.baseurl }}{% post_url 2025-09-25-cpp-stl-lambda-capture-basics %})
 
 ### Concurrency
