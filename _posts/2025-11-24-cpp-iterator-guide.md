@@ -205,6 +205,7 @@ int main() {
 
 ### 1. Traversing Containers
 
+{% raw %}
 ```cpp
 #include <vector>
 #include <list>
@@ -248,6 +249,7 @@ void traverse_map() {
     }
 }
 ```
+{% endraw %}
 
 ### 2. Finding Elements
 
@@ -811,6 +813,7 @@ public:
    ```
 
 4. **Using invalidated iterators in maps**
+   {% raw %}
    ```cpp
    std::map<int, int> m = {{1, 10}, {2, 20}};
    auto it = m.find(1);
@@ -818,6 +821,7 @@ public:
    // ⚠️ it is now invalid
    // int x = it->second;  // Undefined behavior
    ```
+   {% endraw %}
 
 5. **Iterator type mismatch**
    ```cpp
