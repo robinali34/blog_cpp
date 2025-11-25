@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "C++14 New Features: Complete Guide and Reference"
-date: 2025-11-18 00:00:00 -0700
+date: 2025-11-16 00:00:00 -0700
 categories: cpp programming tutorial reference language c++14 modern-cpp
 tags: cpp c++14 auto return-type generic-lambdas make-unique variable-templates
 excerpt: "A comprehensive guide to all C++14 new features including auto return types, generic lambdas, std::make_unique, variable templates, and more with practical examples."

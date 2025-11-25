@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "C++ Lambda Expressions: Complete Guide and Common Scenarios"
-date: 2025-11-18 00:00:00 -0700
+date: 2025-11-16 00:00:00 -0700
 categories: cpp programming tutorial reference language lambda functional-programming
 tags: cpp lambda callback closure functional-programming stl algorithms async
 excerpt: "A comprehensive guide to C++ lambda expressions covering syntax, capture modes, common scenarios like callbacks, event handlers, STL algorithms, async programming, and more with practical examples."

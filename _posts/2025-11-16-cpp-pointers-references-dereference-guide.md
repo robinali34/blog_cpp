@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "C++ Pointers, References, and Dereferencing: Complete Guide and Common Scenarios"
-date: 2025-11-18 00:00:00 -0700
+date: 2025-11-16 00:00:00 -0700
 categories: cpp programming tutorial reference language memory-management pointers
 tags: cpp pointers references dereference memory-management raw-pointers smart-pointers rvalue-reference
 excerpt: "A comprehensive guide to C++ pointers, references, and dereferencing covering raw pointers, references, smart pointers, common scenarios, pitfalls, and best practices with practical examples."

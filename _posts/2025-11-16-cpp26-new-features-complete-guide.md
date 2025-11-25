@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "C++26 New Features: Expected Features and Proposals"
-date: 2025-11-18 00:00:00 -0700
+date: 2025-11-16 00:00:00 -0700
 categories: cpp programming tutorial reference language c++26 modern-cpp future
 tags: cpp c++26 reflection contracts pattern-matching value-semantics networking
 excerpt: "A guide to expected C++26 features based on current proposals and working drafts, including reflection, contracts, pattern matching, value semantics, and networking."

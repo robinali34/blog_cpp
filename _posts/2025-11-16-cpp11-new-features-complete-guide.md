@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "C++11 New Features: Complete Guide and Reference"
-date: 2025-11-18 00:00:00 -0700
+date: 2025-11-16 00:00:00 -0700
 categories: cpp programming tutorial reference language c++11 modern-cpp
 tags: cpp c++11 auto lambda smart-pointers rvalue-references move-semantics constexpr alignas alignof
 excerpt: "A comprehensive guide to all C++11 new features including auto, lambdas, smart pointers, rvalue references, alignas, alignof, and many more with practical examples."

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "C++20 New Features: Complete Guide and Reference"
-date: 2025-11-18 00:00:00 -0700
+date: 2025-11-16 00:00:00 -0700
 categories: cpp programming tutorial reference language c++20 modern-cpp
 tags: cpp c++20 concepts ranges coroutines modules spaceship-operator consteval constinit
 excerpt: "A comprehensive guide to all C++20 new features including concepts, ranges, coroutines, modules, spaceship operator, consteval, constinit, and more with practical examples."

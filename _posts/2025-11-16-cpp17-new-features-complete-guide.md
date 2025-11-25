@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "C++17 New Features: Complete Guide and Reference"
-date: 2025-11-18 00:00:00 -0700
+date: 2025-11-16 00:00:00 -0700
 categories: cpp programming tutorial reference language c++17 modern-cpp
 tags: cpp c++17 structured-bindings if-constexpr fold-expressions filesystem optional variant string-view
 excerpt: "A comprehensive guide to all C++17 new features including structured bindings, if constexpr, fold expressions, filesystem, optional, variant, string_view, and more with practical examples."

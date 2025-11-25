@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "C++23 New Features: Complete Guide and Reference"
-date: 2025-11-18 00:00:00 -0700
+date: 2025-11-16 00:00:00 -0700
 categories: cpp programming tutorial reference language c++23 modern-cpp
 tags: cpp c++23 expected stacktrace print std-print ifconsteval deducing-this
 excerpt: "A comprehensive guide to all C++23 new features including std::expected, std::stacktrace, std::print, if consteval, deducing this, and more with practical examples."
