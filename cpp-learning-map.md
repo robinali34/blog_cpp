@@ -103,7 +103,7 @@ Beginner → Intermediate → Advanced → Expert
 - Passing by value, pointer, and reference
 
 **Recommended Posts:**
-- [C++ Pointers, References, and Dereferencing Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp-pointers-references-dereference-guide %})
+- [C++ Pointers, References, and Dereferencing Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp-pointers-references-dereference-guide %})
 
 ---
 
@@ -374,7 +374,7 @@ Beginner → Intermediate → Advanced → Expert
 - [C++26 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp26-new-features-complete-guide %})
 
 ### Memory and Pointers
-- [Pointers, References, and Dereferencing]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-18-cpp-pointers-references-dereference-guide %})
+- [Pointers, References, and Dereferencing]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp-pointers-references-dereference-guide %})
 - [Shared Pointer Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-cpp-shared-ptr-guide %})
 
 ### Functional Programming
