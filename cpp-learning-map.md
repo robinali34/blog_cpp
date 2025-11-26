@@ -81,7 +81,7 @@ Beginner → Intermediate → Advanced → Expert
   - Break and continue
 
 **Recommended Posts:**
-- [C Programming Cheat Sheet]({{ site.url }}{{ site.baseurl }}{% post_url 2025-09-24-c-programming-cheat-sheet %})
+- [C Programming Cheat Sheet]({% post_url 2025-09-24-c-programming-cheat-sheet %})
 
 ### 2. Functions
 - Function declaration and definition
@@ -103,7 +103,7 @@ Beginner → Intermediate → Advanced → Expert
 - Passing by value, pointer, and reference
 
 **Recommended Posts:**
-- [C++ Pointers, References, and Dereferencing Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp-pointers-references-dereference-guide %})
+- [C++ Pointers, References, and Dereferencing Guide]({% post_url 2025-11-16-cpp-pointers-references-dereference-guide %})
 
 ---
 
@@ -149,8 +149,8 @@ Beginner → Intermediate → Advanced → Expert
 - nullptr
 
 **Recommended Posts:**
-- [C++11 New Features: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp11-new-features-complete-guide %})
-- [C++ Lambda Expressions: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp-lambda-complete-guide-scenarios %})
+- [C++11 New Features: Complete Guide]({% post_url 2025-11-16-cpp11-new-features-complete-guide %})
+- [C++ Lambda Expressions: Complete Guide]({% post_url 2025-11-16-cpp-lambda-complete-guide-scenarios %})
 
 ### 10. C++14 Features
 - Generic lambdas
@@ -159,7 +159,7 @@ Beginner → Intermediate → Advanced → Expert
 - Variable templates
 
 **Recommended Posts:**
-- [C++14 New Features: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp14-new-features-complete-guide %})
+- [C++14 New Features: Complete Guide]({% post_url 2025-11-16-cpp14-new-features-complete-guide %})
 
 ### 11. C++17 Features
 - Structured bindings
@@ -169,7 +169,7 @@ Beginner → Intermediate → Advanced → Expert
 - std::filesystem
 
 **Recommended Posts:**
-- [C++17 New Features: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp17-new-features-complete-guide %})
+- [C++17 New Features: Complete Guide]({% post_url 2025-11-16-cpp17-new-features-complete-guide %})
 
 ### 12. C++20 Features
 - Concepts
@@ -179,7 +179,7 @@ Beginner → Intermediate → Advanced → Expert
 - Three-way comparison
 
 **Recommended Posts:**
-- [C++20 New Features: Complete Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp20-new-features-complete-guide %})
+- [C++20 New Features: Complete Guide]({% post_url 2025-11-16-cpp20-new-features-complete-guide %})
 
 ---
 
@@ -192,7 +192,7 @@ Beginner → Intermediate → Advanced → Expert
 - Container adapters (stack, queue, priority_queue)
 
 **Recommended Posts:**
-- [C++ Container Reserve and Resize Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-cpp-container-reserve-resize-guide %})
+- [C++ Container Reserve and Resize Guide]({% post_url 2025-10-29-cpp-container-reserve-resize-guide %})
 
 ### 14. STL Algorithms
 - Non-modifying algorithms (find, count, search)
@@ -201,7 +201,7 @@ Beginner → Intermediate → Advanced → Expert
 - Numeric algorithms
 
 **Recommended Posts:**
-- [C++ STL Algorithm Max]({{ site.url }}{{ site.baseurl }}{% post_url 2025-09-25-cpp-stl-algorithm-max %})
+- [C++ STL Algorithm Max]({% post_url 2025-09-25-cpp-stl-algorithm-max %})
 
 ### 15. Iterators
 - Iterator categories
@@ -216,8 +216,8 @@ Beginner → Intermediate → Advanced → Expert
 - When to use each
 
 **Recommended Posts:**
-- [C++ Shared Pointer Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-cpp-shared-ptr-guide %})
-- [C++ Reusable Mutex with Shared Ptr]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-cpp-reusable-mutex-with-shared-ptr %})
+- [C++ Shared Pointer Guide]({% post_url 2025-10-29-cpp-shared-ptr-guide %})
+- [C++ Reusable Mutex with Shared Ptr]({% post_url 2025-10-29-cpp-reusable-mutex-with-shared-ptr %})
 
 ---
 
@@ -231,7 +231,7 @@ Beginner → Intermediate → Advanced → Expert
 - Template metaprogramming
 
 **Recommended Posts:**
-- [C++ Using Keyword]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-06-cpp-using-keyword %})
+- [C++ Using Keyword]({% post_url 2025-10-06-cpp-using-keyword %})
 
 ### 18. Memory Management
 - Stack vs heap
@@ -255,8 +255,8 @@ Beginner → Intermediate → Advanced → Expert
 - SFINAE
 
 **Recommended Posts:**
-- [C++ Volatile Guide and Scenarios]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-cpp-volatile-guide-and-scenarios %})
-- [C++20 Bit Manipulation Utilities]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-14-cpp20-bit-manipulation-utilities %})
+- [C++ Volatile Guide and Scenarios]({% post_url 2025-10-29-cpp-volatile-guide-and-scenarios %})
+- [C++20 Bit Manipulation Utilities]({% post_url 2025-10-14-cpp20-bit-manipulation-utilities %})
 
 ---
 
@@ -271,9 +271,9 @@ Beginner → Intermediate → Advanced → Expert
 - Resource sharing patterns
 
 **Recommended Posts:**
-- [C++ Multithreading Basics]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-27-cpp-multithreading-basics %})
-- [C++ Mutex Patterns and Cases]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-cpp-mutex-patterns-and-cases %})
-- [C++ Thread Resource Sharing: Bus vs Queue]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-17-cpp-thread-resource-sharing-bus-vs-queue %})
+- [C++ Multithreading Basics]({% post_url 2025-10-27-cpp-multithreading-basics %})
+- [C++ Mutex Patterns and Cases]({% post_url 2025-10-29-cpp-mutex-patterns-and-cases %})
+- [C++ Thread Resource Sharing: Bus vs Queue]({% post_url 2025-11-17-cpp-thread-resource-sharing-bus-vs-queue %})
 
 ### 22. Networking
 - Socket programming
@@ -283,7 +283,7 @@ Beginner → Intermediate → Advanced → Expert
 - Network protocols
 
 **Recommended Posts:**
-- [C++ Computer Network Interview Q&A]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp-computer-network-interview-qa %})
+- [C++ Computer Network Interview Q&A]({% post_url 2025-11-16-cpp-computer-network-interview-qa %})
 
 ### 23. File I/O
 - File streams
@@ -309,10 +309,10 @@ Beginner → Intermediate → Advanced → Expert
 - Real-time constraints
 
 **Recommended Posts:**
-- [Embedded System Design Showcase]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-embedded-system-design-showcase %})
-- [Power Management for Embedded Systems]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-power-management-design %})
-- [DMA Zero-Copy Architecture]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-dma-zero-copy-architecture %})
-- [RTOS Scheduling and ISR Design]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-rtos-scheduling-isr-design %})
+- [Embedded System Design Showcase]({% post_url 2025-10-29-embedded-system-design-showcase %})
+- [Power Management for Embedded Systems]({% post_url 2025-10-29-power-management-design %})
+- [DMA Zero-Copy Architecture]({% post_url 2025-10-29-dma-zero-copy-architecture %})
+- [RTOS Scheduling and ISR Design]({% post_url 2025-10-29-rtos-scheduling-isr-design %})
 
 ### 26. Performance Optimization
 - Profiling and benchmarking
@@ -322,7 +322,7 @@ Beginner → Intermediate → Advanced → Expert
 - Algorithm optimization
 
 **Recommended Posts:**
-- [C++ String Processing Optimization]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-16-cpp-string-processing-optimization %})
+- [C++ String Processing Optimization]({% post_url 2025-10-16-cpp-string-processing-optimization %})
 
 ### 27. Advanced C++ Patterns
 - RAII
@@ -341,8 +341,8 @@ Beginner → Intermediate → Advanced → Expert
 - ORM concepts
 
 **Recommended Posts:**
-- [SQL Basics Introduction]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-08-sql-basics-introduction %})
-- [PostgreSQL with C++ Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-postgresql-with-cpp-guide %})
+- [SQL Basics Introduction]({% post_url 2025-10-08-sql-basics-introduction %})
+- [PostgreSQL with C++ Guide]({% post_url 2025-10-29-postgresql-with-cpp-guide %})
 
 ### 29. Protocol Implementation
 - BLE (Bluetooth Low Energy)
@@ -350,8 +350,8 @@ Beginner → Intermediate → Advanced → Expert
 - Custom binary protocols
 
 **Recommended Posts:**
-- [BLE: How It Works and C++ Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-ble-how-it-works-and-cpp-guide %})
-- [MQTT: How It Works and C++ Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-mqtt-how-it-works-and-cpp-guide %})
+- [BLE: How It Works and C++ Guide]({% post_url 2025-10-29-ble-how-it-works-and-cpp-guide %})
+- [MQTT: How It Works and C++ Guide]({% post_url 2025-10-29-mqtt-how-it-works-and-cpp-guide %})
 
 ### 30. Interview Preparation
 - Coding interview preparation
@@ -359,39 +359,39 @@ Beginner → Intermediate → Advanced → Expert
 - Common patterns and algorithms
 
 **Recommended Posts:**
-- [Meta LeetCode 5-Day Preparation Plan]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-04-meta-leetcode-5-day-preparation-plan %})
+- [Meta LeetCode 5-Day Preparation Plan]({% post_url 2025-11-04-meta-leetcode-5-day-preparation-plan %})
 
 ---
 
 ## Learning Resources by Topic
 
 ### Core Language
-- [C++11 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp11-new-features-complete-guide %})
-- [C++14 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp14-new-features-complete-guide %})
-- [C++17 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp17-new-features-complete-guide %})
-- [C++20 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp20-new-features-complete-guide %})
-- [C++23 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp23-new-features-complete-guide %})
-- [C++26 New Features]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp26-new-features-complete-guide %})
+- [C++11 New Features]({% post_url 2025-11-16-cpp11-new-features-complete-guide %})
+- [C++14 New Features]({% post_url 2025-11-16-cpp14-new-features-complete-guide %})
+- [C++17 New Features]({% post_url 2025-11-16-cpp17-new-features-complete-guide %})
+- [C++20 New Features]({% post_url 2025-11-16-cpp20-new-features-complete-guide %})
+- [C++23 New Features]({% post_url 2025-11-16-cpp23-new-features-complete-guide %})
+- [C++26 New Features]({% post_url 2025-11-16-cpp26-new-features-complete-guide %})
 
 ### Memory and Pointers
-- [Pointers, References, and Dereferencing]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp-pointers-references-dereference-guide %})
-- [Shared Pointer Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-cpp-shared-ptr-guide %})
+- [Pointers, References, and Dereferencing]({% post_url 2025-11-16-cpp-pointers-references-dereference-guide %})
+- [Shared Pointer Guide]({% post_url 2025-10-29-cpp-shared-ptr-guide %})
 
 ### Functional Programming
-- [Lambda Expressions Guide]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp-lambda-complete-guide-scenarios %})
-- [STL Lambda Capture Basics]({{ site.url }}{{ site.baseurl }}{% post_url 2025-09-25-cpp-stl-lambda-capture-basics %})
+- [Lambda Expressions Guide]({% post_url 2025-11-16-cpp-lambda-complete-guide-scenarios %})
+- [STL Lambda Capture Basics]({% post_url 2025-09-25-cpp-stl-lambda-capture-basics %})
 
 ### Concurrency
-- [Multithreading Basics]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-27-cpp-multithreading-basics %})
-- [Mutex Patterns]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-cpp-mutex-patterns-and-cases %})
-- [Thread Resource Sharing]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-17-cpp-thread-resource-sharing-bus-vs-queue %})
+- [Multithreading Basics]({% post_url 2025-10-27-cpp-multithreading-basics %})
+- [Mutex Patterns]({% post_url 2025-10-29-cpp-mutex-patterns-and-cases %})
+- [Thread Resource Sharing]({% post_url 2025-11-17-cpp-thread-resource-sharing-bus-vs-queue %})
 
 ### Embedded Systems
-- [Embedded System Design Showcase]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-embedded-system-design-showcase %})
-- [STL Embedded Cheat Sheet]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-cpp-stl-embedded-cheat-sheet %})
+- [Embedded System Design Showcase]({% post_url 2025-10-29-embedded-system-design-showcase %})
+- [STL Embedded Cheat Sheet]({% post_url 2025-10-29-cpp-stl-embedded-cheat-sheet %})
 
 ### Networking
-- [Computer Network Interview Q&A]({{ site.url }}{{ site.baseurl }}{% post_url 2025-11-16-cpp-computer-network-interview-qa %})
+- [Computer Network Interview Q&A]({% post_url 2025-11-16-cpp-computer-network-interview-qa %})
 
 ---
 

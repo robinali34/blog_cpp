@@ -56,7 +56,7 @@ This guide serves as both a reference for system design interviews and a practic
 
 ## Practice links (from this blog)
 
-- [Embedded System Design Showcase]({{ site.url }}{{ site.baseurl }}{% post_url 2025-10-29-embedded-system-design-showcase %})
+- [Embedded System Design Showcase]({% post_url 2025-10-29-embedded-system-design-showcase %})
 
 ## One last tip
 
