@@ -275,7 +275,7 @@ hr {
 
 .post-header .site-title {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Larger for desktop */
 }
 
 .post-header .site-title a {
@@ -317,6 +317,20 @@ hr {
   max-width: 1600px;
   margin: 0 auto;
   align-items: start;
+}
+
+/* Large view - Extra large screens (1400px and above) */
+@media (min-width: 1400px) {
+  .post-header .site-title {
+    font-size: 2rem; /* Even larger for very large screens */
+  }
+}
+
+/* Medium-large view - Large tablets and small desktops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .post-header .site-title {
+    font-size: 1.6rem; /* Slightly smaller for medium screens */
+  }
 }
 
 @media (max-width: 1200px) {
@@ -848,7 +862,7 @@ hr {
   }
   
   .post-header .site-title {
-    font-size: 1.25rem;
+    font-size: 1.2rem; /* Mobile size */
   }
   
   .post-header .site-nav {
