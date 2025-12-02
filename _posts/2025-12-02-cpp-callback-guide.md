@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "C++ Callback Guide: Introduction, Scenarios, Examples, and Thread-Safe Patterns"
-date: 2025-11-25 00:00:00 -0700
+date: 2025-12-02 00:00:00 -0800
 categories: cpp programming callback functional async concurrency
-permalink: /2025/11/25/cpp-callback-guide/
+permalink: /2025/12/02/cpp-callback-guide/
 tags: [cpp, callback, std::function, lambda, future, mutex, async, functional-programming, thread-safe]
 excerpt: "A comprehensive guide to C++ callbacks covering function pointers, std::function, lambdas, async callbacks with std::future, and thread-safe callback patterns with mutex."
 ---

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "C++ Function Pointers Complete Guide: Syntax, Scenarios, Examples, and Common Pitfalls"
-date: 2025-11-25 00:00:00 -0700
+date: 2025-12-02 00:00:00 -0800
 categories: cpp programming function-pointers pointers callbacks
-permalink: /2025/11/25/cpp-function-pointers-complete-guide/
+permalink: /2025/12/02/cpp-function-pointers-complete-guide/
 tags: [cpp, function-pointers, pointers, callbacks, member-function-pointers, function-objects, function-signatures]
 excerpt: "A comprehensive guide to C++ function pointers covering syntax, declaration, member function pointers, use cases, practical examples, and common pitfalls."
 ---

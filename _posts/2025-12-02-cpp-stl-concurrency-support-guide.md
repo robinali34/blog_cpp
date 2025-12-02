@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "C++ STL Concurrency Support Guide: Thread-Safe Containers, Atomic Operations, and Synchronization Primitives"
-date: 2025-11-25 00:00:00 -0700
+date: 2025-12-02 00:00:00 -0800
 categories: cpp stl concurrency thread-safe atomic synchronization
-permalink: /2025/11/25/cpp-stl-concurrency-support-guide/
+permalink: /2025/12/02/cpp-stl-concurrency-support-guide/
 tags: [cpp, stl, concurrency, thread-safe, atomic, mutex, condition_variable, shared_mutex, lock_guard, unique_lock]
 excerpt: "A comprehensive guide to C++ STL concurrency support covering thread-safe primitives, atomic operations, synchronization mechanisms, scenarios, examples, and common practices."
 ---

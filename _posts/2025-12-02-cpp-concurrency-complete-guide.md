@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "C++ Concurrency Complete Guide: How It Works, Scenarios, Examples, and Common Practices"
-date: 2025-11-25 00:00:00 -0700
+date: 2025-12-02 00:00:00 -0800
 categories: cpp concurrency multithreading parallel-programming async
-permalink: /2025/11/25/cpp-concurrency-complete-guide/
+permalink: /2025/12/02/cpp-concurrency-complete-guide/
 tags: [cpp, concurrency, multithreading, parallel-programming, async, thread-pool, producer-consumer, race-condition, deadlock, lock-free]
 excerpt: "A comprehensive guide to C++ concurrency covering execution models, synchronization primitives, common patterns, real-world scenarios, and best practices for writing safe and efficient concurrent code."
 ---

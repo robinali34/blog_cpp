@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "C++ Smart Pointers Complete Guide: unique_ptr, shared_ptr, weak_ptr - Scenarios, Examples, and Common Pitfalls"
-date: 2025-11-25 00:00:00 -0700
+date: 2025-12-02 00:00:00 -0800
 categories: cpp smart-pointers memory-management raii
-permalink: /2025/11/25/cpp-smart-pointers-complete-guide/
+permalink: /2025/12/02/cpp-smart-pointers-complete-guide/
 tags: [cpp, smart-pointers, unique_ptr, shared_ptr, weak_ptr, memory-management, raii, ownership, resource-management]
 excerpt: "A comprehensive guide to C++ smart pointers covering unique_ptr, shared_ptr, and weak_ptr with scenarios, practical examples, common practices, and pitfalls to avoid."
 ---
