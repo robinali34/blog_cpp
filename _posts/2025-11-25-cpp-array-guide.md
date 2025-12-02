@@ -277,6 +277,7 @@ int days = days_in_month[month - 1];  // 28
 
 ### 3. Matrix/Grid
 
+{% raw %}
 ```cpp
 constexpr size_t ROWS = 3;
 constexpr size_t COLS = 3;
@@ -297,6 +298,7 @@ for (const auto& row : matrix) {
     std::cout << std::endl;
 }
 ```
+{% endraw %}
 
 ### 4. Return Fixed-Size Array from Function
 
