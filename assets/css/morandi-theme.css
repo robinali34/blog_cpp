@@ -40,11 +40,26 @@
 }
 
 /* Global Styles */
+html, body {
+  /* CRITICAL: Must be visible for sticky to work - overflow-x: hidden breaks sticky */
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+}
+
+html {
+  /* Keep default scroll behavior */
+  height: 100%;
+}
+
 body {
   background-color: var(--morandi-bg-primary);
   color: var(--morandi-text-dark);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.6;
+  /* Prevent horizontal overflow without breaking sticky */
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100%;
 }
 
 /* Headers */
@@ -248,11 +263,15 @@ hr {
 
 /* Post Layout Styles */
 .post-container {
-  max-width: 1400px;
+  max-width: 1600px; /* Match post-wrapper max-width */
   margin: 0 auto;
   padding: 0 20px;
   background-color: var(--morandi-bg-primary);
   min-height: 100vh;
+  /* CRITICAL: Must be visible for sticky to work */
+  overflow: visible;
+  /* Ensure container allows sticky children */
+  position: relative;
 }
 
 .post-header {
@@ -317,6 +336,13 @@ hr {
   max-width: 1600px;
   margin: 0 auto;
   align-items: start;
+  /* CRITICAL: No position or overflow restrictions that break sticky */
+  position: static; /* Changed from relative - sticky needs static parent */
+  overflow: visible;
+  /* Ensure grid is tall enough for sticky to activate */
+  min-height: 100vh;
+  /* Grid rows configuration */
+  grid-auto-rows: min-content;
 }
 
 /* Large view - Extra large screens (1400px and above) */
@@ -484,7 +510,8 @@ hr {
 
 /* Sidebar Styles */
 .post-sidebar,
-.post-sidebar-left {
+/* Sidebar Styles */
+.post-sidebar {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -492,17 +519,29 @@ hr {
 }
 
 .post-sidebar-left {
+  /* CRITICAL: Sticky positioning for TOC sidebar */
+  position: -webkit-sticky; /* Safari support */
   position: sticky;
   top: 20px;
-  height: fit-content;
-  max-height: calc(100vh - 40px);
   align-self: start;
-  width: 100%;
-  max-width: 240px;
-  overflow: visible;
+  
+  /* Layout */
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
   align-items: stretch;
+  
+  /* Sizing */
+  width: 100%;
+  max-width: 240px;
+  min-width: 0; /* Prevent overflow */
+  height: fit-content;
+  max-height: calc(100vh - 40px);
+  
+  /* Overflow and positioning - CRITICAL for sticky to work */
+  overflow: visible;
+  z-index: 10;
+  will-change: transform;
 }
 
 .sidebar-section {
@@ -653,19 +692,25 @@ hr {
 }
 
 /* Table of Contents Styles */
+/* Table of Contents Styles */
 .toc-section {
   width: 100%;
   max-width: 240px;
   box-sizing: border-box;
-  overflow: hidden;
+  /* CRITICAL: Must be visible for sticky to work */
+  overflow: visible;
   display: flex;
   flex-direction: column;
 }
 
 .post-sidebar-left .toc-section {
   max-height: calc(100vh - 40px);
-  height: calc(100vh - 40px);
-  min-height: 300px;
+  /* CRITICAL: overflow: hidden required for inner scroll to work */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* Make sure TOC section works within sticky sidebar */
+  position: relative;
 }
 
 .post-sidebar-left .toc-section .sidebar-title {
@@ -674,16 +719,14 @@ hr {
 }
 
 .toc-nav {
-  flex: 1 1 0%;
+  flex: 1 1 auto;
   overflow-y: auto !important;
   overflow-x: hidden !important;
+  max-height: calc(100vh - 100px); /* ensures scroll */
   padding-right: 0.5rem;
   padding-bottom: 0.5rem;
   width: 100%;
-  max-width: 240px;
   box-sizing: border-box;
-  min-height: 0;
-  max-height: 100%;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--morandi-border-dark) var(--morandi-bg-primary);
@@ -1137,4 +1180,3 @@ hr {
     font-size: 0.8rem;
   }
 }
-
