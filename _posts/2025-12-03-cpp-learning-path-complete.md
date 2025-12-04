@@ -373,7 +373,7 @@ Fundamentals → STL → Concurrency → Advanced Topics
 
 ### System Design Interviews
 
-- [System Design Interview Framework]({% post_url 2025-10-04-system-design-interview-framework %})
+- [System Design Interview Summary]({% post_url 2025-11-16-system-design-interview-summary %})
   - Framework for system design interviews
 
 ### Network Interviews
