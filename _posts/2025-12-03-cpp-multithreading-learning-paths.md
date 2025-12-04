@@ -135,6 +135,33 @@ Learn efficient task execution:
 - Task scheduling
 - Worker thread management
 
+### Step 2.5: Async Function Templates
+
+Learn standard library async execution:
+
+- [C++ std::async Guide](/2025/12/03/cpp-async-guide/)
+  - Async task execution
+  - Launch policies
+  - Future-based results
+- [C++ std::packaged_task Guide](/2025/12/03/cpp-packaged-task-guide/)
+  - Task wrapper with futures
+  - Thread pool integration
+  - Explicit task control
+- [C++ std::promise and std::future Guide](/2025/12/03/cpp-promise-future-guide/)
+  - Thread communication
+  - Exception propagation
+  - Value setting and retrieval
+- [C++ std::shared_future Guide](/2025/12/03/cpp-shared-future-guide/)
+  - Multi-consumer patterns
+  - Broadcasting results
+  - Shared state access
+
+**Key Concepts**:
+- `std::async` for simple async tasks
+- `std::packaged_task` for explicit control
+- `std::promise`/`std::future` for thread communication
+- `std::shared_future` for multiple consumers
+
 ### Step 3: Coordination Primitives
 
 Learn thread coordination:
@@ -289,6 +316,28 @@ Learn standard library support:
   - Worker threads
   - Task execution
 
+### Async Function Templates
+
+- **std::async**: [C++ std::async Guide](/2025/12/03/cpp-async-guide/)
+  - Async task execution
+  - Launch policies
+  - Future-based results
+
+- **std::packaged_task**: [C++ std::packaged_task Guide](/2025/12/03/cpp-packaged-task-guide/)
+  - Task wrapper with futures
+  - Thread pool integration
+  - Explicit execution control
+
+- **std::promise and std::future**: [C++ std::promise and std::future Guide](/2025/12/03/cpp-promise-future-guide/)
+  - Thread communication
+  - Exception propagation
+  - Value setting and retrieval
+
+- **std::shared_future**: [C++ std::shared_future Guide](/2025/12/03/cpp-shared-future-guide/)
+  - Multi-consumer patterns
+  - Broadcasting results
+  - Shared state access
+
 ### Advanced Technologies
 
 - **Lock-Free Design**: [C++ Lock-Free Design Guide](/2025/12/03/cpp-lock-free-design-guide/)
@@ -387,6 +436,10 @@ These are the most commonly used patterns in real-world engineering:
 - **Multiple Producers/Consumers**: [C++ Producer-Consumer Patterns Guide](/2025/12/03/cpp-producer-consumer-patterns-guide/)
 - **Thread Pool Usage**: [C++ Thread Pool Guide](/2025/12/03/cpp-thread-pool-guide/)
 - **Reader-Writer Scenarios**: [C++ Reader-Writer Pattern Guide](/2025/12/03/cpp-reader-writer-pattern-guide/)
+- **Async Tasks**: [C++ std::async Guide](/2025/12/03/cpp-async-guide/)
+- **Packaged Tasks**: [C++ std::packaged_task Guide](/2025/12/03/cpp-packaged-task-guide/)
+- **Promise-Future Communication**: [C++ std::promise and std::future Guide](/2025/12/03/cpp-promise-future-guide/)
+- **Multi-Consumer Results**: [C++ std::shared_future Guide](/2025/12/03/cpp-shared-future-guide/)
 
 ### Advanced Examples
 
@@ -418,6 +471,12 @@ These are the most commonly used patterns in real-world engineering:
 1. [C++ Mutex Guide with Scenarios](/2025/12/03/cpp-mutex-guide-scenarios/)
 2. [C++ Condition Variable Guide](/2025/12/03/cpp-condition-variable-guide/)
 3. [C++ Atomic Operations Guide](/2025/12/03/cpp-atomic-operations-guide/)
+
+#### Async Function Templates
+1. [C++ std::async Guide](/2025/12/03/cpp-async-guide/)
+2. [C++ std::packaged_task Guide](/2025/12/03/cpp-packaged-task-guide/)
+3. [C++ std::promise and std::future Guide](/2025/12/03/cpp-promise-future-guide/)
+4. [C++ std::shared_future Guide](/2025/12/03/cpp-shared-future-guide/)
 
 #### Patterns
 1. [C++ Producer-Consumer Patterns Guide](/2025/12/03/cpp-producer-consumer-patterns-guide/)
@@ -458,6 +517,10 @@ These are the most commonly used patterns in real-world engineering:
 - [C++ Thread Pool Guide](/2025/12/03/cpp-thread-pool-guide/)
 - [C++ Reader-Writer Pattern Guide](/2025/12/03/cpp-reader-writer-pattern-guide/)
 - [C++ Thread Pool Pattern (Real-World)](/2025/12/03/cpp-pattern-thread-pool-real-world/)
+- [C++ std::async Guide](/2025/12/03/cpp-async-guide/)
+- [C++ std::packaged_task Guide](/2025/12/03/cpp-packaged-task-guide/)
+- [C++ std::promise and std::future Guide](/2025/12/03/cpp-promise-future-guide/)
+- [C++ std::shared_future Guide](/2025/12/03/cpp-shared-future-guide/)
 - [C++ Future/Promise Pattern](/2025/12/03/cpp-pattern-future-promise-real-world/)
 - [C++ Map-Reduce Pattern](/2025/12/03/cpp-pattern-map-reduce-real-world/)
 - [C++ Read-Write Lock Pattern](/2025/12/03/cpp-pattern-read-write-lock-real-world/)
