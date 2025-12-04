@@ -307,7 +307,7 @@ Fundamentals → STL → Concurrency → Advanced Topics
 
 ## Function Pointers and Callbacks
 
-- [C++ Function Pointers Complete Guide]({% post_url 2025-11-25-cpp-function-pointers-complete-guide %})
+- [C++ Function Pointers Complete Guide]({% post_url 2025-12-02-cpp-function-pointers-complete-guide %})
   - Syntax, member function pointers, lookup tables, dispatchers
 
 - [C++ Callback Guide]({% post_url 2025-12-02-cpp-callback-guide %})
