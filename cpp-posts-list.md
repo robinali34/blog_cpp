@@ -29,7 +29,7 @@ This page contains a comprehensive list of all C++ blog posts, organized by cate
 
 ### Fundamentals and Basics
 
-{% assign fundamentals = site.posts | where_exp: "post", "post.categories contains 'programming' or post.title contains 'Cheat Sheet' or post.title contains 'Pointers' or post.title contains 'References' or post.title contains 'Volatile'" %}
+{% assign fundamentals = site.posts | where_exp: "post", "post.categories contains 'programming' or post.title contains 'Cheat' or post.title contains 'Pointers' or post.title contains 'References' or post.title contains 'Volatile'" %}
 {% for post in fundamentals %}
 - [{{ post.title }}]({{ post.url | relative_url }}) - {{ post.date | date: "%b %-d, %Y" }}
 {% endfor %}
@@ -64,14 +64,14 @@ This page contains a comprehensive list of all C++ blog posts, organized by cate
 
 ### Modern C++ Features
 
-{% assign modern_cpp = site.posts | where_exp: "post", "post.title contains 'C++11' or post.title contains 'C++14' or post.title contains 'C++17' or post.title contains 'C++20' or post.title contains 'C++23' or post.title contains 'C++26' or post.title contains 'Modern C++' or post.title contains 'New Features'" %}
+{% assign modern_cpp = site.posts | where_exp: "post", "post.title contains 'C++11' or post.title contains 'C++14' or post.title contains 'C++17' or post.title contains 'C++20' or post.title contains 'C++23' or post.title contains 'C++26' or post.title contains 'Modern' or post.title contains 'Features'" %}
 {% for post in modern_cpp %}
 - [{{ post.title }}]({{ post.url | relative_url }}) - {{ post.date | date: "%b %-d, %Y" }}
 {% endfor %}
 
 ### Function Pointers and Callbacks
 
-{% assign callbacks = site.posts | where_exp: "post", "post.title contains 'callback' or post.title contains 'function pointer' or post.title contains 'Function Pointers' or post.title contains 'Callback'" %}
+{% assign callbacks = site.posts | where_exp: "post", "post.title contains 'callback' or post.title contains 'function' or post.title contains 'Pointers' or post.title contains 'Callback'" %}
 {% for post in callbacks %}
 - [{{ post.title }}]({{ post.url | relative_url }}) - {{ post.date | date: "%b %-d, %Y" }}
 {% endfor %}

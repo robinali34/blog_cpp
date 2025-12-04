@@ -118,6 +118,7 @@ bool success = value.compare_exchange_weak(expected, 20);
 
 The foundation of lock-free programming:
 
+{% raw %}
 ```cpp
 #include <atomic>
 using namespace std;
@@ -135,6 +136,7 @@ atomic<bool> flag{false};
 struct Point { int x, y; };
 atomic<Point> point{{0, 0}};
 ```
+{% endraw %}
 
 ### Atomic Operations
 
