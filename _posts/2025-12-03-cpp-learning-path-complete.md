@@ -140,7 +140,7 @@ Fundamentals → STL → Concurrency → Advanced Topics
 
 ### Smart Pointers
 
-- [C++ Smart Pointers Complete Guide]({% post_url 2025-11-25-cpp-smart-pointers-complete-guide %})
+- [C++ Smart Pointers Complete Guide]({% post_url 2025-12-02-cpp-smart-pointers-complete-guide %})
   - `unique_ptr`, `shared_ptr`, `weak_ptr`, ownership, RAII
 
 - [C++ Shared Pointer Guide]({% post_url 2025-10-29-cpp-shared-ptr-guide %})

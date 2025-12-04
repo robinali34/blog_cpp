@@ -97,6 +97,7 @@ m["apple"] = 10;  // Updates value
 
 ### `at()` - Bounds-Checked Access
 
+{% raw %}
 ```cpp
 #include <map>
 #include <string>
@@ -112,9 +113,11 @@ try {
     cout << "Key not found" << endl;
 }
 ```
+{% endraw %}
 
 ### `find()` - Safe Access
 
+{% raw %}
 ```cpp
 #include <map>
 #include <string>
@@ -127,6 +130,7 @@ if (it != m.end()) {
     int value = it->second;  // Safe access
 }
 ```
+{% endraw %}
 
 ---
 
@@ -197,6 +201,8 @@ m.clear();
 
 ### Update Operations
 
+{% raw %}
+{% raw %}
 ```cpp
 #include <map>
 #include <string>
@@ -213,6 +219,7 @@ m.insert_or_assign("banana", 7);  // Inserts if not exists, assigns if exists
 // Try emplace (C++17)
 m.try_emplace("cherry", 9);  // Only inserts if key doesn't exist
 ```
+{% endraw %}
 
 ---
 
@@ -240,6 +247,7 @@ if (it != m.end()) {
 
 ### `count()` - Check Existence
 
+{% raw %}
 ```cpp
 #include <map>
 #include <string>
@@ -253,9 +261,11 @@ if (m.count("apple") > 0) {
 }
 // Returns 1 if exists, 0 if not (since keys are unique)
 ```
+{% endraw %}
 
 ### `contains()` - Check Existence (C++20)
 
+{% raw %}
 ```cpp
 #include <map>
 #include <string>
@@ -268,6 +278,7 @@ if (m.contains("apple")) {
     cout << "Key exists" << endl;
 }
 ```
+{% endraw %}
 
 ### `lower_bound()`, `upper_bound()`, `equal_range()`
 

@@ -82,6 +82,7 @@ atomic<shared_ptr<int>> shared_ptr_atomic;
 
 ### Custom Types
 
+{% raw %}
 ```cpp
 // Must be trivially copyable
 struct Point {
@@ -90,6 +91,7 @@ struct Point {
 
 atomic<Point> point_atomic{{0, 0}};
 ```
+{% endraw %}
 
 ---
 

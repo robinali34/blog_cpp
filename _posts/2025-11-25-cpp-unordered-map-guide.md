@@ -98,6 +98,7 @@ m["apple"] = 10;  // Updates value
 
 ### `at()` - Bounds-Checked Access
 
+{% raw %}
 ```cpp
 std::unordered_map<std::string, int> m = {{"apple", 5}};
 
@@ -108,9 +109,11 @@ try {
     std::cout << "Key not found" << std::endl;
 }
 ```
+{% endraw %}
 
 ### `find()` - Safe Access
 
+{% raw %}
 ```cpp
 std::unordered_map<std::string, int> m = {{"apple", 5}};
 
@@ -119,6 +122,7 @@ if (it != m.end()) {
     int value = it->second;  // Safe access
 }
 ```
+{% endraw %}
 
 ---
 
@@ -180,6 +184,7 @@ m.clear();
 
 ### Update Operations
 
+{% raw %}
 ```cpp
 std::unordered_map<std::string, int> m = {{"apple", 5}};
 
@@ -192,6 +197,7 @@ m.insert_or_assign("banana", 7);  // Inserts if not exists, assigns if exists
 // Try emplace (C++17)
 m.try_emplace("cherry", 9);  // Only inserts if key doesn't exist
 ```
+{% endraw %}
 
 ---
 
@@ -214,6 +220,7 @@ if (it != m.end()) {
 
 ### `count()` - Check Existence
 
+{% raw %}
 ```cpp
 std::unordered_map<std::string, int> m = {{"apple", 5}};
 
@@ -222,9 +229,11 @@ if (m.count("apple") > 0) {
 }
 // Returns 1 if exists, 0 if not (since keys are unique)
 ```
+{% endraw %}
 
 ### `contains()` - Check Existence (C++20)
 
+{% raw %}
 ```cpp
 std::unordered_map<std::string, int> m = {{"apple", 5}};
 
@@ -232,6 +241,7 @@ if (m.contains("apple")) {
     std::cout << "Key exists" << std::endl;
 }
 ```
+{% endraw %}
 
 ### `equal_range()` - Find All Elements with Key
 
