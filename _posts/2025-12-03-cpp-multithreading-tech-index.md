@@ -50,8 +50,8 @@ C++ provides a comprehensive set of multi-threading technologies for building co
 - Thread-safe data structures
 
 **Links**:
-- [Mutex Guide with Scenarios](/2025/12/03/cpp-mutex-guide-scenarios/)
-- [Mutex Patterns and Cases](/2025/10/29/cpp-mutex-patterns-and-cases/)
+- [Mutex Guide with Scenarios]({{ site.baseurl }}/2025/12/03/cpp-mutex-guide-scenarios/)
+- [Mutex Patterns and Cases]({{ site.baseurl }}/2025/10/29/cpp-mutex-patterns-and-cases/)
 
 **Key Concepts**:
 - `std::mutex`
@@ -72,7 +72,7 @@ C++ provides a comprehensive set of multi-threading technologies for building co
 - Event waiting
 
 **Links**:
-- [Condition Variable Guide](/2025/12/03/cpp-condition-variable-guide/)
+- [Condition Variable Guide]({{ site.baseurl }}/2025/12/03/cpp-condition-variable-guide/)
 
 **Key Concepts**:
 - `std::condition_variable`
@@ -214,7 +214,7 @@ C++ provides a comprehensive set of multi-threading technologies for building co
 - Synchronized processing
 
 **Links**:
-- [Barrier and Latch Guide](/2025/12/03/cpp-barrier-latch-guide/)
+- [Barrier and Latch Guide]({{ site.baseurl }}/2025/12/03/cpp-barrier-latch-guide/)
 
 **Key Concepts**:
 - `std::barrier`
@@ -233,7 +233,7 @@ C++ provides a comprehensive set of multi-threading technologies for building co
 - Countdown scenarios
 
 **Links**:
-- [Barrier and Latch Guide](/2025/12/03/cpp-barrier-latch-guide/)
+- [Barrier and Latch Guide]({{ site.baseurl }}/2025/12/03/cpp-barrier-latch-guide/)
 
 **Key Concepts**:
 - `std::latch`

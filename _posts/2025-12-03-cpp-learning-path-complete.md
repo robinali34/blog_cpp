@@ -128,7 +128,7 @@ Fundamentals → STL → Concurrency → Advanced Topics
 
 ### Lambda and Functional Programming
 
-- [C++ STL Lambda Capture Basics]({% post_url 2025-09-25-cpp-stl-lambda-capture-basics %})
+- [C++ STL Lambda Capture Basics]({{ site.baseurl }}{% post_url 2025-09-25-cpp-stl-lambda-capture-basics %})
   - Lambda capture modes, reference vs value
 
 - [C++ Lambda Expressions Complete Guide]({% post_url 2025-11-16-cpp-lambda-complete-guide-scenarios %})

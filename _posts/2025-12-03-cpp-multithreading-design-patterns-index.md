@@ -51,8 +51,8 @@ Multi-threading design patterns provide proven solutions to common concurrency p
 - Logging systems
 
 **Links**:
-- [Producer-Consumer Patterns Guide](/2025/12/03/cpp-producer-consumer-patterns-guide/)
-- [Producer-Consumer Examples](/2025/12/03/cpp-producer-consumer-pattern-examples/)
+- [Producer-Consumer Patterns Guide]({{ site.baseurl }}/2025/12/03/cpp-producer-consumer-patterns-guide/)
+- [Producer-Consumer Examples]({{ site.baseurl }}/2025/12/03/cpp-producer-consumer-pattern-examples/)
 
 **Key Concepts**:
 - Thread-safe queue
@@ -72,7 +72,7 @@ Multi-threading design patterns provide proven solutions to common concurrency p
 - Read-heavy data structures
 
 **Links**:
-- [Reader-Writer Pattern Guide](/2025/12/03/cpp-reader-writer-pattern-guide/)
+- [Reader-Writer Pattern Guide]({{ site.baseurl }}/2025/12/03/cpp-reader-writer-pattern-guide/)
 
 **Key Concepts**:
 - Shared mutex (C++17)
@@ -110,7 +110,7 @@ Multi-threading design patterns provide proven solutions to common concurrency p
 - Async operations
 
 **Links**:
-- [Thread Pool Guide](/2025/12/03/cpp-thread-pool-guide/)
+- [Thread Pool Guide]({{ site.baseurl }}/2025/12/03/cpp-thread-pool-guide/)
 
 **Key Concepts**:
 - Worker threads
@@ -163,7 +163,7 @@ Multi-threading design patterns provide proven solutions to common concurrency p
 - Progress reporting
 
 **Links**:
-- [Callback Guide](/2025/11/25/cpp-callback-guide/)
+- [Callback Guide]({{ site.baseurl }}/2025/11/25/cpp-callback-guide/)
 
 **Key Concepts**:
 - Function pointers
@@ -184,7 +184,7 @@ Multi-threading design patterns provide proven solutions to common concurrency p
 - Synchronized computation
 
 **Links**:
-- [Barrier and Latch Guide](/2025/12/03/cpp-barrier-latch-guide/)
+- [Barrier and Latch Guide]({{ site.baseurl }}/2025/12/03/cpp-barrier-latch-guide/)
 
 **Key Concepts**:
 - std::barrier (C++20)
@@ -203,7 +203,7 @@ Multi-threading design patterns provide proven solutions to common concurrency p
 - Countdown synchronization
 
 **Links**:
-- [Barrier and Latch Guide](/2025/12/03/cpp-barrier-latch-guide/)
+- [Barrier and Latch Guide]({{ site.baseurl }}/2025/12/03/cpp-barrier-latch-guide/)
 
 **Key Concepts**:
 - std::latch (C++20)
@@ -224,7 +224,7 @@ Multi-threading design patterns provide proven solutions to common concurrency p
 - State-dependent execution
 
 **Links**:
-- [Gate + Thread Pool + Callback Queue](/2025/12/03/cpp-gate-thread-pool-callback-queue/)
+- [Gate + Thread Pool + Callback Queue]({{ site.baseurl }}/2025/12/03/cpp-gate-thread-pool-callback-queue/)
 
 **Key Concepts**:
 - Gate control
@@ -243,7 +243,7 @@ Multi-threading design patterns provide proven solutions to common concurrency p
 - API callbacks
 
 **Links**:
-- [Gated Callback Dispatcher](/2025/12/03/cpp-gated-callback-dispatcher/)
+- [Gated Callback Dispatcher]({{ site.baseurl }}/2025/12/03/cpp-gated-callback-dispatcher/)
 
 **Key Concepts**:
 - Callback queue

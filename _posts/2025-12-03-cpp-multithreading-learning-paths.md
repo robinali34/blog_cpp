@@ -48,9 +48,9 @@ This guide provides structured learning paths for mastering C++ multi-threading,
 
 Start with the fundamentals:
 
-- [C++ Concurrency Complete Guide](/2025/12/02/cpp-concurrency-complete-guide/)
+- [C++ Concurrency Complete Guide]({{ site.baseurl }}/2025/12/02/cpp-concurrency-complete-guide/)
   - How concurrency works
-- [C++ Multithreading Basics](/2025/10/27-cpp-multithreading-basics/)
+- [C++ Multithreading Basics]({{ site.baseurl }}/2025/10/27-cpp-multithreading-basics/)
   - Thread creation and management
 
 **Key Concepts**:
@@ -63,7 +63,7 @@ Start with the fundamentals:
 
 Learn fundamental synchronization primitives:
 
-- [C++ Mutex Guide with Scenarios](/2025/12/03/cpp-mutex-guide-scenarios/)
+- [C++ Mutex Guide with Scenarios]({{ site.baseurl }}/2025/12/03/cpp-mutex-guide-scenarios/)
   - Protecting shared data
   - Critical sections
   - Lock guards
@@ -77,7 +77,7 @@ Learn fundamental synchronization primitives:
 
 Learn how threads communicate:
 
-- [C++ Condition Variable Guide](/2025/12/03/cpp-condition-variable-guide/)
+- [C++ Condition Variable Guide]({{ site.baseurl }}/2025/12/03/cpp-condition-variable-guide/)
   - Wait/notify patterns
   - Thread coordination
 
@@ -90,7 +90,7 @@ Learn how threads communicate:
 
 Apply what you've learned:
 
-- [C++ Producer-Consumer Pattern Examples](/2025/12/03/cpp-producer-consumer-pattern-examples/)
+- [C++ Producer-Consumer Pattern Examples]({{ site.baseurl }}/2025/12/03/cpp-producer-consumer-pattern-examples/)
   - Simple producer-consumer
   - Thread-safe queues
 
@@ -106,11 +106,11 @@ Apply what you've learned:
 
 Deepen your understanding:
 
-- [C++ Reader-Writer Pattern Guide](/2025/12/03/cpp-reader-writer-pattern-guide/)
+- [C++ Reader-Writer Pattern Guide]({{ site.baseurl }}/2025/12/03/cpp-reader-writer-pattern-guide/)
   - Shared mutex
   - Read-write locks
 
-- [C++ Thread Resource Sharing](/2025/12/03/cpp-thread-resource-sharing-bus-vs-queue/)
+- [C++ Thread Resource Sharing]({{ site.baseurl }}/2025/12/03/cpp-thread-resource-sharing-bus-vs-queue/)
   - Bus vs queue approaches
   - Message passing
 
@@ -123,11 +123,11 @@ Deepen your understanding:
 
 Learn efficient task execution:
 
-- [C++ Thread Pool Guide](/2025/12/03/cpp-thread-pool-guide/)
+- [C++ Thread Pool Guide]({{ site.baseurl }}/2025/12/03/cpp-thread-pool-guide/)
   - Worker threads
   - Task queues
   - Thread reuse
-- [C++ Thread Pool Pattern (Real-World)](/2025/12/03/cpp-pattern-thread-pool-real-world/)
+- [C++ Thread Pool Pattern (Real-World)]({{ site.baseurl }}/2025/12/03/cpp-pattern-thread-pool-real-world/)
   - Real-world implementation and best practices
 
 **Key Concepts**:
@@ -139,19 +139,19 @@ Learn efficient task execution:
 
 Learn standard library async execution:
 
-- [C++ std::async Guide](/2025/12/03/cpp-async-guide/)
+- [C++ std::async Guide]({{ site.baseurl }}/2025/12/03/cpp-async-guide/)
   - Async task execution
   - Launch policies
   - Future-based results
-- [C++ std::packaged_task Guide](/2025/12/03/cpp-packaged-task-guide/)
+- [C++ std::packaged_task Guide]({{ site.baseurl }}/2025/12/03/cpp-packaged-task-guide/)
   - Task wrapper with futures
   - Thread pool integration
   - Explicit task control
-- [C++ std::promise and std::future Guide](/2025/12/03/cpp-promise-future-guide/)
+- [C++ std::promise and std::future Guide]({{ site.baseurl }}/2025/12/03/cpp-promise-future-guide/)
   - Thread communication
   - Exception propagation
   - Value setting and retrieval
-- [C++ std::shared_future Guide](/2025/12/03/cpp-shared-future-guide/)
+- [C++ std::shared_future Guide]({{ site.baseurl }}/2025/12/03/cpp-shared-future-guide/)
   - Multi-consumer patterns
   - Broadcasting results
   - Shared state access
@@ -166,7 +166,7 @@ Learn standard library async execution:
 
 Learn thread coordination:
 
-- [C++ Barrier and Latch Guide](/2025/12/03/cpp-barrier-latch-guide/)
+- [C++ Barrier and Latch Guide]({{ site.baseurl }}/2025/12/03/cpp-barrier-latch-guide/)
   - Synchronization points
   - Multi-phase algorithms
 
@@ -179,18 +179,18 @@ Learn thread coordination:
 
 Apply advanced patterns:
 
-- [C++ Producer-Consumer Patterns Guide](/2025/12/03/cpp-producer-consumer-patterns-guide/)
+- [C++ Producer-Consumer Patterns Guide]({{ site.baseurl }}/2025/12/03/cpp-producer-consumer-patterns-guide/)
   - Multiple producers/consumers
   - Complex scenarios
-- [C++ Producer-Consumer Pattern (Real-World)](/2025/12/03/cpp-pattern-producer-consumer-real-world/)
+- [C++ Producer-Consumer Pattern (Real-World)]({{ site.baseurl }}/2025/12/03/cpp-pattern-producer-consumer-real-world/)
   - Real-world implementation guide
-- [C++ Future/Promise Pattern](/2025/12/03/cpp-pattern-future-promise-real-world/)
+- [C++ Future/Promise Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-future-promise-real-world/)
   - Async task result handling
-- [C++ Map-Reduce Pattern](/2025/12/03/cpp-pattern-map-reduce-real-world/)
+- [C++ Map-Reduce Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-map-reduce-real-world/)
   - Parallel data processing
-- [C++ Bounded Buffer Pattern](/2025/12/03/cpp-pattern-bounded-buffer-real-world/)
+- [C++ Bounded Buffer Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-bounded-buffer-real-world/)
   - Resource control and backpressure
-- [C++ Multi-Threading Practical Patterns](/2025/12/03/cpp-multithreading-practical-patterns/)
+- [C++ Multi-Threading Practical Patterns]({{ site.baseurl }}/2025/12/03/cpp-multithreading-practical-patterns/)
   - Task queues, logging, performance monitoring, lambda patterns
 
 **Key Concepts**:
@@ -209,7 +209,7 @@ Apply advanced patterns:
 
 Master lock-free fundamentals:
 
-- [C++ Atomic Operations Guide](/2025/12/03/cpp-atomic-operations-guide/)
+- [C++ Atomic Operations Guide]({{ site.baseurl }}/2025/12/03/cpp-atomic-operations-guide/)
   - Atomic types
   - Memory ordering
   - Lock-free primitives
@@ -223,7 +223,7 @@ Master lock-free fundamentals:
 
 Build lock-free data structures:
 
-- [C++ Lock-Free Design Guide](/2025/12/03/cpp-lock-free-design-guide/)
+- [C++ Lock-Free Design Guide]({{ site.baseurl }}/2025/12/03/cpp-lock-free-design-guide/)
   - Lock-free algorithms
   - STL atomic usage
   - Common scenarios
@@ -238,30 +238,30 @@ Build lock-free data structures:
 
 Master complex patterns:
 
-- [C++ Gate + Thread Pool + Callback Queue](/2025/12/03/cpp-gate-thread-pool-callback-queue/)
+- [C++ Gate + Thread Pool + Callback Queue]({{ site.baseurl }}/2025/12/03/cpp-gate-thread-pool-callback-queue/)
   - Controlled async execution
   - Gate control
 
-- [C++ Gated Callback Dispatcher](/2025/12/03/cpp-gated-callback-dispatcher/)
+- [C++ Gated Callback Dispatcher]({{ site.baseurl }}/2025/12/03/cpp-gated-callback-dispatcher/)
   - Event-driven architectures
   - Callback management
 
-- [C++ Work Stealing Pattern](/2025/12/03/cpp-pattern-work-stealing-real-world/)
+- [C++ Work Stealing Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-work-stealing-real-world/)
   - Dynamic load balancing
 
-- [C++ Pipeline Pattern](/2025/12/03/cpp-pattern-pipeline-real-world/)
+- [C++ Pipeline Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-pipeline-real-world/)
   - Staged execution
 
-- [C++ Reactor Pattern](/2025/12/03/cpp-pattern-reactor-real-world/)
+- [C++ Reactor Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-reactor-real-world/)
   - Event-driven I/O
 
-- [C++ Active Object Pattern](/2025/12/03/cpp-pattern-active-object-real-world/)
+- [C++ Active Object Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-active-object-real-world/)
   - Sequential message processing
 
-- [C++ Actor Model Pattern](/2025/12/03/cpp-pattern-actor-model-real-world/)
+- [C++ Actor Model Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-actor-model-real-world/)
   - Message-passing concurrency
 
-- [C++ Fork-Join Pattern](/2025/12/03/cpp-pattern-fork-join-real-world/)
+- [C++ Fork-Join Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-fork-join-real-world/)
   - Recursive parallelization
 
 **Key Concepts**:
@@ -275,7 +275,7 @@ Master complex patterns:
 
 Learn standard library support:
 
-- [C++ STL Concurrency Support Guide](/2025/12/02/cpp-stl-concurrency-support-guide/)
+- [C++ STL Concurrency Support Guide]({{ site.baseurl }}/2025/12/02/cpp-stl-concurrency-support-guide/)
   - Standard library primitives
   - Best practices
 
@@ -290,71 +290,71 @@ Learn standard library support:
 
 ### Synchronization Primitives
 
-- **Mutex**: [C++ Mutex Guide with Scenarios](/2025/12/03/cpp-mutex-guide-scenarios/)
+- **Mutex**: [C++ Mutex Guide with Scenarios]({{ site.baseurl }}/2025/12/03/cpp-mutex-guide-scenarios/)
   - Basic mutex usage
   - Lock guards
   - Scenarios and examples
 
-- **Condition Variable**: [C++ Condition Variable Guide](/2025/12/03/cpp-condition-variable-guide/)
+- **Condition Variable**: [C++ Condition Variable Guide]({{ site.baseurl }}/2025/12/03/cpp-condition-variable-guide/)
   - Wait/notify patterns
   - Thread coordination
   - Practical examples
 
-- **Atomic Operations**: [C++ Atomic Operations Guide](/2025/12/03/cpp-atomic-operations-guide/)
+- **Atomic Operations**: [C++ Atomic Operations Guide]({{ site.baseurl }}/2025/12/03/cpp-atomic-operations-guide/)
   - Atomic types
   - Memory ordering
   - Lock-free primitives
 
-- **Barrier/Latch**: [C++ Barrier and Latch Guide](/2025/12/03/cpp-barrier-latch-guide/)
+- **Barrier/Latch**: [C++ Barrier and Latch Guide]({{ site.baseurl }}/2025/12/03/cpp-barrier-latch-guide/)
   - Thread synchronization
   - Multi-phase algorithms
 
 ### Thread Management
 
-- **Thread Basics**: [C++ Multithreading Basics](/2025/10/27-cpp-multithreading-basics/)
+- **Thread Basics**: [C++ Multithreading Basics]({{ site.baseurl }}/2025/10/27-cpp-multithreading-basics/)
   - Thread creation
   - Thread management
 
-- **Thread Pool**: [C++ Thread Pool Guide](/2025/12/03/cpp-thread-pool-guide/)
+- **Thread Pool**: [C++ Thread Pool Guide]({{ site.baseurl }}/2025/12/03/cpp-thread-pool-guide/)
   - Worker threads
   - Task execution
 
 ### Async Function Templates
 
-- **std::async**: [C++ std::async Guide](/2025/12/03/cpp-async-guide/)
+- **std::async**: [C++ std::async Guide]({{ site.baseurl }}/2025/12/03/cpp-async-guide/)
   - Async task execution
   - Launch policies
   - Future-based results
 
-- **std::packaged_task**: [C++ std::packaged_task Guide](/2025/12/03/cpp-packaged-task-guide/)
+- **std::packaged_task**: [C++ std::packaged_task Guide]({{ site.baseurl }}/2025/12/03/cpp-packaged-task-guide/)
   - Task wrapper with futures
   - Thread pool integration
   - Explicit execution control
 
-- **std::promise and std::future**: [C++ std::promise and std::future Guide](/2025/12/03/cpp-promise-future-guide/)
+- **std::promise and std::future**: [C++ std::promise and std::future Guide]({{ site.baseurl }}/2025/12/03/cpp-promise-future-guide/)
   - Thread communication
   - Exception propagation
   - Value setting and retrieval
 
-- **std::shared_future**: [C++ std::shared_future Guide](/2025/12/03/cpp-shared-future-guide/)
+- **std::shared_future**: [C++ std::shared_future Guide]({{ site.baseurl }}/2025/12/03/cpp-shared-future-guide/)
   - Multi-consumer patterns
   - Broadcasting results
   - Shared state access
 
 ### Advanced Technologies
 
-- **Lock-Free Design**: [C++ Lock-Free Design Guide](/2025/12/03/cpp-lock-free-design-guide/)
+- **Lock-Free Design**: [C++ Lock-Free Design Guide]({{ site.baseurl }}/2025/12/03/cpp-lock-free-design-guide/)
   - Lock-free algorithms
   - CAS operations
   - Memory ordering
 
-- **STL Concurrency**: [C++ STL Concurrency Support Guide](/2025/12/02/cpp-stl-concurrency-support-guide/)
+- **STL Concurrency**: [C++ STL Concurrency Support Guide]({{ site.baseurl }}/2025/12/02/cpp-stl-concurrency-support-guide/)
   - Standard library support
   - Best practices
 
 ### Index Posts
 
-- **Technologies Index**: [C++ Multi-Threading Technologies Index](/2025/12/03/cpp-multithreading-tech-index/)
+- **Technologies Index**: [C++ Multi-Threading Technologies Index]({{ site.baseurl }}/2025/12/03/cpp-multithreading-tech-index/)
   - Complete technology overview
   - Selection guide
 
@@ -366,63 +366,63 @@ Learn standard library support:
 
 These are the most commonly used patterns in real-world engineering:
 
-1. **Producer-Consumer**: [Real-World Guide](/2025/12/03/cpp-pattern-producer-consumer-real-world/)
+1. **Producer-Consumer**: [Real-World Guide]({{ site.baseurl }}/2025/12/03/cpp-pattern-producer-consumer-real-world/)
    - Decouple work generation from processing
-   - Also see: [Patterns Guide](/2025/12/03/cpp-producer-consumer-patterns-guide/) | [Examples](/2025/12/03/cpp-producer-consumer-pattern-examples/)
+   - Also see: [Patterns Guide]({{ site.baseurl }}/2025/12/03/cpp-producer-consumer-patterns-guide/) | [Examples]({{ site.baseurl }}/2025/12/03/cpp-producer-consumer-pattern-examples/)
 
-2. **Thread Pool**: [Real-World Guide](/2025/12/03/cpp-pattern-thread-pool-real-world/)
+2. **Thread Pool**: [Real-World Guide]({{ site.baseurl }}/2025/12/03/cpp-pattern-thread-pool-real-world/)
    - Efficient task execution with reusable threads
-   - Also see: [Thread Pool Guide](/2025/12/03/cpp-thread-pool-guide/)
+   - Also see: [Thread Pool Guide]({{ site.baseurl }}/2025/12/03/cpp-thread-pool-guide/)
 
-3. **Future/Promise**: [Real-World Guide](/2025/12/03/cpp-pattern-future-promise-real-world/)
+3. **Future/Promise**: [Real-World Guide]({{ site.baseurl }}/2025/12/03/cpp-pattern-future-promise-real-world/)
    - Async task result handling
 
-4. **Map-Reduce**: [Real-World Guide](/2025/12/03/cpp-pattern-map-reduce-real-world/)
+4. **Map-Reduce**: [Real-World Guide]({{ site.baseurl }}/2025/12/03/cpp-pattern-map-reduce-real-world/)
    - Parallel data processing
 
-5. **Read-Write Lock**: [Real-World Guide](/2025/12/03/cpp-pattern-read-write-lock-real-world/)
+5. **Read-Write Lock**: [Real-World Guide]({{ site.baseurl }}/2025/12/03/cpp-pattern-read-write-lock-real-world/)
    - Optimize read-heavy access
-   - Also see: [Reader-Writer Pattern Guide](/2025/12/03/cpp-reader-writer-pattern-guide/)
+   - Also see: [Reader-Writer Pattern Guide]({{ site.baseurl }}/2025/12/03/cpp-reader-writer-pattern-guide/)
 
-6. **Work Stealing**: [Real-World Guide](/2025/12/03/cpp-pattern-work-stealing-real-world/)
+6. **Work Stealing**: [Real-World Guide]({{ site.baseurl }}/2025/12/03/cpp-pattern-work-stealing-real-world/)
    - Dynamic load balancing
 
-7. **Pipeline/Staged Execution**: [Real-World Guide](/2025/12/03/cpp-pattern-pipeline-real-world/)
+7. **Pipeline/Staged Execution**: [Real-World Guide]({{ site.baseurl }}/2025/12/03/cpp-pattern-pipeline-real-world/)
    - Sequential stage parallelism
 
-8. **Reactor Pattern**: [Real-World Guide](/2025/12/03/cpp-pattern-reactor-real-world/)
+8. **Reactor Pattern**: [Real-World Guide]({{ site.baseurl }}/2025/12/03/cpp-pattern-reactor-real-world/)
    - Event-driven I/O
 
-9. **Active Object**: [Real-World Guide](/2025/12/03/cpp-pattern-active-object-real-world/)
+9. **Active Object**: [Real-World Guide]({{ site.baseurl }}/2025/12/03/cpp-pattern-active-object-real-world/)
    - Sequential message processing
 
-10. **Bounded Buffer**: [Real-World Guide](/2025/12/03/cpp-pattern-bounded-buffer-real-world/)
+10. **Bounded Buffer**: [Real-World Guide]({{ site.baseurl }}/2025/12/03/cpp-pattern-bounded-buffer-real-world/)
     - Resource control and backpressure
 
-11. **Actor Model**: [Real-World Guide](/2025/12/03/cpp-pattern-actor-model-real-world/)
+11. **Actor Model**: [Real-World Guide]({{ site.baseurl }}/2025/12/03/cpp-pattern-actor-model-real-world/)
     - Message-passing concurrency
 
-12. **Fork-Join**: [Real-World Guide](/2025/12/03/cpp-pattern-fork-join-real-world/)
+12. **Fork-Join**: [Real-World Guide]({{ site.baseurl }}/2025/12/03/cpp-pattern-fork-join-real-world/)
     - Recursive parallelization
 
 ### Additional Patterns
 
-- **Gate + Thread Pool + Callback**: [C++ Gate + Thread Pool + Callback Queue](/2025/12/03/cpp-gate-thread-pool-callback-queue/)
-- **Gated Callback Dispatcher**: [C++ Gated Callback Dispatcher](/2025/12/03/cpp-gated-callback-dispatcher/)
-- **Background File Loader**: [C++ Background File Loader Pattern](/2025/12/03/cpp-background-file-loader-pattern/)
+- **Gate + Thread Pool + Callback**: [C++ Gate + Thread Pool + Callback Queue]({{ site.baseurl }}/2025/12/03/cpp-gate-thread-pool-callback-queue/)
+- **Gated Callback Dispatcher**: [C++ Gated Callback Dispatcher]({{ site.baseurl }}/2025/12/03/cpp-gated-callback-dispatcher/)
+- **Background File Loader**: [C++ Background File Loader Pattern]({{ site.baseurl }}/2025/12/03/cpp-background-file-loader-pattern/)
   - Batch file loading with line-by-line consumption
 
 ### Coordination Patterns
 
-- **Barrier**: [C++ Barrier and Latch Guide](/2025/12/03/cpp-barrier-latch-guide/)
-- **Latch**: [C++ Barrier and Latch Guide](/2025/12/03/cpp-barrier-latch-guide/)
+- **Barrier**: [C++ Barrier and Latch Guide]({{ site.baseurl }}/2025/12/03/cpp-barrier-latch-guide/)
+- **Latch**: [C++ Barrier and Latch Guide]({{ site.baseurl }}/2025/12/03/cpp-barrier-latch-guide/)
 
 ### Pattern Index
 
-- **Design Patterns Index**: [C++ Multi-Threading Design Patterns Index](/2025/12/03/cpp-multithreading-design-patterns-index/)
+- **Design Patterns Index**: [C++ Multi-Threading Design Patterns Index]({{ site.baseurl }}/2025/12/03/cpp-multithreading-design-patterns-index/)
   - Complete pattern overview
   - Pattern selection guide
-- **Common Patterns Overview**: [C++ Common Multi-Threading Patterns](/2025/12/03/cpp-common-multithreading-patterns-real-world/)
+- **Common Patterns Overview**: [C++ Common Multi-Threading Patterns]({{ site.baseurl }}/2025/12/03/cpp-common-multithreading-patterns-real-world/)
   - All 12 patterns in one guide
 
 ---
@@ -431,35 +431,35 @@ These are the most commonly used patterns in real-world engineering:
 
 ### Basic Examples
 
-- **Simple Producer-Consumer**: [C++ Producer-Consumer Pattern Examples](/2025/12/03/cpp-producer-consumer-pattern-examples/)
-- **Thread Coordination**: [C++ Condition Variable Guide](/2025/12/03/cpp-condition-variable-guide/)
+- **Simple Producer-Consumer**: [C++ Producer-Consumer Pattern Examples]({{ site.baseurl }}/2025/12/03/cpp-producer-consumer-pattern-examples/)
+- **Thread Coordination**: [C++ Condition Variable Guide]({{ site.baseurl }}/2025/12/03/cpp-condition-variable-guide/)
 
 ### Intermediate Examples
 
-- **Multiple Producers/Consumers**: [C++ Producer-Consumer Patterns Guide](/2025/12/03/cpp-producer-consumer-patterns-guide/)
-- **Thread Pool Usage**: [C++ Thread Pool Guide](/2025/12/03/cpp-thread-pool-guide/)
-- **Reader-Writer Scenarios**: [C++ Reader-Writer Pattern Guide](/2025/12/03/cpp-reader-writer-pattern-guide/)
-- **Async Tasks**: [C++ std::async Guide](/2025/12/03/cpp-async-guide/)
-- **Packaged Tasks**: [C++ std::packaged_task Guide](/2025/12/03/cpp-packaged-task-guide/)
-- **Promise-Future Communication**: [C++ std::promise and std::future Guide](/2025/12/03/cpp-promise-future-guide/)
-- **Multi-Consumer Results**: [C++ std::shared_future Guide](/2025/12/03/cpp-shared-future-guide/)
+- **Multiple Producers/Consumers**: [C++ Producer-Consumer Patterns Guide]({{ site.baseurl }}/2025/12/03/cpp-producer-consumer-patterns-guide/)
+- **Thread Pool Usage**: [C++ Thread Pool Guide]({{ site.baseurl }}/2025/12/03/cpp-thread-pool-guide/)
+- **Reader-Writer Scenarios**: [C++ Reader-Writer Pattern Guide]({{ site.baseurl }}/2025/12/03/cpp-reader-writer-pattern-guide/)
+- **Async Tasks**: [C++ std::async Guide]({{ site.baseurl }}/2025/12/03/cpp-async-guide/)
+- **Packaged Tasks**: [C++ std::packaged_task Guide]({{ site.baseurl }}/2025/12/03/cpp-packaged-task-guide/)
+- **Promise-Future Communication**: [C++ std::promise and std::future Guide]({{ site.baseurl }}/2025/12/03/cpp-promise-future-guide/)
+- **Multi-Consumer Results**: [C++ std::shared_future Guide]({{ site.baseurl }}/2025/12/03/cpp-shared-future-guide/)
 
 ### Advanced Examples
 
-- **Lock-Free Structures**: [C++ Lock-Free Design Guide](/2025/12/03/cpp-lock-free-design-guide/)
-- **Atomic Operations**: [C++ Atomic Operations Guide](/2025/12/03/cpp-atomic-operations-guide/)
-- **Gate Control**: [C++ Gate + Thread Pool + Callback Queue](/2025/12/03/cpp-gate-thread-pool-callback-queue/)
-- **Work Stealing**: [C++ Work Stealing Pattern](/2025/12/03/cpp-pattern-work-stealing-real-world/)
-- **Map-Reduce**: [C++ Map-Reduce Pattern](/2025/12/03/cpp-pattern-map-reduce-real-world/)
-- **Fork-Join**: [C++ Fork-Join Pattern](/2025/12/03/cpp-pattern-fork-join-real-world/)
-- **Practical Patterns**: [C++ Multi-Threading Practical Patterns](/2025/12/03/cpp-multithreading-practical-patterns/)
+- **Lock-Free Structures**: [C++ Lock-Free Design Guide]({{ site.baseurl }}/2025/12/03/cpp-lock-free-design-guide/)
+- **Atomic Operations**: [C++ Atomic Operations Guide]({{ site.baseurl }}/2025/12/03/cpp-atomic-operations-guide/)
+- **Gate Control**: [C++ Gate + Thread Pool + Callback Queue]({{ site.baseurl }}/2025/12/03/cpp-gate-thread-pool-callback-queue/)
+- **Work Stealing**: [C++ Work Stealing Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-work-stealing-real-world/)
+- **Map-Reduce**: [C++ Map-Reduce Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-map-reduce-real-world/)
+- **Fork-Join**: [C++ Fork-Join Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-fork-join-real-world/)
+- **Practical Patterns**: [C++ Multi-Threading Practical Patterns]({{ site.baseurl }}/2025/12/03/cpp-multithreading-practical-patterns/)
   - Task queues, logging, performance monitoring
 
 ### Scenario-Based Examples
 
-- **Mutex Scenarios**: [C++ Mutex Guide with Scenarios](/2025/12/03/cpp-mutex-guide-scenarios/)
-- **Resource Sharing**: [C++ Thread Resource Sharing](/2025/12/03/cpp-thread-resource-sharing-bus-vs-queue/)
-- **Background File Loading**: [C++ Background File Loader Pattern](/2025/12/03/cpp-background-file-loader-pattern/)
+- **Mutex Scenarios**: [C++ Mutex Guide with Scenarios]({{ site.baseurl }}/2025/12/03/cpp-mutex-guide-scenarios/)
+- **Resource Sharing**: [C++ Thread Resource Sharing]({{ site.baseurl }}/2025/12/03/cpp-thread-resource-sharing-bus-vs-queue/)
+- **Background File Loading**: [C++ Background File Loader Pattern]({{ site.baseurl }}/2025/12/03/cpp-background-file-loader-pattern/)
   - Batch file loading with consumer processing
 
 ---
@@ -469,79 +469,79 @@ These are the most commonly used patterns in real-world engineering:
 ### By Topic
 
 #### Getting Started
-1. [C++ Concurrency Complete Guide](/2025/12/02/cpp-concurrency-complete-guide/)
-2. [C++ Multithreading Basics](/2025/10/27-cpp-multithreading-basics/)
+1. [C++ Concurrency Complete Guide]({{ site.baseurl }}/2025/12/02/cpp-concurrency-complete-guide/)
+2. [C++ Multithreading Basics]({{ site.baseurl }}/2025/10/27-cpp-multithreading-basics/)
 
 #### Synchronization
-1. [C++ Mutex Guide with Scenarios](/2025/12/03/cpp-mutex-guide-scenarios/)
-2. [C++ Condition Variable Guide](/2025/12/03/cpp-condition-variable-guide/)
-3. [C++ Atomic Operations Guide](/2025/12/03/cpp-atomic-operations-guide/)
+1. [C++ Mutex Guide with Scenarios]({{ site.baseurl }}/2025/12/03/cpp-mutex-guide-scenarios/)
+2. [C++ Condition Variable Guide]({{ site.baseurl }}/2025/12/03/cpp-condition-variable-guide/)
+3. [C++ Atomic Operations Guide]({{ site.baseurl }}/2025/12/03/cpp-atomic-operations-guide/)
 
 #### Async Function Templates
-1. [C++ std::async Guide](/2025/12/03/cpp-async-guide/)
-2. [C++ std::packaged_task Guide](/2025/12/03/cpp-packaged-task-guide/)
-3. [C++ std::promise and std::future Guide](/2025/12/03/cpp-promise-future-guide/)
-4. [C++ std::shared_future Guide](/2025/12/03/cpp-shared-future-guide/)
+1. [C++ std::async Guide]({{ site.baseurl }}/2025/12/03/cpp-async-guide/)
+2. [C++ std::packaged_task Guide]({{ site.baseurl }}/2025/12/03/cpp-packaged-task-guide/)
+3. [C++ std::promise and std::future Guide]({{ site.baseurl }}/2025/12/03/cpp-promise-future-guide/)
+4. [C++ std::shared_future Guide]({{ site.baseurl }}/2025/12/03/cpp-shared-future-guide/)
 
 #### Patterns
-1. [C++ Producer-Consumer Patterns Guide](/2025/12/03/cpp-producer-consumer-patterns-guide/)
-2. [C++ Reader-Writer Pattern Guide](/2025/12/03/cpp-reader-writer-pattern-guide/)
-3. [C++ Thread Pool Guide](/2025/12/03/cpp-thread-pool-guide/)
-4. [C++ Common Multi-Threading Patterns](/2025/12/03/cpp-common-multithreading-patterns-real-world/)
+1. [C++ Producer-Consumer Patterns Guide]({{ site.baseurl }}/2025/12/03/cpp-producer-consumer-patterns-guide/)
+2. [C++ Reader-Writer Pattern Guide]({{ site.baseurl }}/2025/12/03/cpp-reader-writer-pattern-guide/)
+3. [C++ Thread Pool Guide]({{ site.baseurl }}/2025/12/03/cpp-thread-pool-guide/)
+4. [C++ Common Multi-Threading Patterns]({{ site.baseurl }}/2025/12/03/cpp-common-multithreading-patterns-real-world/)
    - All 12 real-world patterns overview
 
 #### Real-World Pattern Guides
-1. [Producer-Consumer Pattern](/2025/12/03/cpp-pattern-producer-consumer-real-world/)
-2. [Thread Pool Pattern](/2025/12/03/cpp-pattern-thread-pool-real-world/)
-3. [Future/Promise Pattern](/2025/12/03/cpp-pattern-future-promise-real-world/)
-4. [Map-Reduce Pattern](/2025/12/03/cpp-pattern-map-reduce-real-world/)
-5. [Read-Write Lock Pattern](/2025/12/03/cpp-pattern-read-write-lock-real-world/)
-6. [Work Stealing Pattern](/2025/12/03/cpp-pattern-work-stealing-real-world/)
-7. [Pipeline Pattern](/2025/12/03/cpp-pattern-pipeline-real-world/)
-8. [Reactor Pattern](/2025/12/03/cpp-pattern-reactor-real-world/)
-9. [Active Object Pattern](/2025/12/03/cpp-pattern-active-object-real-world/)
-10. [Bounded Buffer Pattern](/2025/12/03/cpp-pattern-bounded-buffer-real-world/)
-11. [Actor Model Pattern](/2025/12/03/cpp-pattern-actor-model-real-world/)
-12. [Fork-Join Pattern](/2025/12/03/cpp-pattern-fork-join-real-world/)
+1. [Producer-Consumer Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-producer-consumer-real-world/)
+2. [Thread Pool Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-thread-pool-real-world/)
+3. [Future/Promise Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-future-promise-real-world/)
+4. [Map-Reduce Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-map-reduce-real-world/)
+5. [Read-Write Lock Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-read-write-lock-real-world/)
+6. [Work Stealing Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-work-stealing-real-world/)
+7. [Pipeline Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-pipeline-real-world/)
+8. [Reactor Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-reactor-real-world/)
+9. [Active Object Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-active-object-real-world/)
+10. [Bounded Buffer Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-bounded-buffer-real-world/)
+11. [Actor Model Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-actor-model-real-world/)
+12. [Fork-Join Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-fork-join-real-world/)
 
 #### Advanced
-1. [C++ Lock-Free Design Guide](/2025/12/03/cpp-lock-free-design-guide/)
-2. [C++ Gate + Thread Pool + Callback Queue](/2025/12/03/cpp-gate-thread-pool-callback-queue/)
-3. [C++ Gated Callback Dispatcher](/2025/12/03/cpp-gated-callback-dispatcher/)
-4. [C++ Background File Loader Pattern](/2025/12/03/cpp-background-file-loader-pattern/)
+1. [C++ Lock-Free Design Guide]({{ site.baseurl }}/2025/12/03/cpp-lock-free-design-guide/)
+2. [C++ Gate + Thread Pool + Callback Queue]({{ site.baseurl }}/2025/12/03/cpp-gate-thread-pool-callback-queue/)
+3. [C++ Gated Callback Dispatcher]({{ site.baseurl }}/2025/12/03/cpp-gated-callback-dispatcher/)
+4. [C++ Background File Loader Pattern]({{ site.baseurl }}/2025/12/03/cpp-background-file-loader-pattern/)
 
 ### By Difficulty
 
 #### Beginner
-- [C++ Multithreading Basics](/2025/10/27-cpp-multithreading-basics/)
-- [C++ Mutex Guide with Scenarios](/2025/12/03/cpp-mutex-guide-scenarios/)
-- [C++ Producer-Consumer Pattern Examples](/2025/12/03/cpp-producer-consumer-pattern-examples/)
+- [C++ Multithreading Basics]({{ site.baseurl }}/2025/10/27-cpp-multithreading-basics/)
+- [C++ Mutex Guide with Scenarios]({{ site.baseurl }}/2025/12/03/cpp-mutex-guide-scenarios/)
+- [C++ Producer-Consumer Pattern Examples]({{ site.baseurl }}/2025/12/03/cpp-producer-consumer-pattern-examples/)
 
 #### Intermediate
-- [C++ Condition Variable Guide](/2025/12/03/cpp-condition-variable-guide/)
-- [C++ Thread Pool Guide](/2025/12/03/cpp-thread-pool-guide/)
-- [C++ Reader-Writer Pattern Guide](/2025/12/03/cpp-reader-writer-pattern-guide/)
-- [C++ Thread Pool Pattern (Real-World)](/2025/12/03/cpp-pattern-thread-pool-real-world/)
-- [C++ std::async Guide](/2025/12/03/cpp-async-guide/)
-- [C++ std::packaged_task Guide](/2025/12/03/cpp-packaged-task-guide/)
-- [C++ std::promise and std::future Guide](/2025/12/03/cpp-promise-future-guide/)
-- [C++ std::shared_future Guide](/2025/12/03/cpp-shared-future-guide/)
-- [C++ Future/Promise Pattern](/2025/12/03/cpp-pattern-future-promise-real-world/)
-- [C++ Map-Reduce Pattern](/2025/12/03/cpp-pattern-map-reduce-real-world/)
-- [C++ Read-Write Lock Pattern](/2025/12/03/cpp-pattern-read-write-lock-real-world/)
-- [C++ Background File Loader Pattern](/2025/12/03/cpp-background-file-loader-pattern/)
-- [C++ Multi-Threading Practical Patterns](/2025/12/03/cpp-multithreading-practical-patterns/)
+- [C++ Condition Variable Guide]({{ site.baseurl }}/2025/12/03/cpp-condition-variable-guide/)
+- [C++ Thread Pool Guide]({{ site.baseurl }}/2025/12/03/cpp-thread-pool-guide/)
+- [C++ Reader-Writer Pattern Guide]({{ site.baseurl }}/2025/12/03/cpp-reader-writer-pattern-guide/)
+- [C++ Thread Pool Pattern (Real-World)]({{ site.baseurl }}/2025/12/03/cpp-pattern-thread-pool-real-world/)
+- [C++ std::async Guide]({{ site.baseurl }}/2025/12/03/cpp-async-guide/)
+- [C++ std::packaged_task Guide]({{ site.baseurl }}/2025/12/03/cpp-packaged-task-guide/)
+- [C++ std::promise and std::future Guide]({{ site.baseurl }}/2025/12/03/cpp-promise-future-guide/)
+- [C++ std::shared_future Guide]({{ site.baseurl }}/2025/12/03/cpp-shared-future-guide/)
+- [C++ Future/Promise Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-future-promise-real-world/)
+- [C++ Map-Reduce Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-map-reduce-real-world/)
+- [C++ Read-Write Lock Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-read-write-lock-real-world/)
+- [C++ Background File Loader Pattern]({{ site.baseurl }}/2025/12/03/cpp-background-file-loader-pattern/)
+- [C++ Multi-Threading Practical Patterns]({{ site.baseurl }}/2025/12/03/cpp-multithreading-practical-patterns/)
 
 #### Advanced
-- [C++ Atomic Operations Guide](/2025/12/03/cpp-atomic-operations-guide/)
-- [C++ Lock-Free Design Guide](/2025/12/03/cpp-lock-free-design-guide/)
-- [C++ Gated Callback Dispatcher](/2025/12/03/cpp-gated-callback-dispatcher/)
-- [C++ Work Stealing Pattern](/2025/12/03/cpp-pattern-work-stealing-real-world/)
-- [C++ Pipeline Pattern](/2025/12/03/cpp-pattern-pipeline-real-world/)
-- [C++ Reactor Pattern](/2025/12/03/cpp-pattern-reactor-real-world/)
-- [C++ Active Object Pattern](/2025/12/03/cpp-pattern-active-object-real-world/)
-- [C++ Actor Model Pattern](/2025/12/03/cpp-pattern-actor-model-real-world/)
-- [C++ Fork-Join Pattern](/2025/12/03/cpp-pattern-fork-join-real-world/)
+- [C++ Atomic Operations Guide]({{ site.baseurl }}/2025/12/03/cpp-atomic-operations-guide/)
+- [C++ Lock-Free Design Guide]({{ site.baseurl }}/2025/12/03/cpp-lock-free-design-guide/)
+- [C++ Gated Callback Dispatcher]({{ site.baseurl }}/2025/12/03/cpp-gated-callback-dispatcher/)
+- [C++ Work Stealing Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-work-stealing-real-world/)
+- [C++ Pipeline Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-pipeline-real-world/)
+- [C++ Reactor Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-reactor-real-world/)
+- [C++ Active Object Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-active-object-real-world/)
+- [C++ Actor Model Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-actor-model-real-world/)
+- [C++ Fork-Join Pattern]({{ site.baseurl }}/2025/12/03/cpp-pattern-fork-join-real-world/)
 
 ---
 
@@ -594,9 +594,9 @@ This learning path provides a structured approach to mastering C++ multi-threadi
 
 ### Key Resources
 
-- **Technologies**: [Technologies Index](/2025/12/03/cpp-multithreading-tech-index/)
-- **Patterns**: [Design Patterns Index](/2025/12/03/cpp-multithreading-design-patterns-index/)
-- **Complete Guide**: [Concurrency Complete Guide](/2025/12/02/cpp-concurrency-complete-guide/)
+- **Technologies**: [Technologies Index]({{ site.baseurl }}/2025/12/03/cpp-multithreading-tech-index/)
+- **Patterns**: [Design Patterns Index]({{ site.baseurl }}/2025/12/03/cpp-multithreading-design-patterns-index/)
+- **Complete Guide**: [Concurrency Complete Guide]({{ site.baseurl }}/2025/12/02/cpp-concurrency-complete-guide/)
 
 ### Next Steps
 
