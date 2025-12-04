@@ -18,6 +18,8 @@
 
         <div class="trigger">
           <a class="page-link" href="{{ "/posts/" | relative_url }}">All Posts</a>
+          <a class="page-link" href="{{ "/cpp-posts-list/" | relative_url }}">Posts List</a>
+          <a class="page-link" href="{{ "/2025/12/03/cpp-learning-path-complete/" | relative_url }}">Learning Path</a>
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.title and my_page.nav_exclude != true -%}

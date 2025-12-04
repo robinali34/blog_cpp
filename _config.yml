@@ -42,6 +42,7 @@ plugins:
 header_pages:
   - posts.md
   - cpp-learning-map.md
+  - cpp-posts-list.md
   - embedded-system-design-showcase.md
 
 # Build options

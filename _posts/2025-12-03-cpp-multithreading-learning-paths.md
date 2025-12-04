@@ -190,6 +190,8 @@ Apply advanced patterns:
   - Parallel data processing
 - [C++ Bounded Buffer Pattern](/2025/12/03/cpp-pattern-bounded-buffer-real-world/)
   - Resource control and backpressure
+- [C++ Multi-Threading Practical Patterns](/2025/12/03/cpp-multithreading-practical-patterns/)
+  - Task queues, logging, performance monitoring, lambda patterns
 
 **Key Concepts**:
 - SPSC, MPSC, SPMC, MPMC patterns
@@ -197,6 +199,7 @@ Apply advanced patterns:
 - Load balancing
 - Async result handling
 - Parallel data processing
+- Practical production patterns
 
 ---
 
@@ -449,6 +452,8 @@ These are the most commonly used patterns in real-world engineering:
 - **Work Stealing**: [C++ Work Stealing Pattern](/2025/12/03/cpp-pattern-work-stealing-real-world/)
 - **Map-Reduce**: [C++ Map-Reduce Pattern](/2025/12/03/cpp-pattern-map-reduce-real-world/)
 - **Fork-Join**: [C++ Fork-Join Pattern](/2025/12/03/cpp-pattern-fork-join-real-world/)
+- **Practical Patterns**: [C++ Multi-Threading Practical Patterns](/2025/12/03/cpp-multithreading-practical-patterns/)
+  - Task queues, logging, performance monitoring
 
 ### Scenario-Based Examples
 
@@ -525,6 +530,7 @@ These are the most commonly used patterns in real-world engineering:
 - [C++ Map-Reduce Pattern](/2025/12/03/cpp-pattern-map-reduce-real-world/)
 - [C++ Read-Write Lock Pattern](/2025/12/03/cpp-pattern-read-write-lock-real-world/)
 - [C++ Background File Loader Pattern](/2025/12/03/cpp-background-file-loader-pattern/)
+- [C++ Multi-Threading Practical Patterns](/2025/12/03/cpp-multithreading-practical-patterns/)
 
 #### Advanced
 - [C++ Atomic Operations Guide](/2025/12/03/cpp-atomic-operations-guide/)
