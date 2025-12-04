@@ -133,6 +133,7 @@ Beginner → Intermediate → Advanced → Expert
 **Recommended Posts:**
 - [C++ Function Overriding Guide]({{ site.baseurl }}{% post_url 2025-12-04-cpp-function-overriding-guide %}) - Function overriding syntax, rules, override keyword, hiding vs overriding
 - [C++ Virtual Functions Guide]({{ site.baseurl }}{% post_url 2025-12-04-cpp-virtual-functions-guide %}) - Virtual functions, vtable mechanism, runtime polymorphism, performance
+- [C++ Virtual Functions and VTable Guide]({{ site.baseurl }}{% post_url 2025-12-04-cpp-virtual-functions-vtable-guide %}) - Deep dive into virtual tables, memory layout, vtable structure, implementation details
 - [C++ Virtual Destructors Guide]({{ site.baseurl }}{% post_url 2025-12-04-cpp-virtual-destructors-guide %}) - Why virtual destructors are needed, memory leak prevention, proper cleanup
 - [C++ Pure Virtual Functions Guide]({{ site.baseurl }}{% post_url 2025-12-04-cpp-pure-virtual-functions-guide %}) - Abstract classes, interfaces, implementation requirements
 - [C++ Runtime Polymorphism Guide]({{ site.baseurl }}{% post_url 2025-12-04-cpp-runtime-polymorphism-guide %}) - Runtime polymorphism, late binding, vtable mechanism, practical examples
@@ -446,6 +447,7 @@ Beginner → Intermediate → Advanced → Expert
 ### Object-Oriented Programming and Polymorphism
 - [Function Overriding Guide]({{ site.baseurl }}{% post_url 2025-12-04-cpp-function-overriding-guide %})
 - [Virtual Functions Guide]({{ site.baseurl }}{% post_url 2025-12-04-cpp-virtual-functions-guide %})
+- [Virtual Functions and VTable Guide]({{ site.baseurl }}{% post_url 2025-12-04-cpp-virtual-functions-vtable-guide %})
 - [Virtual Destructors Guide]({{ site.baseurl }}{% post_url 2025-12-04-cpp-virtual-destructors-guide %})
 - [Pure Virtual Functions Guide]({{ site.baseurl }}{% post_url 2025-12-04-cpp-pure-virtual-functions-guide %})
 - [Runtime Polymorphism Guide]({{ site.baseurl }}{% post_url 2025-12-04-cpp-runtime-polymorphism-guide %})
