@@ -201,6 +201,7 @@ Beginner → Intermediate → Advanced → Expert
 
 **Recommended Posts:**
 - [C++ Container Reserve and Resize Guide]({{ site.baseurl }}{% post_url 2025-10-29-cpp-container-reserve-resize-guide %})
+- [C++ Defining Data Structures Guide]({{ site.baseurl }}{% post_url 2026-01-14-cpp-defining-data-structures-guide %}) - Creating custom data structures, tree structures, traversal algorithms
 
 ### 14. STL Algorithms
 - Non-modifying algorithms (find, count, search)

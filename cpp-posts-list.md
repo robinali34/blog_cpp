@@ -49,7 +49,7 @@ navigation, prefer the dedicated learning path pages:
 
 ## Quick Links
 
-- [C++ Complete Learning Path]({% post_url 2025-12-03-cpp-learning-path-complete %}) - All posts organized by category
+- [C++ Complete Learning Path]({% post_url 2026-01-14-cpp-learning-path-complete %}) - All posts organized by category
 - [C++ Multi-Threading Learning Paths]({% post_url 2025-12-03-cpp-multithreading-learning-paths %}) - Multi-threading specific learning path
 - [C++ Learning Map]({{ "/cpp-learning-map/" | relative_url }}) - Structured learning roadmap
 

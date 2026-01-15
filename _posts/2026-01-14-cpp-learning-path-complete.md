@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "C++ Complete Learning Path: All Posts Organized by Category"
-date: 2025-12-03 00:00:00 -0800
+date: 2026-01-14 00:00:00 -0800
 categories: cpp learning-path tutorial guide reference
-permalink: /2025/12/03/cpp-learning-path-complete/
+permalink: /2026/01/14/cpp-learning-path-complete/
 tags: [cpp, learning-path, tutorial, guide, reference, curriculum, all-posts]
 excerpt: "Complete C++ learning path with all posts organized by category. Structured guide covering fundamentals, STL, concurrency, modern C++, advanced topics, and specialized areas."
 ---
